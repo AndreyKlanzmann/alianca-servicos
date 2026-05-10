@@ -382,14 +382,17 @@ a{text-decoration:none;color:inherit}
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
           <div class="patch-version">v1.5</div>
-          <div class="patch-date">10 de maio de 2026 · 10:18</div>
-          <div class="patch-title">Bugs corrigidos + Ficha de detalhes por serviço</div>
+          <div class="patch-date">10 de maio de 2026 · 10:40</div>
+          <div class="patch-title">Bugs corrigidos + Ficha de detalhes + Busca inteligente</div>
           <ul class="patch-items">
             <li>Filtro por categoria agora funciona corretamente</li>
             <li>Botão X e Fechar do modal funcionando</li>
             <li>Dados "O que pedir" e "Observações" puxados corretamente da planilha</li>
-            <li>Busca genérica: "emai" encontra "e-mail", "certid" encontra "certidão"</li>
             <li>Botão "Ver detalhes" em cada card abre ficha completa</li>
+            <li>Busca genérica: digitar "carr", "ema", "renav" já encontra os serviços relacionados</li>
+            <li>Tags invisíveis por serviço: cada serviço tem palavras-chave ocultas que entram no critério de busca</li>
+            <li>Tolerância a erro de digitação: buscas com 4+ letras aceitam 1 erro (ex: "imss" encontra INSS)</li>
+            <li>Normalização completa: acentos, hífens e pontos são ignorados na comparação</li>
           </ul>
         </div>
       </div>
