@@ -180,7 +180,7 @@ a{text-decoration:none;color:inherit}
   <div class="header-actions">
     <button class="btn-patch" onclick="openPatch()" title="Notas de atualização">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      <span>v1.6 — Patch Notes</span>
+      <span>v1.2.1 — Patch Notes</span>
     </button>
     <button class="btn-icon" data-theme-toggle aria-label="Alternar tema">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -377,114 +377,75 @@ a{text-decoration:none;color:inherit}
       </button>
     </div>
     <div class="patch-body">
-
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
-                    <div class="patch-version">v1.6</div>
+          <div class="patch-version">v1.2.1</div>
           <div class="patch-date">10 de maio de 2026 · 11:03</div>
-          <div class="patch-title">Correção dos valores dos serviços</div>
+          <div class="patch-title">Hotfix — Valores dos serviços</div>
           <ul class="patch-items">
             <li>Todos os 75 serviços tiveram seus valores corrigidos conforme a planilha</li>
-            <li>Serviços com tabela de preços (impressões, plastificação) exibem faixas completas</li>
+            <li>Serviços com tabela de preços (impressões, plastificação) exibem faixas completas por quantidade</li>
           </ul>
         </div>
       </div>
-
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
-          <div class="patch-version">v1.5</div>
-          <div class="patch-date">10 de maio de 2026 · 10:40</div>
-          <div class="patch-title">Bugs corrigidos + Ficha de detalhes + Busca inteligente</div>
+          <div class="patch-version">v1.2</div>
+          <div class="patch-date">10 de maio de 2026 · 10:29</div>
+          <div class="patch-title">Busca inteligente</div>
           <ul class="patch-items">
-            <li>Filtro por categoria agora funciona corretamente</li>
-            <li>Botão X e Fechar do modal funcionando</li>
-            <li>Dados "O que pedir" e "Observações" puxados corretamente da planilha</li>
-            <li>Botão "Ver detalhes" em cada card abre ficha completa</li>
             <li>Busca genérica: digitar "carr", "ema", "renav" já encontra os serviços relacionados</li>
-            <li>Tags invisíveis por serviço: cada serviço tem palavras-chave ocultas que entram no critério de busca</li>
+            <li>Tags invisíveis por serviço — cada serviço tem palavras-chave ocultas que entram no critério de busca</li>
             <li>Tolerância a erro de digitação: buscas com 4+ letras aceitam 1 erro (ex: "imss" encontra INSS)</li>
             <li>Normalização completa: acentos, hífens e pontos são ignorados na comparação</li>
           </ul>
         </div>
       </div>
-
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
-          <div class="patch-version">v1.4</div>
-          <div class="patch-date">10 de maio de 2026 · 09:18</div>
-          <div class="patch-title">Links reais da planilha integrados</div>
+          <div class="patch-version">v1.1.1</div>
+          <div class="patch-date">10 de maio de 2026 · 10:18</div>
+          <div class="patch-title">Hotfix — Correção de bugs gerais</div>
           <ul class="patch-items">
-            <li>Todos os botões "Acessar Sistema" agora usam os links diretos extraídos da planilha original</li>
-            <li>Removidos completamente os links do sites.google.com</li>
-            <li>IPVA aponta para veiculosmg.fazenda.mg.gov.br</li>
-            <li>Contratos e procurações marcados como "Arquivo Local" (arquivo no PC)</li>
-            <li>Adicionada aba de Patch Notes com histórico completo de versões</li>
-            <li>Serviços sem sistema online exibem "Serviço Interno" em cinza</li>
+            <li>Filtro por categoria agora funciona corretamente</li>
+            <li>Botão X e Fechar do modal voltaram a funcionar</li>
+            <li>Dados "O que pedir" e "Observações" puxados corretamente da planilha</li>
           </ul>
         </div>
       </div>
-
-      <div class="patch-entry">
-        <div class="patch-timeline"><div class="patch-dot"></div><div class="patch-line"></div></div>
-        <div class="patch-content">
-          <div class="patch-version">v1.3</div>
-          <div class="patch-date">10 de maio de 2026 · 09:00</div>
-          <div class="patch-title">Integração com botões e sistema de links</div>
-          <ul class="patch-items">
-            <li>Criação dos botões "Acessar Sistema" em cada card de serviço</li>
-            <li>Mapeamento inicial de URLs por categoria</li>
-            <li>Ajuste visual dos cards com estado ativo/inativo nos botões</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="patch-entry">
-        <div class="patch-timeline"><div class="patch-dot"></div><div class="patch-line"></div></div>
-        <div class="patch-content">
-          <div class="patch-version">v1.2</div>
-          <div class="patch-date">10 de maio de 2026 · 08:50</div>
-          <div class="patch-title">Painel web — versão completa</div>
-          <ul class="patch-items">
-            <li>Todas as categorias da planilha mapeadas: Detran, MEI, GOV, INSS, 2ª Via, Documentos, Contratos, Inscrições, Trabalhos, E-mail/Fotos, Gráfica e Especiais</li>
-            <li>Sistema de busca com sinônimos (ex: "luz" encontra CEMIG)</li>
-            <li>Filtro por categoria via pills de navegação</li>
-            <li>Modo escuro com toggle e persistência de sessão</li>
-          </ul>
-        </div>
-      </div>
-
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
           <div class="patch-version">v1.1</div>
-          <div class="patch-date">09 de maio de 2026 · 22:01</div>
-          <div class="patch-title">Criação do painel web</div>
+          <div class="patch-date">10 de maio de 2026 · 10:06</div>
+          <div class="patch-title">Ficha de detalhes por serviço</div>
           <ul class="patch-items">
-            <li>Primeira versão do painel para substituir o Excel com problemas de resolução</li>
-            <li>Layout responsivo que abre padronizado em qualquer PC/monitor</li>
-            <li>Estrutura base com header fixo, busca e grid de cards por categoria</li>
-            <li>Design system próprio com tokens de cor, tipografia e espaçamento</li>
+            <li>Botão "Ver detalhes" adicionado em cada card</li>
+            <li>Modal com "O que pedir ao cliente", "Observações / Passo a passo" e Valor</li>
+            <li>Botão "Acessar Sistema" disponível dentro do modal</li>
+            <li>Dados extraídos diretamente da planilha de serviços</li>
           </ul>
         </div>
       </div>
-
       <div class="patch-entry">
-        <div class="patch-timeline"><div class="patch-dot"></div></div>
+        <div class="patch-timeline"><div class="patch-dot major"></div></div>
         <div class="patch-content">
           <div class="patch-version">v1.0</div>
-          <div class="patch-date">Antes de maio de 2026</div>
-          <div class="patch-title">Planilha Excel original</div>
+          <div class="patch-date">10 de maio de 2026 · 00:44</div>
+          <div class="patch-title">Lançamento inicial</div>
           <ul class="patch-items">
-            <li>Planilha com abas por categoria de serviço</li>
-            <li>Links diretos para sistemas externos</li>
-            <li>Problemas de resolução ao abrir em PCs diferentes identificados</li>
+            <li>Painel com todos os serviços organizados por categoria</li>
+            <li>Filtro por categoria via pills clicáveis</li>
+            <li>Busca por nome e descrição do serviço</li>
+            <li>Botão "Acessar Sistema" com link direto para cada serviço</li>
+            <li>Modo escuro com identidade visual da Aliança</li>
+            <li>Patch Notes integrado ao painel</li>
           </ul>
         </div>
       </div>
-
     </div>
   </div>
 </div>
