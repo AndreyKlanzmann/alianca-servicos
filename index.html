@@ -523,6 +523,8 @@ a{text-decoration:none;color:inherit}
             <li>🕙 16:04 — Botão 🧾 Notinha disponível em cada atendimento do histórico</li>
             <li>🕙 16:04 — Novos serviços em Gráfica: Consulta Completa R$4, Consulta Básica R$2, Papel Cartão R$4, Fotográfico R$6</li>
             <li>🕙 16:04 — Modo Rápido: adicionados Boleto/2ª Via R$4,75, Consulta R$4, Consulta R$2 e Papel Cartão R$4</li>
+            <li>🕙 16:41 — Notinha: desconto visual por item com preço riscado, novo preço em verde e badge % de economia</li>
+            <li>🕙 16:41 — Notinha: linha de total de economia ao final quando há desconto aplicado</li>
           </ul>
         </div>
       </div>
@@ -1594,14 +1596,55 @@ function gerarNotinha(idx) {
   var nomeCliente = prompt('Nome do cliente (opcional — pressione OK para pular):', '');
   if (nomeCliente === null) return; // cancelou
 
+  // Mapa de preço cheio por serviço (faixa 1)
+  var FULL_PRICE = {
+    'Impressão PB Frente Apostila': 2.50,
+    'Impressão PB Frente e Verso': 3.50,
+    'Impressão Colorida Frente Apostila': 3.00,
+    'Impressão Colorida Frente e Verso': 4.00,
+    'Xerox / Cópia': 0.50
+  };
+
   var linhas = '';
   for (var i = 0; i < h.items.length; i++) {
     var it = h.items[i];
-    linhas += '<tr>' +
-      '<td style="padding:5px 6px;font-size:12px;border-bottom:1px solid #eee">' + (it.qty > 1 ? it.qty + 'x ' : '') + it.name + '</td>' +
-      '<td style="padding:5px 6px;font-size:12px;border-bottom:1px solid #eee;text-align:right;white-space:nowrap">R$ ' + it.tot.toFixed(2).replace('.',',') + '</td>' +
-    '</tr>';
+    var unitPrice = it.qty > 0 ? it.tot / it.qty : 0;
+    var fullPrice = FULL_PRICE[it.name] || null;
+    var hasDiscount = fullPrice && it.qty > 1 && unitPrice < fullPrice - 0.001;
+    var discountPct = hasDiscount ? Math.round((1 - unitPrice / fullPrice) * 100) : 0;
+
+    if (hasDiscount) {
+      linhas += '<tr>' +
+        '<td colspan="2" style="padding:6px 6px 2px;font-size:12px;font-weight:600">' +
+          (it.qty > 1 ? it.qty + 'x ' : '') + it.name +
+        '</td>' +
+      '</tr>' +
+      '<tr>' +
+        '<td style="padding:1px 6px 2px;font-size:11px;color:#888">' +
+          '<span style="text-decoration:line-through">R$ ' + fullPrice.toFixed(2).replace('.',',') + '/un</span>' +
+          ' → <span style="color:#1a7a3a;font-weight:700">R$ ' + unitPrice.toFixed(2).replace('.',',') + '/un</span>' +
+          ' <span style="background:#d4f5e2;color:#1a7a3a;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:800">🏷️ -' + discountPct + '%</span>' +
+        '</td>' +
+        '<td style="padding:1px 6px 2px;font-size:12px;font-weight:700;text-align:right;color:#1a7a3a;border-bottom:1px solid #eee;vertical-align:bottom">R$ ' + it.tot.toFixed(2).replace('.',',') + '</td>' +
+      '</tr>';
+    } else {
+      linhas += '<tr>' +
+        '<td style="padding:5px 6px;font-size:12px;border-bottom:1px solid #eee">' + (it.qty > 1 ? it.qty + 'x ' : '') + it.name + '</td>' +
+        '<td style="padding:5px 6px;font-size:12px;border-bottom:1px solid #eee;text-align:right;white-space:nowrap">R$ ' + it.tot.toFixed(2).replace('.',',') + '</td>' +
+      '</tr>';
+    }
   }
+
+  // Calcular economia total
+  var totalSemDesc = 0;
+  for (var i = 0; i < h.items.length; i++) {
+    var it = h.items[i];
+    var fp = FULL_PRICE[it.name] || null;
+    var up = it.qty > 0 ? it.tot / it.qty : 0;
+    if (fp && it.qty > 1 && up < fp - 0.001) totalSemDesc += fp * it.qty;
+    else totalSemDesc += it.tot;
+  }
+  var economia = totalSemDesc - h.total;
 
   var win = window.open('', '_blank', 'width=400,height=600');
   win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Comprovante</title>
@@ -1632,6 +1675,7 @@ function gerarNotinha(idx) {
     <table>
       <tbody>${linhas}</tbody>
       <tfoot>
+        ${economia > 0.005 ? `<tr><td style="padding:4px 6px;font-size:11px;color:#1a7a3a">🏷️ Você economizou</td><td style="text-align:right;font-size:11px;color:#1a7a3a;font-weight:700;padding:4px 6px">- R$ ${economia.toFixed(2).replace('.',',')}</td></tr>` : ''}
         <tr class="total-row">
           <td>TOTAL</td>
           <td style="text-align:right">R$ ${h.total.toFixed(2).replace('.',',')}</td>
