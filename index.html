@@ -81,9 +81,9 @@ a{text-decoration:none;color:inherit}
 /* CARD */
 .card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3);box-shadow:var(--shadow-sm);transition:box-shadow var(--transition),transform var(--transition)}
 .card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-2)}
-.card-name{font-weight:600;font-size:var(--text-sm);line-height:1.3}
-.card-price{font-size:var(--text-xs);font-weight:700;color:var(--color-primary);white-space:nowrap;background:var(--color-primary-highlight);padding:2px var(--space-2);border-radius:var(--radius-full)}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-2);flex-wrap:wrap}
+.card-name{font-weight:600;font-size:var(--text-sm);line-height:1.3;flex:1;min-width:0}
+.card-price{font-size:var(--text-xs);font-weight:700;color:var(--color-primary);white-space:normal;word-break:break-word;background:var(--color-primary-highlight);padding:2px var(--space-2);border-radius:var(--radius-full);align-self:flex-start;text-align:right;max-width:100%}
 .card-obs{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.5;flex:1}
 .card-footer{margin-top:auto}
 .btn-access{width:100%;padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);font-size:var(--text-xs);font-weight:600;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:var(--space-2);transition:all var(--transition)}
@@ -180,6 +180,72 @@ a{text-decoration:none;color:inherit}
 /* BADGE VISUAL PASSO A PASSO */
 .badge-visual{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;background:var(--color-patch);color:#fff;margin-left:6px;vertical-align:middle;letter-spacing:.3px}
 
+
+/* ── CARRINHO ── */
+.cart-fab{position:fixed;bottom:24px;right:24px;z-index:300;background:var(--color-patch);color:#fff;border:none;border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow-lg);transition:transform .15s}
+.cart-fab:hover{transform:scale(1.08)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:#e53e3e;color:#fff;border-radius:50%;font-size:10px;font-weight:800;width:18px;height:18px;display:flex;align-items:center;justify-content:center;display:none}
+.cart-badge.show{display:flex}
+.cart-drawer{position:fixed;top:0;right:-460px;width:min(460px,100vw);height:100vh;z-index:400;background:var(--color-surface);border-left:1px solid var(--color-border);box-shadow:var(--shadow-lg);display:flex;flex-direction:column;transition:right .25s cubic-bezier(.4,0,.2,1)}
+.cart-drawer.open{right:0}
+.cart-head{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--color-border);flex-shrink:0}
+.cart-head h2{flex:1;font-size:var(--text-base);font-weight:700}
+.cart-close{background:none;border:none;cursor:pointer;color:var(--color-text-muted);padding:4px;border-radius:6px}
+.cart-close:hover{background:var(--color-border)}
+/* abas */
+.cart-tabs{display:flex;border-bottom:1px solid var(--color-border);flex-shrink:0;overflow-x:auto}
+.cart-tab{flex:1;padding:8px 6px;font-size:12px;font-weight:600;border:none;background:none;cursor:pointer;color:var(--color-text-muted);border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .15s}
+.cart-tab.active{color:var(--color-primary);border-bottom-color:var(--color-primary)}
+.cart-tab-count{display:inline-flex;align-items:center;justify-content:center;background:var(--color-border);color:var(--color-text-muted);border-radius:999px;font-size:9px;font-weight:800;padding:1px 5px;margin-left:4px}
+.cart-tab.active .cart-tab-count{background:var(--color-primary);color:#fff}
+/* atalhos rápidos */
+.cart-quick{display:flex;gap:6px;padding:10px 16px 0;flex-shrink:0;flex-wrap:wrap}
+.cart-quick-btn{display:flex;align-items:center;gap:4px;padding:5px 10px;border-radius:20px;border:1.5px solid var(--color-border);background:var(--color-bg);cursor:pointer;font-size:11px;font-weight:700;color:var(--color-text);transition:background .15s}
+.cart-quick-btn:hover{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+/* itens */
+.cart-items{flex:1;overflow-y:auto;padding:10px 16px;display:flex;flex-direction:column;gap:8px}
+.cart-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;color:var(--color-text-muted);font-size:13px;opacity:.6}
+.cart-item{background:var(--color-bg);border:1px solid var(--color-border);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+.cart-item.done{opacity:.55}
+.cart-item-top{display:flex;align-items:flex-start;gap:8px}
+.cart-item-name{flex:1;font-size:13px;font-weight:600;line-height:1.3}
+.cart-item-remove{background:none;border:none;cursor:pointer;color:var(--color-text-muted);padding:2px 5px;border-radius:5px;font-size:15px;line-height:1}
+.cart-item-remove:hover{background:#fee2e2;color:#dc2626}
+.cart-item-bottom{display:flex;align-items:center;gap:8px}
+.cart-qty{display:flex;align-items:center;gap:6px}
+.cart-qty-btn{background:var(--color-surface);border:1.5px solid var(--color-border);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;font-weight:700;color:var(--color-text);line-height:1}
+.cart-qty-btn:hover{background:var(--color-border)}
+.cart-qty-val{font-size:13px;font-weight:700;min-width:24px;text-align:center}
+.cart-item-price{margin-left:auto;font-size:13px;font-weight:700;color:var(--color-primary)}
+.cart-item-tier{font-size:10px;color:var(--color-text-muted);margin-left:auto}
+/* rodapé */
+.cart-foot{padding:14px 20px;border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:8px;flex-shrink:0}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center}
+.cart-total-label{font-size:13px;color:var(--color-text-muted)}
+.cart-total-val{font-size:22px;font-weight:800;color:var(--color-primary)}
+.cart-actions{display:flex;gap:8px}
+.cart-btn-finish{flex:1;padding:9px;border-radius:8px;background:var(--color-success);color:#fff;border:none;cursor:pointer;font-size:13px;font-weight:700}
+.cart-btn-finish:hover{background:var(--color-success-hover)}
+.cart-btn-copy{flex:1;padding:9px;border-radius:8px;background:var(--color-patch);color:#fff;border:none;cursor:pointer;font-size:13px;font-weight:700}
+.cart-btn-copy:hover{opacity:.88}
+.cart-btn-clear{padding:9px 14px;border-radius:8px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:13px;font-weight:600;color:var(--color-text-muted)}
+.cart-btn-clear:hover{background:#fee2e2;color:#dc2626;border-color:#fca5a5}
+/* histórico */
+.hist-item{background:var(--color-bg);border:1px solid var(--color-border);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+.hist-item-head{display:flex;justify-content:space-between;align-items:center}
+.hist-item-label{font-size:12px;font-weight:700;color:var(--color-text)}
+.hist-item-total{font-size:13px;font-weight:800;color:var(--color-success)}
+.hist-item-time{font-size:10px;color:var(--color-text-muted)}
+.hist-item-lines{font-size:11px;color:var(--color-text-muted);margin-top:2px;line-height:1.6}
+.hist-item-copy{background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:3px 8px;cursor:pointer;font-size:11px;font-weight:600;color:var(--color-text-muted);margin-top:4px;align-self:flex-end}
+.hist-item-copy:hover{background:var(--color-patch);color:#fff;border-color:var(--color-patch)}
+/* overlay */
+.cart-overlay{position:fixed;inset:0;z-index:399;background:rgba(0,0,0,.35);display:none}
+.cart-overlay.open{display:block}
+/* botão add no card */
+.btn-add-cart{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:7px 10px;border-radius:8px;background:var(--color-success);color:#fff;border:none;cursor:pointer;font-size:12px;font-weight:600}
+.btn-add-cart:hover{background:var(--color-success-hover)}
+
 </style>
 </head>
 <body>
@@ -200,7 +266,7 @@ a{text-decoration:none;color:inherit}
   <div class="header-actions">
     <button class="btn-patch" onclick="openPatch()" title="Notas de atualização">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      <span>v2.1 — Patch Notes</span>
+      <span>v2.2 — Patch Notes</span>
     </button>
     <button class="btn-icon" data-theme-toggle aria-label="Alternar tema">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -403,12 +469,29 @@ a{text-decoration:none;color:inherit}
     <div class="patch-head">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-patch)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       <h2>Patch Notes</h2>
-      <span class="patch-version-badge">v2.1</span>
+      <span class="patch-version-badge">v2.2</span>
       <button class="patch-close" onclick="closePatch()" aria-label="Fechar">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="patch-body">
+      <div class="patch-entry">
+        <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
+        <div class="patch-content">
+          <div class="patch-version">v2.2</div>
+          <div class="patch-date">12 de maio de 2026</div>
+          <div class="patch-title">Caixa do Dia — estabilização e correções críticas</div>
+          <ul class="patch-items">
+            <li>🕙 14:31 — Fix crítico: JS do carrinho reescrito do zero — histórico, finalizar e limpar agora funcionam corretamente</li>
+            <li>🕙 14:31 — Fix: conflito com window.history do navegador resolvido</li>
+            <li>🕙 14:31 — Fix: onclick com parâmetros string quebrava o parser JS — trocado para índice numérico</li>
+            <li>🕙 14:31 — Atalhos rápidos: ⚡ Xerox P/B e ⚡ Impressão P/B disponíveis no topo do carrinho</li>
+            <li>🕙 14:31 — Botão ✕ por atendimento no histórico para excluir registros incorretos</li>
+            <li>🕙 14:35 — Fix visual: badge de versão no header atualizado para v2.2</li>
+            <li>🕙 14:35 — Multa DETRAN: 1ª via R$ 6,00 · a partir da 2ª R$ 2,50 fixo (sem desconto progressivo)</li>
+          </ul>
+        </div>
+      </div>
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
@@ -420,6 +503,9 @@ a{text-decoration:none;color:inherit}
             <li>🕙 09:44 — Passo a passo visual no modal: Troca de Titularidade CEMIG (5 passos)</li>
             <li>🕙 09:44 — Botão WhatsApp substituído por "Copiar mensagem pronta"</li>
             <li>🕙 10:06 — Etiqueta "visual" adicionada nos cards com passo a passo fotográfico</li>
+            <li>🕙 13:00 — Correção: preço longo não ultrapassa mais o card (ex: apostilas)</li>
+            <li>🕙 13:19 — Novo recurso: Caixa do Dia — carrinho com descontos automáticos por faixa de quantidade</li>
+            <li>🕙 13:28 — Caixa do Dia: atendimentos independentes com histórico, botão Finalizar e atalhos rápidos</li>
           </ul>
         </div>
       </div>
@@ -524,7 +610,7 @@ const SERVICES = [
   {cat:'detran', name:'Parcelamento IPVA', obs:'Consulta e solicitação de parcelamento do IPVA', price:'R$ 50,00', url:'https://www2.fazenda.mg.gov.br/sol/ctrl/SOL/PARCEL/CONSULTA_017?ACAO=VISUALIZAR'},
   {cat:'detran', name:'Consulta Veículo', obs:'Consultar situação do veículo no Detran', price:'R$ 4,00 / R$ 8,00', url:'https://detran.mg.gov.br/veiculos/situacao-do-veiculo/consultar-situacao-do-veiculo'},
   {cat:'detran', name:'Imprimir CRLV', obs:'Emissão digital do documento do veículo (CRLV)', price:'R$ 6,00', url:'https://detran.mg.gov.br/veiculos/documentos-de-veiculos/emissao-do-clrv'},
-  {cat:'detran', name:'Multas', obs:'Extrato de multas do veículo', price:'R$ 6,00', url:'https://detran.mg.gov.br/veiculos/situacao-do-veiculo/emitir-de-extrato-de-multas'},
+  {cat:'detran', name:'Multas', obs:'1ª via: R$ 6,00 · A partir da 2ª: R$ 2,50 cada (preço fixo de impressão, sem desconto progressivo)', price:'R$ 6,00 / R$ 2,50', url:'https://detran.mg.gov.br/veiculos/situacao-do-veiculo/emitir-de-extrato-de-multas'},
   {cat:'detran', name:'Intenção de Venda', obs:'Registrar intenção de venda do veículo', price:'R$ 50,00', url:'https://transito.mg.gov.br/veiculos/transferencias/realizar-a-venda-de-um-veiculo-vendi-meu-veiculo'},
   {cat:'detran', name:'Decalque de Chassi', obs:'Taxa para transferir propriedade de veículo (comprador)', price:'R$ 50,00', url:'https://www.detran.mg.gov.br/veiculos/transferencias/taxa-para-transferir-propriedade-de-veiculo-comprador/index/2'},
   {cat:'detran', name:'Renovação CNH', obs:'Emissão da taxa de renovação da CNH', price:'R$ 30,00', url:'https://detran.mg.gov.br/habilitacao/renovacao-da-cnh-1/taxa-da-renovacao-do-documento-de-habilitacao'},
@@ -686,6 +772,10 @@ function buildCard(s) {
       <button type="button" onclick="copyMsg('${escapedName}','${escapedPrice}')" style="flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:7px 10px;border-radius:8px;background:var(--color-patch);color:#fff;border:none;cursor:pointer;font-size:12px;font-weight:600;line-height:1;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         Copiar mensagem pronta
+      </button>
+      <button type="button" class="btn-add-cart" onclick="addToCart('${escapedName}','${escapedPrice}')">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        + Caixa
       </button>
     </div>
   </div>`;
@@ -930,9 +1020,6 @@ function buildShareMsg(name, price) {
   msg += '\nQualquer dúvida, estamos à disposição! \uD83D\uDE0A';
   return msg;
 }
-function sendWhatsApp(name, price) {
-  window.open('https://web.whatsapp.com/send?text=' + encodeURIComponent(buildShareMsg(name, price)), 'whatsapp_alianca');
-}
 function copyMsg(name, price) {
   var msg = buildShareMsg(name, price);
   if (navigator.clipboard && window.isSecureContext) {
@@ -956,6 +1043,205 @@ function showToast(msg) {
   t.textContent = msg; t.style.opacity = '1';
   clearTimeout(t._tmr); t._tmr = setTimeout(function(){ t.style.opacity = '0'; }, 2500);
 }
+
+// ═══════════════════════════════════
+//  CAIXA DO DIA — JS
+// ═══════════════════════════════════
+
+var TIERS = {
+  'Xerox P/B':                                           [{n:1,x:Infinity,p:0.50}],
+  'Impressão P/B (Apenas Frente) [Apostila]':            [{n:1,x:4,p:2.50},{n:5,x:9,p:2.00},{n:10,x:24,p:1.50},{n:25,x:Infinity,p:0.75}],
+  'Impressão P/B (Frente e Verso) [Apostila]':           [{n:1,x:4,p:3.50},{n:5,x:9,p:1.75},{n:10,x:24,p:1.00},{n:25,x:99,p:0.50},{n:100,x:Infinity,p:0.40}],
+  'Impressão Colorida (Apenas Frente) [Apostila]':       [{n:1,x:4,p:3.00},{n:5,x:9,p:2.50},{n:10,x:24,p:1.75},{n:25,x:Infinity,p:1.25}],
+  'Impressão Colorida (Frente e Verso) [Apostila]':      [{n:1,x:4,p:4.00},{n:5,x:9,p:2.00},{n:10,x:24,p:1.50},{n:25,x:99,p:1.00},{n:100,x:Infinity,p:0.65}],
+  'Papel Cartão':                                        [{n:1,x:9,p:4.00},{n:10,x:24,p:3.50},{n:25,x:Infinity,p:3.00}],
+  'Papel Cartão F/V':                                    [{n:1,x:9,p:6.00},{n:10,x:24,p:5.00},{n:25,x:Infinity,p:3.50}],
+  'Fotográfico (Normal ou Adesivo)':                     [{n:1,x:9,p:6.00},{n:10,x:Infinity,p:5.00}],
+  'Vinil':                                               [{n:1,x:Infinity,p:8.00}]
+};
+
+var CNIS_KEY = 'Extrato / CNIS / Situação ou Declaração do Benefício';
+
+// estado
+var _cart = [];
+var _atendimentos = [];
+var _atenCount = 0;
+var _tab = 'current';
+
+function _tierPrice(name, qty) {
+  var ts = TIERS[name]; if (!ts) return null;
+  for (var i=0;i<ts.length;i++) if (qty>=ts[i].n && qty<=ts[i].x) return ts[i].p;
+  return ts[ts.length-1].p;
+}
+function _tierLabel(name, qty) {
+  var ts = TIERS[name]; if (!ts) return '';
+  for (var i=0;i<ts.length;i++) if (qty>=ts[i].n && qty<=ts[i].x) return 'faixa: '+ts[i].n+(ts[i].x===Infinity?'+':'–'+ts[i].x)+' und';
+  return '';
+}
+function _itemTotal(item) {
+  if (item.name === CNIS_KEY) return 6.00 + (item.qty - 1) * 0.50;
+  var p = _tierPrice(item.name, item.qty);
+  if (p !== null) return p * item.qty;
+  return item.basePrice * item.qty;
+}
+function _brl(v) { return 'R$ ' + v.toFixed(2).replace('.',','); }
+function _now() { var d=new Date(); return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2); }
+function _parsePrice(s) { if(!s) return 0; var m=s.match(/[0-9]+[,.]?[0-9]*/); return m ? parseFloat(m[0].replace(',','.')) : 0; }
+
+function addToCart(name, priceStr) {
+  var ex = null;
+  for (var i=0;i<_cart.length;i++) { if (_cart[i].name===name){ex=_cart[i];break;} }
+  if (ex) { ex.qty++; } else { _cart.push({uid: _cart.length + '_' + Date.now(), name:name, qty:1, basePrice:_parsePrice(priceStr)}); }
+  _renderCart(); _renderBadge();
+}
+function quickAdd(name, price) { addToCart(name, price); }
+
+function _removeItem(idx) {
+  _cart.splice(idx, 1); _renderCart(); _renderBadge();
+}
+function _changeQty(idx, delta) {
+  if (_cart[idx]) { _cart[idx].qty=Math.max(1,_cart[idx].qty+delta); }
+  _renderCart(); _renderBadge();
+}
+function clearCart() {
+  if (_cart.length===0) return;
+  if (!confirm('Cancelar atendimento atual?')) return;
+  _cart=[]; _renderCart(); _renderBadge();
+}
+function finishAttendance() {
+  if (_cart.length===0) { alert('Nenhum serviço adicionado!'); return; }
+  _atenCount++;
+  var tot = 0; for (var i=0;i<_cart.length;i++) tot+=_itemTotal(_cart[i]);
+  var saved = [];
+  for (var i=0;i<_cart.length;i++) saved.push({name:_cart[i].name, qty:_cart[i].qty, tot:_itemTotal(_cart[i])});
+  _atendimentos.unshift({id:_atenCount, time:_now(), items:saved, total:tot});
+  _cart = [];
+  _renderCart();
+  _renderBadge();
+  _switchTab('history');
+}
+function copyCart() {
+  if (_cart.length===0) { alert('Carrinho vazio!'); return; }
+  var tot=0; for(var i=0;i<_cart.length;i++) tot+=_itemTotal(_cart[i]);
+  var lines=['Resumo do Atendimento'];
+  for(var i=0;i<_cart.length;i++){
+    var it=_cart[i]; lines.push('- '+it.name+(it.qty>1?' (x'+it.qty+')':'')+' — '+_brl(_itemTotal(it)));
+  }
+  lines.push('Total: '+_brl(tot));
+  navigator.clipboard.writeText(lines.join('\n')).then(function(){
+    var b=document.querySelector('.cart-btn-copy'); if(!b) return;
+    var o=b.innerHTML; b.textContent='✓'; setTimeout(function(){b.innerHTML=o;},1800);
+  });
+}
+function _copyAten(idx) {
+  var h=_atendimentos[idx];
+  var lines=['Resumo do Atendimento #'+h.id+' ('+h.time+')'];
+  for(var i=0;i<h.items.length;i++){
+    var it=h.items[i]; lines.push('- '+it.name+(it.qty>1?' (x'+it.qty+')':'')+' — '+_brl(it.tot));
+  }
+  lines.push('Total: '+_brl(h.total));
+  navigator.clipboard.writeText(lines.join('\n')).then(function(){
+    var btns=document.querySelectorAll('.hist-item-copy'); if(btns[idx]){var o=btns[idx].textContent; btns[idx].textContent='✓ Copiado!'; setTimeout(function(){btns[idx].textContent=o;},1800);}
+  });
+}
+function _deleteAten(idx) {
+  if (!confirm('Excluir Atendimento #'+_atendimentos[idx].id+'?')) return;
+  _atendimentos.splice(idx,1); _renderHistory(); _renderBadge();
+}
+
+function _renderCart() {
+  var el=document.getElementById('cartItems'); if(!el) return;
+  var tot=document.getElementById('cartTotal');
+  var tc=document.getElementById('tabCurrentCount'); if(tc) tc.textContent=_cart.length;
+  if (_cart.length===0) {
+    el.innerHTML='<div class="cart-empty"><span>Nenhum serviço adicionado</span></div>';
+    if(tot) tot.textContent='R$ 0,00'; return;
+  }
+  var sum=0, out='';
+  for(var i=0;i<_cart.length;i++){
+    var it=_cart[i], vt=_itemTotal(it); sum+=vt;
+    var isCnis=(it.name===CNIS_KEY), hasTier=!!TIERS[it.name];
+    out+='<div class="cart-item">'+
+      '<div class="cart-item-top"><span class="cart-item-name">'+it.name+'</span>'+
+      '<button class="cart-item-remove" onclick="_removeItem('+i+')">&#x2715;</button></div>'+
+      '<div class="cart-item-bottom">'+
+      '<div class="cart-qty">'+
+        '<button class="cart-qty-btn" onclick="_changeQty('+i+',-1)">&#x2212;</button>'+
+        '<span class="cart-qty-val">'+it.qty+'</span>'+
+        '<button class="cart-qty-btn" onclick="_changeQty('+i+',1)">+</button>'+
+      '</div>';
+    if (isCnis) out+='<span class="cart-item-tier">'+it.qty+' pág.</span>';
+    else if (hasTier) out+='<span class="cart-item-tier">'+_tierLabel(it.name,it.qty)+'</span>';
+    out+='<span class="cart-item-price">'+_brl(vt)+'</span>';
+    out+='</div></div>';
+  }
+  el.innerHTML=out;
+  if(tot) tot.textContent=_brl(sum);
+}
+
+function _renderHistory() {
+  var el=document.getElementById('histItems'); if(!el) return;
+  var tc=document.getElementById('tabHistCount'); if(tc) tc.textContent=_atendimentos.length;
+  if (_atendimentos.length===0) {
+    el.innerHTML='<div class="cart-empty" style="margin-top:40px"><span>Nenhum atendimento finalizado</span></div>'; return;
+  }
+  var out='';
+  for(var i=0;i<_atendimentos.length;i++){
+    var h=_atendimentos[i];
+    var lines='';
+    for(var j=0;j<h.items.length;j++){
+      var it=h.items[j];
+      lines+=(j>0?'<br>':'')+(it.qty>1?it.qty+'x ':'')+it.name+' — '+_brl(it.tot);
+    }
+    out+='<div class="hist-item">'+
+      '<div class="hist-item-head">'+
+        '<span class="hist-item-label">Atendimento #'+h.id+'</span>'+
+        '<div style="display:flex;align-items:center;gap:6px">'+
+          '<span class="hist-item-time">'+h.time+'</span>'+
+          '<button onclick="_deleteAten('+i+')" title="Excluir" style="background:none;border:none;cursor:pointer;color:#888;font-size:14px;padding:2px 5px;border-radius:4px">&#x2715;</button>'+
+        '</div>'+
+      '</div>'+
+      '<div class="hist-item-lines">'+lines+'</div>'+
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">'+
+        '<span class="hist-item-total">'+_brl(h.total)+'</span>'+
+        '<button class="hist-item-copy" onclick="_copyAten('+i+')">Copiar</button>'+
+      '</div>'+
+    '</div>';
+  }
+  el.innerHTML=out;
+}
+
+function _renderBadge() {
+  var b=document.getElementById('cartBadge'); if(!b) return;
+  b.textContent=_cart.length;
+  if(_cart.length>0) b.classList.add('show'); else b.classList.remove('show');
+}
+
+function _switchTab(tab) {
+  _tab=tab;
+  var tc=document.getElementById('tabCurrent'), th=document.getElementById('tabHistory');
+  var pc=document.getElementById('panelCurrent'), ph=document.getElementById('panelHistory');
+  if(!tc||!th||!pc||!ph) return;
+  if(tab==='current'){
+    tc.classList.add('active'); th.classList.remove('active');
+    pc.style.display='flex'; ph.style.display='none';
+  } else {
+    th.classList.add('active'); tc.classList.remove('active');
+    ph.style.display='flex'; ph.style.flexDirection='column'; pc.style.display='none';
+    _renderHistory();
+  }
+}
+
+function openCart() {
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  _renderCart();
+}
+function closeCart() {
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+}
+
 </script>
 
 <div class="svc-ov" id="svcOv">
@@ -971,5 +1257,66 @@ function showToast(msg) {
     <div class="svc-foot" id="svcFoot"></div>
   </div>
 </div>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<!-- CART FAB -->
+<button class="cart-fab" onclick="openCart()" title="Carrinho">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+  <span class="cart-badge" id="cartBadge">0</span>
+</button>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true">
+  <div class="cart-head">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-patch)" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <h2>Caixa do Dia</h2>
+    <button class="cart-close" onclick="closeCart()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- ABAS -->
+  <div class="cart-tabs">
+    <button class="cart-tab active" id="tabCurrent" onclick="_switchTab('current')">
+      Atendimento atual <span class="cart-tab-count" id="tabCurrentCount">0</span>
+    </button>
+    <button class="cart-tab" id="tabHistory" onclick="_switchTab('history')">
+      Histórico <span class="cart-tab-count" id="tabHistCount">0</span>
+    </button>
+  </div>
+
+  <!-- ABA ATUAL -->
+  <div id="panelCurrent" style="display:flex;flex-direction:column;flex:1;overflow:hidden">
+    <!-- atalhos rápidos -->
+    <div class="cart-quick">
+      <button class="cart-quick-btn" onclick="quickAdd('Xerox P/B','0,50')">⚡ Xerox P/B</button>
+      <button class="cart-quick-btn" onclick="quickAdd('Impressão P/B (Apenas Frente) [Apostila]','2,50')">⚡ Impressão P/B</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total do atendimento</span>
+        <span class="cart-total-val" id="cartTotal">R$ 0,00</span>
+      </div>
+      <div class="cart-actions">
+        <button class="cart-btn-finish" onclick="finishAttendance()">
+          ✓ Finalizar atendimento
+        </button>
+        <button class="cart-btn-copy" onclick="copyCart()" title="Copiar resumo">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+        <button class="cart-btn-clear" onclick="clearCart()">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABA HISTÓRICO -->
+  <div id="panelHistory" style="display:none;flex:1;overflow-y:auto;padding:12px 16px;flex-direction:column;gap:8px">
+    <div id="histItems"></div>
+  </div>
+</div>
+
 </body>
 </html>
