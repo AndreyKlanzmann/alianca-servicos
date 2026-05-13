@@ -1633,12 +1633,12 @@ function gerarNotinha(idx) {
   }
   var economia = totalSemDesc - h.total;
 
-  var win = window.open('', '_blank', 'width=400,height=600');
+  var win = window.open('', '_blank', 'width=420,height=650,scrollbars=yes');
   win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Comprovante</title>
   <style>
     * { margin:0;padding:0;box-sizing:border-box }
-    body { font-family:'Segoe UI',Arial,sans-serif;background:#fff;padding:0 }
-    .cupom { width:320px;margin:0 auto;padding:20px 16px }
+    body { font-family:'Segoe UI',Arial,sans-serif;background:#f4f4f4;padding:0 }
+    .cupom { width:320px;margin:20px auto;padding:20px 16px;outline:1.5px solid #000;border-radius:0;position:relative }
     .logo-wrap { text-align:center;margin-bottom:8px }
     .logo-wrap img { width:90px;height:90px;object-fit:contain;border-radius:50% }
     .nome-loja { text-align:center;font-size:15px;font-weight:800;color:#1a3a8f;letter-spacing:.5px;margin-bottom:2px }
@@ -1648,14 +1648,18 @@ function gerarNotinha(idx) {
     table { width:100%;border-collapse:collapse;margin:8px 0 }
     .total-row td { padding:8px 6px;font-size:14px;font-weight:800;border-top:2px solid #222 }
     .rodape { text-align:center;font-size:10px;color:#aaa;margin-top:14px;line-height:1.6 }
-    @media print { button { display:none } body { padding:0 } }
+    @media print {
+      button { display:none }
+      body { background:#fff !important; padding:0; margin:0 }
+      .cupom { outline:1.5px solid #000 !important; margin:10px auto !important; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+    }
   </style>
   </head><body>
   <div class="cupom">
+    <div style="position:absolute;top:-10px;right:10px;background:#fff;padding:0 4px;font-size:13px;color:#aaa" title="Recorte aqui">✂</div>
     <div class="logo-wrap"><img src="${LOGO_B64}" alt="Logo"></div>
     <div class="nome-loja">ALIANÇA INFORMÁTICA</div>
-    <div class="subtitulo">Lan House · Papelaria · Eletrônicos</div>
-    <div style="text-align:center;font-size:10px;color:#aaa;margin-top:2px;margin-bottom:4px">CNPJ 41.618.382/0001-07</div>
+    <div class="subtitulo" style="color:#333;font-weight:600">Lan House · Papelaria · Eletrônicos</div>
     <hr class="divider">
     <div class="info-row"><span>Atendimento #${h.id}</span><span>${dataStr} ${h.time}</span></div>
     ${nomeCliente ? '<div class="info-row"><span>Cliente:</span><span style="font-weight:600">' + nomeCliente + '</span></div>' : ''}
@@ -1675,7 +1679,7 @@ function gerarNotinha(idx) {
       <strong style="font-size:11px;color:#444;display:block;margin-bottom:4px">Aliança Informática</strong>
       <span>Rua Diva Garcia, 1963 — Linhares, Juiz de Fora/MG</span><br>
       <span>CNPJ: 41.618.382/0001-07</span><br><br>
-      <span>📞 (32) 9 9141-4783 &nbsp;|&nbsp; 📷 @alianca_informaticajf</span><br><br>
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366" style="vertical-align:middle;margin-right:3px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.833L.057 23.077a.75.75 0 0 0 .92.92l5.244-1.453A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 0 1-4.964-1.355l-.356-.211-3.114.863.863-3.114-.211-.356A9.725 9.725 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>(32) 9 9141-4783 &nbsp;|&nbsp; 📷 @alianca_informaticajf</span><br><br>
       <span style="font-size:10px;color:#bbb">Seg–Sex: 08h às 18h &nbsp;|&nbsp; Sáb: 08h às 12h</span><br><br>
       <span style="font-size:11px;color:#555">Obrigado pela preferência! 😊</span>
     </div>
