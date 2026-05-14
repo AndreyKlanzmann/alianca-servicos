@@ -3848,7 +3848,8 @@ window._verificarLembrete = _verificarLembrete;
     <div class="patch-head" style="flex-wrap:wrap;gap:8px">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a3e8a" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
       <h2 style="margin:0;flex:1">Estoque · <span id="estoqueCount" style="font-weight:400;color:#888;font-size:13px">carregando...</span></h2>
-      <button onclick="_abrirImportSMB()" class="btn-ver" style="padding:8px 12px;background:#01696F;color:#fff;border:none" title="Importar 414 produtos do SMB no Firebase">📥 Importar SMB</button>
+      <button onclick="_abrirImportSMB()" class="btn-ver" style="padding:8px 12px;background:#01696F;color:#fff;border:none" title="Importar produtos do SMB no Firebase">📥 Importar SMB</button>
+      <button onclick="_limparTodosProdutos()" class="btn-ver" style="padding:8px 12px;background:#c0392b;color:#fff;border:none" title="APAGA todos os produtos do Firebase">🗑️ Limpar tudo</button>
       <button onclick="_abrirEditarProduto(null)" class="btn-ver" style="padding:8px 12px;background:#28a745;color:#fff;border:none">➕ Novo produto</button>
       <button onclick="_recarregarEstoque()" class="btn-ver" style="padding:8px 12px">↻ Atualizar</button>
       <button class="patch-close" onclick="fecharEstoque()" aria-label="Fechar">
@@ -4238,6 +4239,35 @@ window._fecharEditarProduto = _fecharEditarProduto;
 window._salvarProdutoUI = _salvarProdutoUI;
 window._excluirProdutoUI = _excluirProdutoUI;
 window._abrirImportSMB = _abrirImportSMB;
+
+/* ---------- Limpar todos os produtos (perigoso) ---------- */
+async function _limparTodosProdutos() {
+  if (!window.firebaseDB) { alert('Firebase não conectado.'); return; }
+  const confirma1 = confirm('⚠️ APAGAR TODOS OS PRODUTOS do Firebase?\n\nIsso apaga a collection "produtos" inteira. Não tem como desfazer.\n\nContinuar?');
+  if (!confirma1) return;
+  const confirma2 = prompt('Pra confirmar, digite APAGAR (em maiúsculo):');
+  if (confirma2 !== 'APAGAR') { alert('Cancelado.'); return; }
+  const btn = event && event.target;
+  if (btn) { btn.disabled = true; btn.textContent = 'Apagando...'; }
+  try {
+    const produtos = await window.carregarProdutos();
+    if (!produtos || produtos.length === 0) { alert('Já estava vazio.'); return; }
+    let apagados = 0;
+    for (const p of produtos) {
+      try { await window.deletarProduto(p.codigo); apagados++; } catch(e){ console.warn('falha ao apagar', p.codigo, e); }
+      if (btn) btn.textContent = `Apagando ${apagados}/${produtos.length}...`;
+    }
+    alert(`✅ ${apagados} produtos apagados do Firebase.\n\nAgora clique em 📥 Importar SMB pra subir a base nova.`);
+    if (typeof _recarregarEstoque === 'function') _recarregarEstoque();
+    if (typeof _renderLoja === 'function') _renderLoja();
+  } catch(err) {
+    console.error(err);
+    alert('Erro ao limpar: ' + err.message);
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '🗑️ Limpar tudo'; }
+  }
+}
+window._limparTodosProdutos = _limparTodosProdutos;
 
 /* ESC fecha overlays do estoque */
 document.addEventListener('keydown', function(e){
