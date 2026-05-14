@@ -291,7 +291,7 @@ a{text-decoration:none;color:inherit}
     </button>
     <button class="btn-patch" onclick="openPatch()" title="Notas de atualização">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      <span>v2.4.1</span>
+      <span>v2.7</span>
     </button>
     <button class="btn-icon" data-theme-toggle aria-label="Alternar tema">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -494,12 +494,80 @@ a{text-decoration:none;color:inherit}
     <div class="patch-head">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-patch)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       <h2>Patch Notes</h2>
-      <span class="patch-version-badge">v2.4.1</span>
+      <span class="patch-version-badge">v2.7</span>
       <button class="patch-close" onclick="closePatch()" aria-label="Fechar">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="patch-body">
+      <div class="patch-entry">
+        <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
+        <div class="patch-content">
+          <div class="patch-version">v2.7</div>
+          <div class="patch-date">14 de maio de 2026</div>
+          <div class="patch-title">Fechamento inteligente de caixa — nunca mais esquecer de fechar o dia</div>
+          <ul class="patch-items">
+            <li>🕧 12:40 — Novo recurso: botão 🔒 Fechar Caixa agora é inteligente — detecta dias em aberto dos últimos 14 dias e abre modal para escolher quais fechar</li>
+            <li>🕧 12:40 — Modal de fechamento: lista cada dia com tag HOJE (azul), ABERTO (vermelho) ou FECHADO (verde, desabilitado)</li>
+            <li>🕧 12:40 — Fechamento em lote: marque vários dias atrasados com checkbox e feche todos de uma vez (com resumo no Telegram pra cada um)</li>
+            <li>🕧 12:40 — Novo recurso: banner laranja no topo do site avisa quando há caixa pendente de dias anteriores</li>
+            <li>🕧 12:40 — Banner: botão “Resolver agora” abre direto o modal de fechamento; “Dispensar” esconde o banner por 1 hora</li>
+            <li>🕧 12:40 — Novo recurso: lembrete automático no Telegram quando o caixa do dia não foi fechado até o horário configurado</li>
+            <li>🕧 12:40 — Lembrete: horário customizável na tela de configuração do Telegram (padrão 18:00) com checkbox para ativar/desativar</li>
+            <li>🕧 12:40 — Lembrete dispara segunda a sábado (pula domingo) e só envia se houver atendimentos registrados no dia</li>
+            <li>🕧 12:40 — Anti-duplicidade do lembrete: log separado garante que não envia 2 vezes no mesmo dia</li>
+            <li>🕧 12:40 — Verificação de pendências automática: ao abrir o site e a cada 15 minutos enquanto estiver aberto</li>
+            <li>🕧 12:40 — Dia HOJE em destaque visual no modal (borda azul) para diferenciar fechamento normal vs. retroativo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="patch-entry">
+        <div class="patch-timeline"><div class="patch-dot"></div><div class="patch-line"></div></div>
+        <div class="patch-content">
+          <div class="patch-version">v2.6</div>
+          <div class="patch-date">14 de maio de 2026</div>
+          <div class="patch-title">Dashboard nativo + Notificações automáticas no Telegram</div>
+          <ul class="patch-items">
+            <li>🕚 12:15 — Novo recurso: Dashboard de Vendas nativo no site — KPIs, gráficos e Top 5 serviços puxando do Firebase em tempo real</li>
+            <li>🕚 12:15 — Dashboard: 4 cards de KPI (Faturamento, Atendimentos, Ticket Médio, Itens Vendidos) com cores Aliança</li>
+            <li>🕚 12:15 — Dashboard: seletor de período (Hoje, 7 dias, 30 dias, Mês atual) com atualização instantânea</li>
+            <li>🕚 12:15 — Dashboard: gráfico de linha de faturamento por dia + barras horizontais de receita por serviço (Chart.js)</li>
+            <li>🕚 12:15 — Novo botão flutuante 📈 (canto inferior direito) para abrir Dashboard a qualquer momento</li>
+            <li>🕚 12:15 — Novo recurso: integração com Telegram — envia resumos automáticos pro celular</li>
+            <li>🕚 12:15 — Telegram: tela de configuração com tutorial passo a passo (BotFather + userinfobot)</li>
+            <li>🕚 12:15 — Telegram: botão de teste antes de salvar para validar TOKEN e CHAT ID</li>
+            <li>🕚 12:15 — Telegram: credenciais salvas no localStorage do navegador (não ficam no código do GitHub Pages)</li>
+            <li>🕚 12:15 — Novo recurso: botão 🔒 Fechar Caixa do Dia — encerra o dia e envia resumo no Telegram em 1 clique</li>
+            <li>🕚 12:15 — Agendamento automático semanal: toda segunda após 8h envia resumo da semana anterior</li>
+            <li>🕚 12:15 — Agendamento automático mensal: todo dia 1º após 8h envia resumo do mês anterior</li>
+            <li>🕚 12:15 — Anti-duplicidade: log de envios em localStorage para não mandar o mesmo resumo 2 vezes</li>
+            <li>🕚 12:15 — Botões manuais no Dashboard para enviar resumo do dia, semana ou mês a qualquer momento</li>
+          </ul>
+        </div>
+      </div>
+      <div class="patch-entry">
+        <div class="patch-timeline"><div class="patch-dot"></div><div class="patch-line"></div></div>
+        <div class="patch-content">
+          <div class="patch-version">v2.5</div>
+          <div class="patch-date">14 de maio de 2026</div>
+          <div class="patch-title">PDV completo com Firebase — histórico, sincronização e export CSV</div>
+          <ul class="patch-items">
+            <li>🕙 10:08 — Novo recurso: cancelar venda no site agora exclui também do Firebase (sincronização garantida)</li>
+            <li>🕙 10:08 — Novo recurso: histórico do site mostra apenas atendimentos do dia atual; Firebase guarda tudo permanentemente</li>
+            <li>🕙 10:08 — Novo recurso: virada automática de dia — à meia-noite o histórico do site se atualiza sozinho</li>
+            <li>🕙 10:08 — Novo recurso: badges de sincronização no histórico (⏳ salvando, ✓ salvo, ⚠ erro)</li>
+            <li>🕙 10:08 — Novo recurso: botão “✕ Cancelar” explícito em cada atendimento, com confirmação detalhada</li>
+            <li>🕙 10:08 — Fix crítico: data do atendimento agora usa fuso local (corrige bug que jogava vendas da madrugada pro dia anterior)</li>
+            <li>🕙 10:08 — Fix: exclusão no Firebase agora é transacional — se falhar a rede, o atendimento NÃO é removido do site (sem perda silenciosa)</li>
+            <li>🕙 10:15 — Novo recurso: 📅 Histórico Anterior — consulta atendimentos de dias passados direto do Firebase com filtro por período</li>
+            <li>🕙 10:15 — Histórico Anterior: presets rápidos (Hoje, Ontem, 7 dias, 30 dias) + resumo com total, média/dia e itens vendidos</li>
+            <li>🕙 10:15 — Histórico Anterior: agrupamento por dia + botão de exclusão individual por atendimento</li>
+            <li>🕙 10:15 — Novo recurso: 📊 Exportar CSV — planilha completa com 4 seções (Itens, Atendimentos, Resumo por Dia, Ranking de Serviços)</li>
+            <li>🕙 10:15 — CSV: BOM UTF-8 para acentos no Excel + separador pt-BR (ponto e vírgula) ou internacional (vírgula)</li>
+            <li>🕙 10:15 — CSV: inclui Data, Dia da Semana, Hora, Serviço, Qtd, Valor Unitário, Total do Item, Ticket Médio, % do Faturamento e Doc ID Firebase</li>
+          </ul>
+        </div>
+      </div>
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot"></div><div class="patch-line"></div></div>
         <div class="patch-content">
@@ -1165,6 +1233,14 @@ function _itemTotal(item) {
 function _brl(v) { return 'R$ ' + v.toFixed(2).replace('.',','); }
 function _now() { var d=new Date(); return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2); }
 function _parsePrice(s) { if(!s) return 0; var m=s.match(/[0-9]+[,.]?[0-9]*/); return m ? parseFloat(m[0].replace(',','.')) : 0; }
+// Data ISO LOCAL (YYYY-MM-DD) — evita problema de fuso horário que .toISOString() causa no Brasil
+function _todayISO() {
+  var d = new Date();
+  var y = d.getFullYear();
+  var m = ('0' + (d.getMonth() + 1)).slice(-2);
+  var dd = ('0' + d.getDate()).slice(-2);
+  return y + '-' + m + '-' + dd;
+}
 
 function addToCart(name, priceStr) {
   var ex = null;
@@ -1182,114 +1258,266 @@ function _changeQty(idx, delta) {
   _renderCart(); _renderBadge();
 }
 function clearCart() {
-  if (_cart.length===0) return;
+  if (_cart.length === 0) return;
   if (!confirm('Cancelar atendimento atual?')) return;
-  _cart=[]; _renderCart(); _renderBadge();
+  _cart = [];
+  _renderCart();
+  _renderBadge();
 }
-function finishAttendance() {
-  if (_cart.length===0) { alert('Nenhum serviço adicionado!'); return; }
+
+async function finishAttendance() {
+  if (_cart.length === 0) {
+    alert('Nenhum serviço adicionado!');
+    return;
+  }
+
   _atenCount++;
-  var tot = 0; for (var i=0;i<_cart.length;i++) tot+=_itemTotal(_cart[i]);
+
+  var tot = 0;
+  for (var i = 0; i < _cart.length; i++) tot += _itemTotal(_cart[i]);
+
   var saved = [];
-  for (var i=0;i<_cart.length;i++) saved.push({name:_cart[i].name, qty:_cart[i].qty, tot:_itemTotal(_cart[i])});
-  _atendimentos.unshift({id:_atenCount, time:_now(), items:saved, total:tot});
+  for (var i = 0; i < _cart.length; i++) {
+    saved.push({
+      name: _cart[i].name,
+      qty: _cart[i].qty,
+      tot: _itemTotal(_cart[i])
+    });
+  }
+
+  var agora = new Date();
+  var dataISO = _todayISO();
+  var hora = agora.toTimeString().slice(0, 5);
+
+  var at = {
+    id: _atenCount,
+    time: _now(),
+    items: saved,
+    total: tot,
+    data: dataISO,
+    hora: hora,
+    _syncStatus: 'saving' // saving | saved | error
+  };
+
+  _atendimentos.unshift(at);
   _cart = [];
   _renderCart();
   _renderBadge();
   _switchTab('history');
-}
-function copyCart() {
-  if (_cart.length===0) { alert('Carrinho vazio!'); return; }
-  var tot=0; for(var i=0;i<_cart.length;i++) tot+=_itemTotal(_cart[i]);
-  var lines=['Resumo do Atendimento'];
-  for(var i=0;i<_cart.length;i++){
-    var it=_cart[i]; lines.push('- '+it.name+(it.qty>1?' (x'+it.qty+')':'')+' — '+_brl(_itemTotal(it)));
+  _updateDayTotal();
+
+  // Salva no Firestore e aguarda confirmação
+  if (window.salvarAtendimento) {
+    try {
+      await window.salvarAtendimento(at);
+      at._syncStatus = 'saved';
+    } catch (e) {
+      console.error('Falha ao salvar no Firestore:', e);
+      at._syncStatus = 'error';
+    }
+    _renderHistory();
+  } else {
+    at._syncStatus = 'error';
+    _renderHistory();
   }
-  lines.push('Total: '+_brl(tot));
-  navigator.clipboard.writeText(lines.join('\n')).then(function(){
-    var b=document.querySelector('.cart-btn-copy'); if(!b) return;
-    var o=b.innerHTML; b.textContent='✓'; setTimeout(function(){b.innerHTML=o;},1800);
-  });
-}
-function _copyAten(idx) {
-  var h=_atendimentos[idx];
-  var lines=['Resumo do Atendimento #'+h.id+' ('+h.time+')'];
-  for(var i=0;i<h.items.length;i++){
-    var it=h.items[i]; lines.push('- '+it.name+(it.qty>1?' (x'+it.qty+')':'')+' — '+_brl(it.tot));
-  }
-  lines.push('Total: '+_brl(h.total));
-  navigator.clipboard.writeText(lines.join('\n')).then(function(){
-    var btns=document.querySelectorAll('.hist-item-copy'); if(btns[idx]){var o=btns[idx].textContent; btns[idx].textContent='✓ Copiado!'; setTimeout(function(){btns[idx].textContent=o;},1800);}
-  });
-}
-function _deleteAten(idx) {
-  if (!confirm('Excluir Atendimento #'+_atendimentos[idx].id+'?')) return;
-  _atendimentos.splice(idx,1); _renderHistory(); _renderBadge(); _updateDayTotal();
 }
 
 function _renderCart() {
-  var el=document.getElementById('cartItems'); if(!el) return;
-  var tot=document.getElementById('cartTotal');
-  var tc=document.getElementById('tabCurrentCount'); if(tc) tc.textContent=_cart.length;
-  if (_cart.length===0) {
-    el.innerHTML='<div class="cart-empty"><span>Nenhum serviço adicionado</span></div>';
-    if(tot) tot.textContent='R$ 0,00'; return;
+  var el = document.getElementById('cartItems');
+  if (!el) return;
+
+  var tot = document.getElementById('cartTotal');
+  var tc = document.getElementById('tabCurrentCount');
+  if (tc) tc.textContent = _cart.length;
+
+  if (_cart.length === 0) {
+    el.innerHTML = '<div class="cart-empty"><span>Nenhum serviço adicionado</span></div>';
+    if (tot) tot.textContent = 'R$ 0,00';
+    return;
   }
-  var sum=0, out='';
-  for(var i=0;i<_cart.length;i++){
-    var it=_cart[i], vt=_itemTotal(it); sum+=vt;
-    var isCnis=(it.name===CNIS_KEY), hasTier=!!TIERS[it.name];
-    out+='<div class="cart-item">'+
-      '<div class="cart-item-top"><span class="cart-item-name">'+it.name+'</span>'+
-      '<button class="cart-item-remove" onclick="_removeItem('+i+')">&#x2715;</button></div>'+
-      '<div class="cart-item-bottom">'+
-      '<div class="cart-qty">'+
-        '<button class="cart-qty-btn" onclick="_changeQty('+i+',-1)">&#x2212;</button>'+
-        '<span class="cart-qty-val">'+it.qty+'</span>'+
-        '<button class="cart-qty-btn" onclick="_changeQty('+i+',1)">+</button>'+
-      '</div>';
-    if (isCnis) out+='<span class="cart-item-tier">'+it.qty+' pág.</span>';
-    else if (hasTier) out+='<span class="cart-item-tier">'+_tierLabel(it.name,it.qty)+'</span>';
-    out+='<span class="cart-item-price">'+_brl(vt)+'</span>';
-    out+='</div></div>';
+
+  var sum = 0, out = '';
+  for (var i = 0; i < _cart.length; i++) {
+    var it = _cart[i], vt = _itemTotal(it); sum += vt;
+    var isCnis = (it.name === CNIS_KEY), hasTier = !!TIERS[it.name];
+    out += '<div class="cart-item">' +
+      '<div class="cart-item-top"><span class="cart-item-name">' + it.name + '</span>' +
+        '<button class="cart-item-remove" onclick="_removeItem(' + i + ')">&#x2715;</button></div>' +
+      '<div class="cart-item-bottom">' +
+        '<div class="cart-qty">' +
+          '<button class="cart-qty-btn" onclick="_changeQty(' + i + ',-1)">&#x2212;</button>' +
+          '<span class="cart-qty-val">' + it.qty + '</span>' +
+          '<button class="cart-qty-btn" onclick="_changeQty(' + i + ',1)">+</button>' +
+        '</div>';
+    if (isCnis) out += '<span class="cart-item-tier">' + it.qty + ' pág.</span>';
+    else if (hasTier) out += '<span class="cart-item-tier">' + _tierLabel(it.name, it.qty) + '</span>';
+    out += '<span class="cart-item-price">' + _brl(vt) + '</span>';
+    out += '</div></div>';
   }
-  el.innerHTML=out;
-  if(tot) tot.textContent=_brl(sum);
+
+  el.innerHTML = out;
+  if (tot) tot.textContent = _brl(sum);
+}
+
+function copyCart() {
+  if (_cart.length === 0) {
+    alert('Carrinho vazio!');
+    return;
+  }
+  var tot = 0;
+  for (var i = 0; i < _cart.length; i++) tot += _itemTotal(_cart[i]);
+  var lines = ['Resumo do Atendimento'];
+  for (var i = 0; i < _cart.length; i++) {
+    var it = _cart[i];
+    lines.push('- ' + it.name + (it.qty > 1 ? ' (x' + it.qty + ')' : '') + ' — ' + _brl(_itemTotal(it)));
+  }
+  lines.push('Total: ' + _brl(tot));
+  navigator.clipboard.writeText(lines.join('\n')).then(function () {
+    var b = document.querySelector('.cart-btn-copy');
+    if (!b) return;
+    var o = b.innerHTML;
+    b.textContent = '✓';
+    setTimeout(function () { b.innerHTML = o; }, 1800);
+  });
+}
+
+// NÃO DEVE ter nenhum "});" aqui
+// Próxima função logo em seguida:
+
+function _copyAten(idx) {
+  var h = _atendimentos[idx];
+  var lines = ['Resumo do Atendimento #' + h.id + ' (' + h.time + ')'];
+  for (var i = 0; i < h.items.length; i++) {
+    var it = h.items[i];
+    lines.push('- ' + it.name + (it.qty > 1 ? ' (x' + it.qty + ')' : '') + ' — ' + _brl(it.tot));
+  }
+  lines.push('Total: ' + _brl(h.total));
+  navigator.clipboard.writeText(lines.join('\n')).then(function () {
+    var btns = document.querySelectorAll('.hist-item-copy');
+    if (btns[idx]) {
+      var o = btns[idx].textContent;
+      btns[idx].textContent = '✓ Copiado!';
+      setTimeout(function () { btns[idx].textContent = o; }, 1800);
+    }
+  });
+}
+
+async function _deleteAten(idx) {
+  var h = _atendimentos[idx];
+  if (!h) return;
+  var labelId = (h.id != null) ? h.id : (idx + 1);
+  if (!confirm('Cancelar / excluir Atendimento #' + labelId + ' (' + _brl(h.total) + ')?\n\nIsso vai apagar do site E do banco de dados Firebase.\nEssa ação não pode ser desfeita.')) return;
+
+  // Se ainda está salvando, espera um pouco
+  if (h._syncStatus === 'saving') {
+    var waited = 0;
+    while (h._syncStatus === 'saving' && waited < 5000) {
+      await new Promise(function(r){ setTimeout(r, 200); });
+      waited += 200;
+    }
+  }
+
+  // Marca como excluindo (feedback visual)
+  h._syncStatus = 'deleting';
+  _renderHistory();
+
+  // Tenta excluir do Firestore PRIMEIRO
+  if (h._docId && typeof h._docId === "string" && window.excluirAtendimento) {
+    try {
+      await window.excluirAtendimento(h._docId);
+      console.log("Apagado do Firestore:", h._docId);
+    } catch (e) {
+      console.error("Erro ao excluir no Firestore:", e);
+      h._syncStatus = 'error';
+      _renderHistory();
+      alert('Erro ao excluir do Firebase. O atendimento NÃO foi removido.\n\nVerifique sua conexão e tente novamente.\n\nDetalhe: ' + (e && e.message ? e.message : e));
+      return;
+    }
+  } else if (!h._docId) {
+    // Não tem _docId — nunca foi salvo (talvez offline). Permite excluir só local.
+    console.warn('Atendimento sem _docId — removendo apenas localmente.');
+  }
+
+  // Só remove local depois de confirmado no Firestore (ou se nunca foi salvo)
+  _atendimentos.splice(idx, 1);
+  _renderHistory();
+  _renderBadge();
+  _updateDayTotal();
+}
+
+// Retorna apenas os atendimentos do dia atual (filtra fora os de outros dias)
+function _atendimentosDoDia() {
+  var hoje = _todayISO();
+  var lista = [];
+  for (var i = 0; i < _atendimentos.length; i++) {
+    var a = _atendimentos[i];
+    // Se não tem data, considera de hoje (compat. com itens antigos)
+    if (!a.data || a.data === hoje) lista.push({ _origIdx: i, item: a });
+  }
+  return lista;
 }
 
 function _renderHistory() {
-  var el=document.getElementById('histItems'); if(!el) return;
-  var tc=document.getElementById('tabHistCount'); if(tc) tc.textContent=_atendimentos.length;
-  if (_atendimentos.length===0) {
-    el.innerHTML='<div class="cart-empty" style="margin-top:40px"><span>Nenhum atendimento finalizado</span></div>'; return;
+  var el = document.getElementById('histItems');
+  if (!el) return;
+
+  var visiveis = _atendimentosDoDia();
+
+  var tc = document.getElementById('tabHistCount');
+  if (tc) tc.textContent = visiveis.length;
+
+  if (visiveis.length === 0) {
+    el.innerHTML = '<div class="cart-empty" style="margin-top:40px"><span>Nenhum atendimento finalizado hoje</span></div>';
+    return;
   }
-  var out='';
-  for(var i=0;i<_atendimentos.length;i++){
-    var h=_atendimentos[i];
-    var lines='';
-    for(var j=0;j<h.items.length;j++){
-      var it=h.items[j];
-      lines+=(j>0?'<br>':'')+(it.qty>1?it.qty+'x ':'')+it.name+' — '+_brl(it.tot);
+
+  var out = '';
+  for (var v = 0; v < visiveis.length; v++) {
+    var h = visiveis[v].item;
+    var realIdx = visiveis[v]._origIdx; // índice em _atendimentos (para passar nos onclicks)
+    var labelId = (h.id != null) ? h.id : (realIdx + 1);
+
+    var lines = '';
+    for (var j = 0; j < h.items.length; j++) {
+      var it = h.items[j];
+      lines += (j > 0 ? '<br>' : '') +
+        (it.qty > 1 ? it.qty + 'x ' : '') +
+        it.name + ' — ' + _brl(it.tot);
     }
-    out+='<div class="hist-item">'+
-      '<div class="hist-item-head">'+
-        '<span class="hist-item-label">Atendimento #'+h.id+'</span>'+
-        '<div style="display:flex;align-items:center;gap:6px">'+
-          '<span class="hist-item-time">'+h.time+'</span>'+
-          '<button onclick="_deleteAten('+i+')" title="Excluir" style="background:none;border:none;cursor:pointer;color:#888;font-size:14px;padding:2px 5px;border-radius:4px">&#x2715;</button>'+
-        '</div>'+
-      '</div>'+
-      '<div class="hist-item-lines">'+lines+'</div>'+
-      '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">'+
-        '<span class="hist-item-total">'+_brl(h.total)+'</span>'+
-        '<div style="display:flex;gap:6px">'+
-          '<button class="hist-item-copy" onclick="_copyAten('+i+')">Copiar</button>'+
-          '<button onclick="gerarNotinha('+i+')" class="btn-notinha">🧾 Notinha</button>'+
-        '</div>'+
-      '</div>'+
+
+    // Indicador visual de status de sincronização
+    var syncBadge = '';
+    if (h._syncStatus === 'saving') {
+      syncBadge = '<span title="Salvando no Firebase..." style="font-size:10px;color:#b08a3a;background:#fff8e6;padding:1px 6px;border-radius:8px;font-weight:700">⏳ salvando</span>';
+    } else if (h._syncStatus === 'deleting') {
+      syncBadge = '<span title="Excluindo do Firebase..." style="font-size:10px;color:#a12c7b;background:#fde6f3;padding:1px 6px;border-radius:8px;font-weight:700">⏳ excluindo</span>';
+    } else if (h._syncStatus === 'error') {
+      syncBadge = '<span title="Erro de sincronização" style="font-size:10px;color:#a12c7b;background:#fde6f3;padding:1px 6px;border-radius:8px;font-weight:700">⚠ erro</span>';
+    } else if (h._docId) {
+      syncBadge = '<span title="Salvo no Firebase" style="font-size:10px;color:#437a22;background:#e9f3df;padding:1px 6px;border-radius:8px;font-weight:700">✓ salvo</span>';
+    }
+
+    out += '<div class="hist-item">' +
+      '<div class="hist-item-head">' +
+        '<span class="hist-item-label">Atendimento #' + labelId + '</span>' +
+        '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end">' +
+          syncBadge +
+          '<span class="hist-item-time">' + (h.time || '') + '</span>' +
+          '<button onclick="_deleteAten(' + realIdx + ')" title="Cancelar venda (apaga do site e do Firebase)" style="background:none;border:none;cursor:pointer;color:#888;font-size:14px;padding:2px 5px;border-radius:4px">&#x2715;</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="hist-item-lines">' + lines + '</div>' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;gap:6px;flex-wrap:wrap">' +
+        '<span class="hist-item-total">' + _brl(h.total) + '</span>' +
+        '<div style="display:flex;gap:6px;flex-wrap:wrap">' +
+          '<button class="hist-item-copy" onclick="_copyAten(' + realIdx + ')">Copiar</button>' +
+          '<button onclick="gerarNotinha(' + realIdx + ')" class="btn-notinha">🧾 Notinha</button>' +
+          '<button onclick="_deleteAten(' + realIdx + ')" title="Cancelar venda" style="padding:5px 10px;border-radius:6px;background:#fee2e2;color:#a12c7b;border:1px solid #f5b8c8;cursor:pointer;font-size:11px;font-weight:700">✕ Cancelar</button>' +
+        '</div>' +
+      '</div>' +
     '</div>';
   }
-  el.innerHTML=out;
+  el.innerHTML = out;
 }
 
 function _renderBadge() {
@@ -1438,10 +1666,11 @@ function _updateDayTotal() {
   var val = document.getElementById('dayTotalVal');
   var clients = document.getElementById('dayTotalClients');
   if (!val || !clients) return;
+  var visiveis = _atendimentosDoDia();
   var sum = 0;
-  for (var i = 0; i < _atendimentos.length; i++) sum += _atendimentos[i].total;
+  for (var i = 0; i < visiveis.length; i++) sum += (visiveis[i].item.total || 0);
   val.textContent = 'R$ ' + sum.toFixed(2).replace('.',',');
-  var n = _atendimentos.length;
+  var n = visiveis.length;
   clients.textContent = n + ' atendimento' + (n !== 1 ? 's' : '');
 }
 
@@ -1454,6 +1683,8 @@ document.addEventListener('keydown', function(e) {
     closeQuickMode();
     closeCart();
     closePatch();
+    fecharHistoricoAnterior();
+    fecharExportCSV();
     var ov = document.getElementById('svcOv');
     if (ov) ov.classList.remove('open');
   }
@@ -1468,6 +1699,364 @@ document.addEventListener('keydown', function(e) {
     else openCart();
   }
 });
+
+//  HISTÓRICO ANTERIOR (DIAS PASSADOS)
+
+function abrirHistoricoAnterior() {
+  document.getElementById('histAntOverlay').classList.add('open');
+  // pré-preenche com ontem → hoje
+  var hoje = _todayISO();
+  var ontem = new Date(); ontem.setDate(ontem.getDate() - 7);
+  var ontemISO = ontem.getFullYear()+'-'+('0'+(ontem.getMonth()+1)).slice(-2)+'-'+('0'+ontem.getDate()).slice(-2);
+  var di = document.getElementById('histAntDataIni');
+  var df = document.getElementById('histAntDataFim');
+  if (di && !di.value) di.value = ontemISO;
+  if (df && !df.value) df.value = hoje;
+}
+function fecharHistoricoAnterior() {
+  document.getElementById('histAntOverlay').classList.remove('open');
+}
+function _histAntPreset(dias) {
+  var hoje = new Date();
+  var hojeISO = hoje.getFullYear()+'-'+('0'+(hoje.getMonth()+1)).slice(-2)+'-'+('0'+hoje.getDate()).slice(-2);
+  var di = document.getElementById('histAntDataIni');
+  var df = document.getElementById('histAntDataFim');
+  if (dias === 0) { di.value = hojeISO; df.value = hojeISO; }
+  else if (dias === 1) {
+    var ontem = new Date(); ontem.setDate(ontem.getDate() - 1);
+    var ontemISO = ontem.getFullYear()+'-'+('0'+(ontem.getMonth()+1)).slice(-2)+'-'+('0'+ontem.getDate()).slice(-2);
+    di.value = ontemISO; df.value = ontemISO;
+  } else {
+    var ini = new Date(); ini.setDate(ini.getDate() - (dias - 1));
+    var iniISO = ini.getFullYear()+'-'+('0'+(ini.getMonth()+1)).slice(-2)+'-'+('0'+ini.getDate()).slice(-2);
+    di.value = iniISO; df.value = hojeISO;
+  }
+  buscarHistoricoAnterior();
+}
+
+async function buscarHistoricoAnterior() {
+  var di = document.getElementById('histAntDataIni').value;
+  var df = document.getElementById('histAntDataFim').value;
+  var lista = document.getElementById('histAntLista');
+  var resumo = document.getElementById('histAntResumo');
+  if (!di || !df) { alert('Selecione as datas de início e fim'); return; }
+  if (di > df) { alert('Data inicial deve ser anterior à final'); return; }
+  if (!window.carregarAtendimentosPorPeriodo) { alert('Firebase não disponível'); return; }
+
+  lista.innerHTML = '<div style="text-align:center;color:var(--color-text-muted);font-size:13px;padding:30px">⏳ Buscando no Firebase...</div>';
+  resumo.style.display = 'none';
+
+  try {
+    var dados = await window.carregarAtendimentosPorPeriodo(di, df);
+    if (dados.length === 0) {
+      lista.innerHTML = '<div style="text-align:center;color:var(--color-text-muted);font-size:13px;padding:30px">Nenhum atendimento no período</div>';
+      return;
+    }
+
+    // Resumo geral
+    var totalGeral = 0, totalItens = 0;
+    var porDia = {};
+    for (var i = 0; i < dados.length; i++) {
+      totalGeral += (dados[i].total || 0);
+      for (var j = 0; j < dados[i].items.length; j++) totalItens += dados[i].items[j].qty || 0;
+      var dt = dados[i].data;
+      if (!porDia[dt]) porDia[dt] = { total: 0, n: 0 };
+      porDia[dt].total += dados[i].total || 0;
+      porDia[dt].n++;
+    }
+    var diasUnicos = Object.keys(porDia).length;
+    resumo.style.display = 'flex';
+    resumo.innerHTML =
+      '<div><strong style="color:#2a7a2a;font-size:18px">' + _brl(totalGeral) + '</strong><br><span style="font-size:11px;color:#555">Total no período</span></div>' +
+      '<div><strong>' + dados.length + '</strong><br><span style="font-size:11px;color:#555">Atendimentos</span></div>' +
+      '<div><strong>' + totalItens + '</strong><br><span style="font-size:11px;color:#555">Itens vendidos</span></div>' +
+      '<div><strong>' + diasUnicos + '</strong><br><span style="font-size:11px;color:#555">Dia' + (diasUnicos!==1?'s':'') + ' com vendas</span></div>' +
+      '<div><strong>' + _brl(totalGeral / Math.max(1, diasUnicos)) + '</strong><br><span style="font-size:11px;color:#555">Média / dia</span></div>';
+
+    // Agrupar por dia
+    var grupos = {};
+    for (var i = 0; i < dados.length; i++) {
+      var d = dados[i].data || '----';
+      if (!grupos[d]) grupos[d] = [];
+      grupos[d].push(dados[i]);
+    }
+    var datas = Object.keys(grupos).sort().reverse(); // mais recente em cima
+
+    var html = '';
+    for (var k = 0; k < datas.length; k++) {
+      var dia = datas[k];
+      var ats = grupos[dia];
+      var totDia = 0;
+      for (var i = 0; i < ats.length; i++) totDia += ats[i].total || 0;
+      // formato pt-BR da data
+      var partes = dia.split('-');
+      var dataFmt = partes[2] + '/' + partes[1] + '/' + partes[0];
+
+      html += '<div style="border:1px solid var(--color-border);border-radius:8px;overflow:hidden;background:var(--color-surface)">' +
+        '<div style="background:var(--color-surface-offset);padding:8px 12px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:13px;border-bottom:1px solid var(--color-border)">' +
+          '<span>📅 ' + dataFmt + ' — ' + ats.length + ' atendimento' + (ats.length!==1?'s':'') + '</span>' +
+          '<span style="color:var(--color-success);font-weight:800">' + _brl(totDia) + '</span>' +
+        '</div>' +
+        '<div style="padding:8px 12px;display:flex;flex-direction:column;gap:6px">';
+      for (var i = 0; i < ats.length; i++) {
+        var a = ats[i];
+        var resItens = '';
+        for (var j = 0; j < a.items.length; j++) {
+          resItens += (j > 0 ? ', ' : '') + (a.items[j].qty > 1 ? a.items[j].qty + 'x ' : '') + a.items[j].name;
+        }
+        html += '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px;background:var(--color-bg);border-radius:6px;font-size:12px">' +
+          '<div style="flex:1;min-width:0"><strong>#' + (a.id || '-') + '</strong> <span style="color:var(--color-text-muted)">' + (a.hora || a.time || '') + '</span><br><span style="color:var(--color-text-muted);font-size:11px">' + resItens + '</span></div>' +
+          '<span style="font-weight:700;color:var(--color-primary)">' + _brl(a.total) + '</span>' +
+          '<button onclick="_excluirHistoricoAnterior(\'' + a._docId + '\', this)" title="Excluir do Firebase" style="padding:4px 8px;border-radius:4px;background:#fee2e2;color:#a12c7b;border:1px solid #f5b8c8;cursor:pointer;font-size:10px;font-weight:700">✕</button>' +
+        '</div>';
+      }
+      html += '</div></div>';
+    }
+    lista.innerHTML = html;
+  } catch (e) {
+    lista.innerHTML = '<div style="text-align:center;color:var(--color-error);font-size:13px;padding:30px">Erro: ' + (e.message || e) + '</div>';
+  }
+}
+
+async function _excluirHistoricoAnterior(docId, btn) {
+  if (!docId) return;
+  if (!confirm('Excluir esse atendimento do Firebase?\nEssa ação não pode ser desfeita.')) return;
+  try {
+    btn.disabled = true; btn.textContent = '...';
+    await window.excluirAtendimento(docId);
+    // também remove do _atendimentos local (se existir)
+    for (var i = _atendimentos.length - 1; i >= 0; i--) {
+      if (_atendimentos[i]._docId === docId) {
+        _atendimentos.splice(i, 1);
+      }
+    }
+    _renderHistory();
+    _updateDayTotal();
+    buscarHistoricoAnterior(); // recarrega a lista
+  } catch (e) {
+    alert('Erro ao excluir: ' + (e.message || e));
+    btn.disabled = false; btn.textContent = '✕';
+  }
+}
+
+//  EXPORTAR CSV
+
+function abrirExportCSV() {
+  document.getElementById('exportCsvOverlay').classList.add('open');
+  var hoje = _todayISO();
+  var di = document.getElementById('csvDataIni');
+  var df = document.getElementById('csvDataFim');
+  if (di && !di.value) {
+    var ini = new Date(); ini.setDate(ini.getDate() - 29);
+    di.value = ini.getFullYear()+'-'+('0'+(ini.getMonth()+1)).slice(-2)+'-'+('0'+ini.getDate()).slice(-2);
+  }
+  if (df && !df.value) df.value = hoje;
+  document.getElementById('csvStatus').style.display = 'none';
+}
+function fecharExportCSV() {
+  document.getElementById('exportCsvOverlay').classList.remove('open');
+}
+function _csvPreset(dias) {
+  var hoje = new Date();
+  var hojeISO = hoje.getFullYear()+'-'+('0'+(hoje.getMonth()+1)).slice(-2)+'-'+('0'+hoje.getDate()).slice(-2);
+  var di = document.getElementById('csvDataIni');
+  var df = document.getElementById('csvDataFim');
+  if (dias === -1) { di.value = '2020-01-01'; df.value = hojeISO; }
+  else if (dias === 0) { di.value = hojeISO; df.value = hojeISO; }
+  else {
+    var ini = new Date(); ini.setDate(ini.getDate() - (dias - 1));
+    di.value = ini.getFullYear()+'-'+('0'+(ini.getMonth()+1)).slice(-2)+'-'+('0'+ini.getDate()).slice(-2);
+    df.value = hojeISO;
+  }
+}
+
+// Escapa um valor para CSV (RFC 4180): aspas duplas, escapa aspas internas, etc.
+function _csvEsc(v, sep) {
+  if (v === null || v === undefined) return '';
+  var s = String(v);
+  if (s.indexOf('"') !== -1 || s.indexOf(sep) !== -1 || s.indexOf('\n') !== -1 || s.indexOf('\r') !== -1) {
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
+  return s;
+}
+
+async function exportarCSV() {
+  var di = document.getElementById('csvDataIni').value;
+  var df = document.getElementById('csvDataFim').value;
+  var incItens = document.getElementById('csvIncluirItens').checked;
+  var incResumo = document.getElementById('csvIncluirResumo').checked;
+  var sepVirgula = document.getElementById('csvSepVirgula').checked;
+  var status = document.getElementById('csvStatus');
+  var btn = document.getElementById('csvBtnDownload');
+
+  if (!di || !df) { alert('Selecione as datas'); return; }
+  if (di > df) { alert('Data inicial deve ser anterior à final'); return; }
+  if (!window.carregarAtendimentosPorPeriodo) { alert('Firebase não disponível'); return; }
+
+  // separador: ponto e vírgula (padrão Excel pt-BR) ou vírgula
+  var SEP = sepVirgula ? ',' : ';';
+  // decimais: se sep é vírgula, decimais com ponto. Senão, decimais com vírgula (pt-BR).
+  var dec = sepVirgula ? '.' : ',';
+  function fmtMoney(v) { return (Number(v) || 0).toFixed(2).replace('.', dec); }
+  function fmtNum(v) { return String(Number(v) || 0); }
+
+  btn.disabled = true; btn.textContent = '⏳ Buscando...';
+  status.style.display = 'block';
+  status.style.background = '#fff8e6'; status.style.color = '#b08a3a';
+  status.textContent = 'Carregando dados do Firebase...';
+
+  try {
+    var dados = await window.carregarAtendimentosPorPeriodo(di, df);
+    if (dados.length === 0) {
+      status.style.background = '#fee2e2'; status.style.color = '#a12c7b';
+      status.textContent = 'Nenhum atendimento encontrado no período';
+      btn.disabled = false; btn.textContent = '⬇ Baixar Planilha';
+      return;
+    }
+
+    btn.textContent = '⏳ Gerando planilha...';
+    status.textContent = 'Gerando planilha com ' + dados.length + ' atendimento(s)...';
+
+    var linhas = [];
+    // Cabeçalho de metadados (comentários iníciais)
+    var hoje = new Date();
+    linhas.push(_csvEsc('Aliança Informática — Relatório de Atendimentos', SEP));
+    linhas.push(_csvEsc('Período: ' + di.split('-').reverse().join('/') + ' até ' + df.split('-').reverse().join('/'), SEP));
+    linhas.push(_csvEsc('Gerado em: ' + hoje.toLocaleString('pt-BR'), SEP));
+    linhas.push(_csvEsc('Total de atendimentos: ' + dados.length, SEP));
+    var totGeral = 0; var totQty = 0;
+    for (var i = 0; i < dados.length; i++) {
+      totGeral += dados[i].total || 0;
+      for (var j = 0; j < dados[i].items.length; j++) totQty += dados[i].items[j].qty || 0;
+    }
+    linhas.push(_csvEsc('Faturamento total: R$ ' + fmtMoney(totGeral), SEP));
+    linhas.push(_csvEsc('Total de itens vendidos: ' + totQty, SEP));
+    linhas.push(''); // linha em branco
+
+    if (incItens) {
+      // SEÇÃO 1: DETALHAMENTO ITEM POR ITEM
+      linhas.push(_csvEsc('=== DETALHAMENTO POR ITEM ===', SEP));
+      var cab = [
+        'Data','Dia da Semana','Hora','Atendimento #','Item #','Serviço','Quantidade',
+        'Valor Unitário (R$)','Total do Item (R$)','Total do Atendimento (R$)',
+        'Qtd Itens no Atendimento','Doc ID Firebase'
+      ];
+      linhas.push(cab.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+      var diasSemana = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+      for (var i = 0; i < dados.length; i++) {
+        var a = dados[i];
+        var dataObj = a.data ? new Date(a.data + 'T00:00:00') : new Date();
+        var diaSem = diasSemana[dataObj.getDay()];
+        var dataPt = a.data ? a.data.split('-').reverse().join('/') : '';
+        var qtdItens = a.items.length;
+        for (var j = 0; j < a.items.length; j++) {
+          var it = a.items[j];
+          var unit = it.qty > 0 ? it.tot / it.qty : it.tot;
+          var row = [
+            dataPt, diaSem, a.hora || a.time || '',
+            a.id || '', (j + 1), it.name, fmtNum(it.qty),
+            fmtMoney(unit), fmtMoney(it.tot), fmtMoney(a.total),
+            fmtNum(qtdItens), a._docId || ''
+          ];
+          linhas.push(row.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+        }
+      }
+      linhas.push('');
+    }
+
+    // SEÇÃO 2: RESUMO POR ATENDIMENTO
+    linhas.push(_csvEsc('=== RESUMO POR ATENDIMENTO ===', SEP));
+    var cabAt = ['Data','Hora','Atendimento #','Qtd Serviços Diferentes','Qtd Total de Itens','Total (R$)','Serviços','Doc ID Firebase'];
+    linhas.push(cabAt.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+    for (var i = 0; i < dados.length; i++) {
+      var a = dados[i];
+      var totItens = 0; var srvList = [];
+      for (var j = 0; j < a.items.length; j++) {
+        totItens += a.items[j].qty || 0;
+        srvList.push((a.items[j].qty > 1 ? a.items[j].qty + 'x ' : '') + a.items[j].name);
+      }
+      var dataPt = a.data ? a.data.split('-').reverse().join('/') : '';
+      var row = [dataPt, a.hora || a.time || '', a.id || '', a.items.length, totItens, fmtMoney(a.total), srvList.join(' | '), a._docId || ''];
+      linhas.push(row.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+    }
+    linhas.push('');
+
+    if (incResumo) {
+      // SEÇÃO 3: RESUMO POR DIA
+      linhas.push(_csvEsc('=== RESUMO POR DIA ===', SEP));
+      var cabDia = ['Data','Dia da Semana','Atendimentos','Itens Vendidos','Faturamento (R$)','Ticket Médio (R$)'];
+      linhas.push(cabDia.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+      var porDia = {};
+      for (var i = 0; i < dados.length; i++) {
+        var d = dados[i].data || '----';
+        if (!porDia[d]) porDia[d] = { n: 0, itens: 0, total: 0 };
+        porDia[d].n++;
+        porDia[d].total += dados[i].total || 0;
+        for (var j = 0; j < dados[i].items.length; j++) porDia[d].itens += dados[i].items[j].qty || 0;
+      }
+      var diasOrd = Object.keys(porDia).sort();
+      var diasSem = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+      for (var k = 0; k < diasOrd.length; k++) {
+        var dt = diasOrd[k];
+        var info = porDia[dt];
+        var dataObj = new Date(dt + 'T00:00:00');
+        var dataPt = dt.split('-').reverse().join('/');
+        var ticket = info.n > 0 ? info.total / info.n : 0;
+        var row = [dataPt, diasSem[dataObj.getDay()], info.n, info.itens, fmtMoney(info.total), fmtMoney(ticket)];
+        linhas.push(row.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+      }
+      linhas.push('');
+
+      // SEÇÃO 4: RANKING DE SERVIÇOS
+      linhas.push(_csvEsc('=== RANKING DE SERVIÇOS ===', SEP));
+      var cabSrv = ['Posição','Serviço','Qtd Vendida','Faturamento (R$)','% do Faturamento','Preço Médio (R$)'];
+      linhas.push(cabSrv.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+      var porSrv = {};
+      for (var i = 0; i < dados.length; i++) {
+        for (var j = 0; j < dados[i].items.length; j++) {
+          var it = dados[i].items[j];
+          if (!porSrv[it.name]) porSrv[it.name] = { qty: 0, total: 0 };
+          porSrv[it.name].qty += it.qty || 0;
+          porSrv[it.name].total += it.tot || 0;
+        }
+      }
+      var srvArr = [];
+      for (var nm in porSrv) srvArr.push({ name: nm, qty: porSrv[nm].qty, total: porSrv[nm].total });
+      srvArr.sort(function(a,b){ return b.total - a.total; });
+      for (var i = 0; i < srvArr.length; i++) {
+        var s = srvArr[i];
+        var pct = totGeral > 0 ? (s.total / totGeral * 100) : 0;
+        var precoMed = s.qty > 0 ? s.total / s.qty : 0;
+        var row = [(i+1), s.name, fmtNum(s.qty), fmtMoney(s.total), fmtMoney(pct) + '%', fmtMoney(precoMed)];
+        linhas.push(row.map(function(c){return _csvEsc(c, SEP);}).join(SEP));
+      }
+      linhas.push('');
+      linhas.push(_csvEsc('TOTAIS GERAIS', SEP) + SEP + _csvEsc(dados.length + ' atendimentos', SEP) + SEP + _csvEsc(totQty + ' itens', SEP) + SEP + _csvEsc(fmtMoney(totGeral), SEP));
+    }
+
+    // Monta o CSV final com BOM UTF-8 para Excel abrir acentos corretamente
+    var csv = '\uFEFF' + linhas.join('\r\n');
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var ahref = document.createElement('a');
+    ahref.href = url;
+    var nomeArq = 'alianca-atendimentos_' + di + '_a_' + df + '.csv';
+    ahref.download = nomeArq;
+    document.body.appendChild(ahref);
+    ahref.click();
+    document.body.removeChild(ahref);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+
+    status.style.background = '#e9f3df'; status.style.color = '#437a22';
+    status.textContent = '✓ Planilha baixada: ' + nomeArq + ' (' + linhas.length + ' linhas, ' + dados.length + ' atendimentos)';
+    btn.disabled = false; btn.textContent = '⬇ Baixar Planilha';
+  } catch (e) {
+    console.error('Erro export CSV:', e);
+    status.style.background = '#fee2e2'; status.style.color = '#a12c7b';
+    status.textContent = 'Erro: ' + (e.message || e);
+    btn.disabled = false; btn.textContent = '⬇ Baixar Planilha';
+  }
+}
 
 //  RELATÓRIO PDF
 
@@ -1716,6 +2305,61 @@ function gerarNotinha(idx) {
   <span class="cart-badge" id="cartBadge">0</span>
 </button>
 
+<!-- DASHBOARD FAB -->
+<button class="dashboard-fab" onclick="abrirDashboard()" title="Dashboard de Vendas" aria-label="Dashboard">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+</button>
+
+<style>
+.dashboard-fab{position:fixed;bottom:88px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--color-patch,#5a3e8a);color:#fff;border:2px solid rgba(255,255,255,.2);box-shadow:0 6px 20px rgba(90,62,138,.4);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:99;transition:transform .15s ease,box-shadow .15s ease}
+.dashboard-fab:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(90,62,138,.55)}
+.dashboard-fab:active{transform:scale(.96)}
+@media(max-width:600px){.dashboard-fab{bottom:80px;right:16px;width:48px;height:48px}}
+
+.dash-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;z-index:1000;padding:20px;overflow-y:auto;backdrop-filter:blur(4px)}
+.dash-overlay.open{display:flex}
+.dash-panel{background:var(--color-bg,#fff);width:min(1100px,100%);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:95vh;overflow-y:auto}
+.dash-head{display:flex;align-items:center;gap:12px;padding:18px 24px;border-bottom:1px solid var(--color-divider,#e5e5e5);position:sticky;top:0;background:var(--color-bg,#fff);z-index:5;border-radius:16px 16px 0 0}
+.dash-head h2{margin:0;font-size:20px;font-weight:700;color:var(--color-primary,#01696F)}
+.dash-period-bar{display:flex;flex-wrap:wrap;gap:8px;padding:14px 24px;background:var(--color-surface-offset,#f5f5f5);border-bottom:1px solid var(--color-divider,#e5e5e5);align-items:center}
+.dash-period-btn{padding:6px 14px;border-radius:6px;background:var(--color-surface,#fff);border:1.5px solid var(--color-border,#ddd);cursor:pointer;font-size:12px;font-weight:600;color:var(--color-text,#222);transition:all .15s}
+.dash-period-btn.active{background:var(--color-primary,#01696F);color:#fff;border-color:var(--color-primary,#01696F)}
+.dash-period-btn:hover:not(.active){background:var(--color-surface-offset,#f5f5f5)}
+.dash-body{padding:20px 24px 28px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:24px}
+.kpi-card{background:var(--color-surface,#fff);border:1px solid var(--color-border,#ddd);border-radius:12px;padding:16px 18px;transition:transform .15s ease,box-shadow .15s ease}
+.kpi-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.kpi-label{font-size:11px;font-weight:600;color:var(--color-text-muted,#666);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.kpi-value{font-size:26px;font-weight:800;line-height:1.1}
+.kpi-sub{font-size:11px;color:var(--color-text-muted,#888);margin-top:6px}
+.kpi-card.teal .kpi-value{color:#01696F}
+.kpi-card.purple .kpi-value{color:#5a3e8a}
+.kpi-card.green .kpi-value{color:#437A22}
+.kpi-card.terra .kpi-value{color:#A84B2F}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+@media(max-width:760px){.chart-grid{grid-template-columns:1fr}}
+.chart-box{background:var(--color-surface,#fff);border:1px solid var(--color-border,#ddd);border-radius:12px;padding:16px}
+.chart-box h3{margin:0 0 12px;font-size:13px;font-weight:700;color:var(--color-patch,#5a3e8a);text-transform:uppercase;letter-spacing:.4px}
+.chart-box canvas{max-height:260px}
+.top-list{list-style:none;padding:0;margin:0}
+.top-list li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--color-divider,#eee);font-size:13px}
+.top-list li:last-child{border:none}
+.top-list .name{font-weight:600;color:var(--color-text,#222)}
+.top-list .val{font-weight:700;color:#01696F;font-variant-numeric:tabular-nums}
+.top-list .pct{font-size:11px;color:var(--color-text-muted,#888);margin-left:6px}
+.dash-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding:14px 24px;border-top:1px solid var(--color-divider,#e5e5e5);background:var(--color-surface-offset,#f9f9f9);border-radius:0 0 16px 16px}
+.dash-actions button{padding:8px 16px;border-radius:8px;border:1.5px solid var(--color-border,#ddd);background:var(--color-surface,#fff);cursor:pointer;font-size:13px;font-weight:600;color:var(--color-text,#222);transition:all .15s}
+.dash-actions button.primary{background:var(--color-primary,#01696F);color:#fff;border-color:var(--color-primary,#01696F)}
+.dash-actions button:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.dash-empty{text-align:center;padding:60px 20px;color:var(--color-text-muted,#888)}
+.cart-btn-finish-day{background:linear-gradient(135deg,#5a3e8a,#7b5cb8);color:#fff;border:none;border-radius:8px;padding:10px 16px;cursor:pointer;font-weight:700;font-size:13px;width:100%;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px}
+.cart-btn-finish-day:hover{filter:brightness(1.1)}
+.notify-status{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
+.notify-status.ok{background:#d4edda;color:#155724}
+.notify-status.off{background:#f8d7da;color:#721c24}
+.notify-status.warn{background:#fff3cd;color:#856404}
+</style>
+
 <!-- CART DRAWER -->
 <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true">
   <div class="cart-head">
@@ -1769,12 +2413,18 @@ function gerarNotinha(idx) {
         <div class="day-total-bar-label">Total do dia</div>
         <div class="day-total-bar-val" id="dayTotalVal">R$ 0,00</div>
       </div>
-      <div style="display:flex;align-items:center;gap:8px">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end">
         <div class="day-total-bar-clients" id="dayTotalClients">0 atendimentos</div>
-        <button onclick="abrirGrafico()" title="Gráfico de serviços" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📊</button>
-        <button onclick="gerarRelatorio()" title="Relatório PDF" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📄 PDF</button>
+        <button onclick="abrirGrafico()" title="Gráfico de serviços do dia" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📊</button>
+        <button onclick="gerarRelatorio()" title="Relatório PDF do dia" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📄 PDF</button>
+        <button onclick="abrirHistoricoAnterior()" title="Histórico de dias anteriores (Firebase)" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📅 Histórico</button>
+        <button onclick="abrirExportCSV()" title="Exportar planilha CSV" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📊 CSV</button>
+        <button onclick="abrirDashboard()" title="Dashboard de Vendas" style="background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px;color:var(--color-text-muted)">📈 Dashboard</button>
       </div>
     </div>
+    <button class="cart-btn-finish-day" onclick="fecharCaixaDoDia()" title="Encerra o dia e envia resumo no Telegram">
+      🔒 Fechar Caixa do Dia
+    </button>
   </div>
 </div>
 
@@ -1799,6 +2449,1013 @@ function gerarNotinha(idx) {
   </div>
 
 </div>
+
+<!-- HISTÓRICO ANTERIOR (DIAS PASSADOS) -->
+<div class="overlay" id="histAntOverlay" role="dialog" aria-modal="true" aria-label="Histórico anterior">
+  <div class="patch-panel" style="width:min(720px,95vw);max-height:88vh">
+    <div class="patch-head">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <h2>Histórico Anterior</h2>
+      <span class="patch-version-badge" style="background:var(--color-primary-highlight);color:var(--color-primary);border-color:var(--color-primary)">Firebase</span>
+      <button class="patch-close" onclick="fecharHistoricoAnterior()" aria-label="Fechar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="patch-body" style="gap:var(--space-4)">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:end;background:var(--color-surface-offset);padding:12px;border-radius:8px">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <label for="histAntDataIni" style="font-size:11px;font-weight:600;color:var(--color-text-muted)">De</label>
+          <input type="date" id="histAntDataIni" style="padding:6px 10px;border:1.5px solid var(--color-border);border-radius:6px;background:var(--color-surface);color:var(--color-text);font-size:13px">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <label for="histAntDataFim" style="font-size:11px;font-weight:600;color:var(--color-text-muted)">Até</label>
+          <input type="date" id="histAntDataFim" style="padding:6px 10px;border:1.5px solid var(--color-border);border-radius:6px;background:var(--color-surface);color:var(--color-text);font-size:13px">
+        </div>
+        <button onclick="_histAntPreset(0)" title="Hoje" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">Hoje</button>
+        <button onclick="_histAntPreset(1)" title="Ontem" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">Ontem</button>
+        <button onclick="_histAntPreset(7)" title="Últimos 7 dias" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">7 dias</button>
+        <button onclick="_histAntPreset(30)" title="Últimos 30 dias" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">30 dias</button>
+        <button onclick="buscarHistoricoAnterior()" style="padding:6px 16px;border-radius:6px;background:var(--color-primary);color:#fff;border:none;cursor:pointer;font-size:12px;font-weight:700;margin-left:auto">🔍 Buscar</button>
+      </div>
+      <div id="histAntResumo" style="display:none;background:#e9f3df;border:1px solid #b2d8b2;border-radius:8px;padding:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px"></div>
+      <div id="histAntLista" style="display:flex;flex-direction:column;gap:8px">
+        <div style="text-align:center;color:var(--color-text-muted);font-size:13px;padding:30px">Escolha um período e clique em Buscar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPORTAR CSV -->
+<div class="overlay" id="exportCsvOverlay" role="dialog" aria-modal="true" aria-label="Exportar CSV">
+  <div class="patch-panel" style="width:min(560px,95vw)">
+    <div class="patch-head">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <h2>Exportar Planilha CSV</h2>
+      <button class="patch-close" onclick="fecharExportCSV()" aria-label="Fechar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="patch-body" style="gap:var(--space-4)">
+      <p style="font-size:13px;color:var(--color-text-muted);line-height:1.5">Gera uma planilha completa (.csv) compatível com Excel, Google Sheets e LibreOffice. Cada linha = 1 item vendido, com data, hora, atendimento, serviço, quantidade, valor unitário, total do item e total do atendimento.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:end;background:var(--color-surface-offset);padding:12px;border-radius:8px">
+        <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:120px">
+          <label for="csvDataIni" style="font-size:11px;font-weight:600;color:var(--color-text-muted)">De</label>
+          <input type="date" id="csvDataIni" style="padding:6px 10px;border:1.5px solid var(--color-border);border-radius:6px;background:var(--color-surface);color:var(--color-text);font-size:13px">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:120px">
+          <label for="csvDataFim" style="font-size:11px;font-weight:600;color:var(--color-text-muted)">Até</label>
+          <input type="date" id="csvDataFim" style="padding:6px 10px;border:1.5px solid var(--color-border);border-radius:6px;background:var(--color-surface);color:var(--color-text);font-size:13px">
+        </div>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <button onclick="_csvPreset(0)" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">Hoje</button>
+        <button onclick="_csvPreset(7)" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">7 dias</button>
+        <button onclick="_csvPreset(30)" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">30 dias</button>
+        <button onclick="_csvPreset(90)" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">90 dias</button>
+        <button onclick="_csvPreset(-1)" style="padding:6px 12px;border-radius:6px;background:var(--color-surface);border:1.5px solid var(--color-border);cursor:pointer;font-size:11px;font-weight:600">Tudo</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="csvIncluirItens" checked> Incluir detalhamento de itens (linha por item)</label>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="csvIncluirResumo" checked> Incluir aba de resumo por dia no final</label>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="csvSepVirgula"> Usar vírgula como separador (padrão internacional)</label>
+      </div>
+      <div id="csvStatus" style="display:none;padding:10px;border-radius:6px;font-size:12px"></div>
+      <button onclick="exportarCSV()" id="csvBtnDownload" style="padding:10px 20px;border-radius:8px;background:var(--color-success);color:#fff;border:none;cursor:pointer;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px">⬇ Baixar Planilha</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    where,
+    orderBy,
+    deleteDoc,
+    doc
+  } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAVwUMdqCsgHHMVT1CXMRhEYX82Et_8sHQ",
+    authDomain: "lan-house-alianca.firebaseapp.com",
+    projectId: "lan-house-alianca",
+    storageBucket: "lan-house-alianca.firebasestorage.app",
+    messagingSenderId: "645899911722",
+    appId: "1:645899911722:web:ea98f7624ee5aba7487953"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Salvar atendimento no Firestore
+  async function salvarAtendimento(at) {
+    // Cria payload limpo (sem campos internos do site)
+    const payload = {
+      id: at.id,
+      time: at.time,
+      items: at.items,
+      total: at.total,
+      data: at.data,
+      hora: at.hora,
+      criadoEm: new Date().toISOString()
+    };
+    const docRef = await addDoc(collection(db, "atendimentos"), payload);
+    at._docId = docRef.id;
+    console.log("Atendimento salvo no Firestore:", docRef.id);
+    return docRef.id;
+  }
+
+  // Excluir atendimento do Firestore
+  async function excluirAtendimento(docId) {
+    if (!docId) throw new Error('docId vazio');
+    await deleteDoc(doc(db, "atendimentos", docId));
+    console.log("Atendimento excluído do Firestore:", docId);
+    return true;
+  }
+
+  // Carregar atendimentos por período (intervalo de datas ISO inclusive)
+  async function carregarAtendimentosPorPeriodo(dataInicioISO, dataFimISO) {
+    try {
+      const colRef = collection(db, "atendimentos");
+      const qRef = query(
+        colRef,
+        where("data", ">=", dataInicioISO),
+        where("data", "<=", dataFimISO),
+        orderBy("data", "asc"),
+        orderBy("hora", "asc")
+      );
+      const snap = await getDocs(qRef);
+      const lista = [];
+      snap.forEach(docSnap => {
+        const d = docSnap.data();
+        lista.push({
+          _docId: docSnap.id,
+          id: d.id || null,
+          time: d.time || d.hora || '--:--',
+          items: d.items || [],
+          total: d.total || 0,
+          data: d.data,
+          hora: d.hora,
+          criadoEm: d.criadoEm || null
+        });
+      });
+      return lista;
+    } catch (e) {
+      console.error("Erro ao carregar período:", e);
+      throw e;
+    }
+  }
+
+  // Carregar TODOS atendimentos (para export geral)
+  async function carregarTodosAtendimentos() {
+    try {
+      const colRef = collection(db, "atendimentos");
+      const qRef = query(colRef, orderBy("data", "asc"), orderBy("hora", "asc"));
+      const snap = await getDocs(qRef);
+      const lista = [];
+      snap.forEach(docSnap => {
+        const d = docSnap.data();
+        lista.push({
+          _docId: docSnap.id,
+          id: d.id || null,
+          time: d.time || d.hora || '--:--',
+          items: d.items || [],
+          total: d.total || 0,
+          data: d.data,
+          hora: d.hora,
+          criadoEm: d.criadoEm || null
+        });
+      });
+      return lista;
+    } catch (e) {
+      console.error("Erro ao carregar todos atendimentos:", e);
+      throw e;
+    }
+  }
+
+// Carregar atendimentos do dia (por data ISO: "2026-05-13")
+// Carregar atendimentos do dia direto do Firestore,
+// retornando já no formato que o histórico usa (_atendimentos)
+async function carregarAtendimentosDoDia(dataISO) {
+    try {
+      const colRef = collection(db, "atendimentos");
+      const qRef = query(
+        colRef,
+        where("data", "==", dataISO),
+        orderBy("hora", "asc")
+      );
+      const snap = await getDocs(qRef);
+      const lista = [];
+      snap.forEach(docSnap => {
+        const d = docSnap.data();
+        lista.push({
+          _docId: docSnap.id,
+          id: d.id || null,
+          time: d.time || d.hora || '--:--',
+          items: d.items || [],
+          total: d.total || 0,
+          data: d.data,
+          hora: d.hora
+        });
+      });
+      console.log("Atendimentos do dia:", lista);
+      return lista;
+    } catch (e) {
+      console.error("Erro ao carregar atendimentos:", e);
+      return [];
+    }
+  }
+
+// Ao abrir a página, busca atendimentos de hoje (data LOCAL) e preenche o histórico
+  window.addEventListener("load", async () => {
+    // data local (não UTC) — evita pular 1 dia no Brasil de madrugada
+    const d = new Date();
+    const dataISO = d.getFullYear() + '-' + ('0'+(d.getMonth()+1)).slice(-2) + '-' + ('0'+d.getDate()).slice(-2);
+    const listaFS = await carregarAtendimentosDoDia(dataISO);
+    if (listaFS.length > 0) {
+      // marca como já sincronizados
+      listaFS.forEach(a => { a._syncStatus = 'saved'; });
+      _atendimentos = listaFS.concat(_atendimentos || []);
+      var maxId = 0;
+      for (var i = 0; i < _atendimentos.length; i++) {
+        if (_atendimentos[i].id && _atendimentos[i].id > maxId) maxId = _atendimentos[i].id;
+      }
+      if (maxId > 0) _atenCount = maxId;
+      _renderHistory();
+      _updateDayTotal();
+    }
+  });
+
+  // Verifica a cada minuto se o dia mudou — se sim, limpa o histórico do site
+  // (o Firebase continua guardando tudo, mas o site mostra só o dia atual)
+  let _ultimaDataISO = (() => { const d=new Date(); return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); })();
+  setInterval(() => {
+    const d = new Date();
+    const dataAgora = d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+    if (dataAgora !== _ultimaDataISO) {
+      console.log('Dia mudou de', _ultimaDataISO, 'para', dataAgora, '— atualizando histórico');
+      _ultimaDataISO = dataAgora;
+      // re-renderiza (o filtro _atendimentosDoDia esconde automaticamente os de ontem)
+      if (typeof _renderHistory === 'function') _renderHistory();
+      if (typeof _updateDayTotal === 'function') _updateDayTotal();
+    }
+  }, 60000);
+
+  try {
+    window.salvarAtendimento = salvarAtendimento;
+    window.excluirAtendimento = excluirAtendimento;
+    window.carregarAtendimentosDoDia = carregarAtendimentosDoDia;
+    window.carregarAtendimentosPorPeriodo = carregarAtendimentosPorPeriodo;
+    window.carregarTodosAtendimentos = carregarTodosAtendimentos;
+    console.log('Funções Firestore expostas em window');
+  } catch (e) {
+    console.error('Erro ao expor funções no window:', e);
+  }
+</script>
+
+<!-- ====================================================================== -->
+<!-- DASHBOARD + TELEGRAM (v2.6) ========================================== -->
+<!-- ====================================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<!-- OVERLAY: DASHBOARD -->
+<div class="dash-overlay" id="dashOverlay" role="dialog" aria-modal="true" aria-label="Dashboard">
+  <div class="dash-panel">
+    <div class="dash-head">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <h2>Dashboard de Vendas</h2>
+      <span class="notify-status" id="tgStatus">Telegram: desconfigurado</span>
+      <button onclick="abrirConfigTelegram()" style="margin-left:auto;background:none;border:1.5px solid var(--color-border);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:12px;color:var(--color-text-muted)" title="Configurar Telegram">⚙️ Telegram</button>
+      <button onclick="fecharDashboard()" style="background:none;border:none;cursor:pointer;padding:6px;color:var(--color-text-muted)" aria-label="Fechar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="dash-period-bar">
+      <span style="font-size:11px;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.5px;margin-right:6px">Período:</span>
+      <button class="dash-period-btn active" data-period="today" onclick="_dashSet('today')">Hoje</button>
+      <button class="dash-period-btn" data-period="7" onclick="_dashSet('7')">7 dias</button>
+      <button class="dash-period-btn" data-period="30" onclick="_dashSet('30')">30 dias</button>
+      <button class="dash-period-btn" data-period="month" onclick="_dashSet('month')">Mês atual</button>
+      <span style="margin-left:auto;font-size:11px;color:var(--color-text-muted)" id="dashPeriodInfo"></span>
+    </div>
+    <div class="dash-body" id="dashBody">
+      <div class="dash-empty">Carregando dados...</div>
+    </div>
+    <div class="dash-actions">
+      <button onclick="enviarResumoManual('day')">📱 Enviar Hoje no Telegram</button>
+      <button onclick="enviarResumoManual('week')">📱 Enviar Semana</button>
+      <button onclick="enviarResumoManual('month')">📱 Enviar Mês</button>
+      <button class="primary" onclick="fecharDashboard()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER DE CAIXA PENDENTE -->
+<div id="caixaPendenteBanner" style="display:none;position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#964219,#b85a2e);color:#fff;padding:10px 20px;text-align:center;z-index:200;font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(150,66,25,.4);cursor:pointer" onclick="abrirFecharCaixaAvancado()">
+  <span id="caixaPendenteBannerTxt">⚠️ Caixa pendente</span>
+  <span style="margin-left:10px;text-decoration:underline;font-weight:700">Fechar agora →</span>
+  <button onclick="event.stopPropagation();_dispensarBanner()" style="background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:4px;padding:2px 8px;margin-left:14px;cursor:pointer;font-size:11px" title="Dispensar por 1h">✕</button>
+</div>
+
+<!-- OVERLAY: FECHAMENTO AVANÇADO (múltiplos dias) -->
+<div class="dash-overlay" id="fecharCaixaOverlay" role="dialog" aria-modal="true" aria-label="Fechar Caixa">
+  <div class="dash-panel" style="max-width:600px">
+    <div class="dash-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-patch)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <h2>Fechar Caixa</h2>
+      <button onclick="fecharFecharCaixaOverlay()" style="margin-left:auto;background:none;border:none;cursor:pointer;padding:6px;color:var(--color-text-muted)" aria-label="Fechar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="padding:20px 24px" id="fecharCaixaBody">
+      <div class="dash-empty">Verificando dias em aberto...</div>
+    </div>
+    <div class="dash-actions">
+      <button onclick="fecharFecharCaixaOverlay()">Cancelar</button>
+      <button class="primary" id="btnConfirmarFechamento" onclick="_executarFechamento()" disabled>🔒 Confirmar Fechamento</button>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAY: CONFIG TELEGRAM -->
+<div class="dash-overlay" id="tgConfigOverlay" role="dialog" aria-modal="true" aria-label="Configurar Telegram">
+  <div class="dash-panel" style="max-width:560px">
+    <div class="dash-head">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#229ED9" stroke-width="2"><path d="M21.5 4.5L2.5 12l5 2 2 6.5 3.5-4.5 6.5 5L21.5 4.5z"/></svg>
+      <h2>Configurar Telegram</h2>
+      <button onclick="fecharConfigTelegram()" style="margin-left:auto;background:none;border:none;cursor:pointer;padding:6px;color:var(--color-text-muted)" aria-label="Fechar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="padding:22px 24px">
+      <div style="background:#e7f5fd;border:1px solid #b8e0fa;border-radius:8px;padding:12px;font-size:12px;color:#0c5078;margin-bottom:18px;line-height:1.5">
+        <strong>Como obter:</strong><br>
+        1. Telegram → procure <b>@BotFather</b> → <code>/newbot</code> → copie o <b>TOKEN</b>.<br>
+        2. Procure <b>@userinfobot</b> → <code>/start</code> → copie o <b>CHAT ID</b>.<br>
+        3. <b>Mande um "oi"</b> pro seu bot (senão ele não consegue te responder).
+      </div>
+      <label style="display:block;font-size:12px;font-weight:700;color:var(--color-text-muted);margin-bottom:6px">BOT TOKEN</label>
+      <input type="text" id="tgInputToken" placeholder="123456789:ABCdef..." style="width:100%;padding:10px 12px;border:1.5px solid var(--color-border);border-radius:8px;background:var(--color-surface);color:var(--color-text);font-size:13px;font-family:monospace;margin-bottom:14px">
+      <label style="display:block;font-size:12px;font-weight:700;color:var(--color-text-muted);margin-bottom:6px">CHAT ID</label>
+      <input type="text" id="tgInputChatId" placeholder="987654321" style="width:100%;padding:10px 12px;border:1.5px solid var(--color-border);border-radius:8px;background:var(--color-surface);color:var(--color-text);font-size:13px;font-family:monospace;margin-bottom:18px">
+      <div style="display:flex;gap:8px">
+        <button onclick="_tgTest()" style="flex:1;padding:10px;border-radius:8px;border:1.5px solid var(--color-border);background:var(--color-surface);cursor:pointer;font-weight:600;font-size:13px">🧪 Testar</button>
+        <button onclick="_tgSave()" style="flex:1;padding:10px;border-radius:8px;border:none;background:#229ED9;color:#fff;cursor:pointer;font-weight:700;font-size:13px">💾 Salvar</button>
+        <button onclick="_tgClear()" style="padding:10px 14px;border-radius:8px;border:1.5px solid #dc3545;background:transparent;color:#dc3545;cursor:pointer;font-weight:600;font-size:13px">Remover</button>
+      </div>
+      <div id="tgConfigMsg" style="margin-top:14px;font-size:12px;text-align:center;min-height:18px"></div>
+      <hr style="margin:20px 0;border:none;border-top:1px solid var(--color-divider)">
+      <div style="font-size:12px;color:var(--color-text-muted);line-height:1.6">
+        <b>Resumos automáticos:</b><br>
+        • <b>Diário</b> — quando você clicar em "Fechar Caixa do Dia"<br>
+        • <b>Semanal</b> — toda <b>segunda</b> após 8h<br>
+        • <b>Mensal</b> — todo <b>dia 1º</b> após 8h<br>
+        <br>
+        <i>Os agendamentos disparam quando você abre o site. Mantém a aba aberta um pouco pra garantir o envio.</i>
+      </div>
+      <hr style="margin:16px 0;border:none;border-top:1px solid var(--color-divider)">
+      <div>
+        <b style="font-size:13px;color:var(--color-text)">🔔 Lembrete automático de fechamento</b>
+        <p style="font-size:12px;color:var(--color-text-muted);margin:6px 0 12px;line-height:1.5">Se você esquecer de fechar o caixa, manda uma mensagem no Telegram nesse horário (segunda a sábado).</p>
+        <div style="display:flex;gap:10px;align-items:center">
+          <input type="time" id="tgLembreteHora" value="18:00" style="padding:8px 10px;border:1.5px solid var(--color-border);border-radius:8px;background:var(--color-surface);color:var(--color-text);font-size:13px;font-family:monospace">
+          <label style="font-size:12px;color:var(--color-text-muted);display:flex;align-items:center;gap:6px;cursor:pointer">
+            <input type="checkbox" id="tgLembreteAtivo" checked> Ativar lembrete
+          </label>
+          <button onclick="_salvarLembrete()" style="margin-left:auto;padding:6px 14px;border-radius:6px;border:none;background:#229ED9;color:#fff;cursor:pointer;font-weight:700;font-size:12px">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   DASHBOARD + TELEGRAM — Aliança v2.6
+   ============================================================ */
+
+const TG_KEY = 'alianca_tg_config_v1';
+const TG_SENT_KEY = 'alianca_tg_sent_log_v1';
+const LEMBRETE_KEY = 'alianca_lembrete_config_v1';
+const BANNER_DISMISS_KEY = 'alianca_banner_dismiss_v1';
+let _dashChartLinha = null, _dashChartTop = null;
+let _dashPeriodo = 'today';
+let _dashData = [];
+let _diasEmAberto = []; // [{data, totalFat, totalAt}]
+
+/* ---------- Telegram config ---------- */
+function _tgGet() {
+  try { return JSON.parse(localStorage.getItem(TG_KEY) || 'null'); } catch (e) { return null; }
+}
+function _tgSet(cfg) { localStorage.setItem(TG_KEY, JSON.stringify(cfg)); _tgUpdateBadge(); }
+function _tgUpdateBadge() {
+  const el = document.getElementById('tgStatus');
+  if (!el) return;
+  const cfg = _tgGet();
+  if (cfg && cfg.token && cfg.chatId) {
+    el.textContent = 'Telegram: ativo';
+    el.className = 'notify-status ok';
+  } else {
+    el.textContent = 'Telegram: desconfigurado';
+    el.className = 'notify-status off';
+  }
+}
+function abrirConfigTelegram() {
+  const cfg = _tgGet() || {};
+  document.getElementById('tgInputToken').value = cfg.token || '';
+  document.getElementById('tgInputChatId').value = cfg.chatId || '';
+  document.getElementById('tgConfigMsg').textContent = '';
+  document.getElementById('tgConfigOverlay').classList.add('open');
+}
+function fecharConfigTelegram() {
+  document.getElementById('tgConfigOverlay').classList.remove('open');
+}
+function _tgSave() {
+  const token = document.getElementById('tgInputToken').value.trim();
+  const chatId = document.getElementById('tgInputChatId').value.trim();
+  const msg = document.getElementById('tgConfigMsg');
+  if (!token || !chatId) {
+    msg.textContent = '⚠️ Preencha os dois campos'; msg.style.color = '#dc3545'; return;
+  }
+  _tgSet({ token, chatId });
+  msg.textContent = '✓ Salvo'; msg.style.color = '#28a745';
+}
+function _tgClear() {
+  if (!confirm('Remover configuração do Telegram?')) return;
+  localStorage.removeItem(TG_KEY); _tgUpdateBadge();
+  document.getElementById('tgInputToken').value = '';
+  document.getElementById('tgInputChatId').value = '';
+  const msg = document.getElementById('tgConfigMsg');
+  msg.textContent = 'Configuração removida'; msg.style.color = '#888';
+}
+async function _tgTest() {
+  const token = document.getElementById('tgInputToken').value.trim();
+  const chatId = document.getElementById('tgInputChatId').value.trim();
+  const msg = document.getElementById('tgConfigMsg');
+  if (!token || !chatId) {
+    msg.textContent = '⚠️ Preencha os dois campos antes de testar'; msg.style.color = '#dc3545'; return;
+  }
+  msg.textContent = 'Enviando teste...'; msg.style.color = '#666';
+  try {
+    const r = await _tgSend('🧪 *Teste Aliança Informática*\n\nSe você está vendo isso, a configuração está perfeita.', { token, chatId });
+    if (r.ok) { msg.textContent = '✓ Mensagem enviada! Confere seu Telegram'; msg.style.color = '#28a745'; }
+    else { msg.textContent = '❌ Erro: ' + (r.description || 'verifique TOKEN/CHAT ID e mande "oi" pro bot primeiro'); msg.style.color = '#dc3545'; }
+  } catch (e) {
+    msg.textContent = '❌ Falha de rede: ' + e.message; msg.style.color = '#dc3545';
+  }
+}
+async function _tgSend(texto, cfgOverride) {
+  const cfg = cfgOverride || _tgGet();
+  if (!cfg || !cfg.token || !cfg.chatId) throw new Error('Telegram não configurado');
+  const url = `https://api.telegram.org/bot${cfg.token}/sendMessage`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: cfg.chatId, text: texto, parse_mode: 'Markdown' })
+  });
+  return res.json();
+}
+
+/* ---------- Datas helpers ---------- */
+function _hojeISO() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function _isoMinusDias(n) {
+  const d = new Date(); d.setDate(d.getDate() - n);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function _ddmm(iso) {
+  if (!iso) return '';
+  const p = iso.split('-'); return p[2] + '/' + p[1];
+}
+function _brl(n) {
+  return 'R$ ' + (n||0).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.').replace(/^R\$ (.*)\.(\d{2})$/, (_,a,b)=>'R$ '+a+','+b);
+}
+function _brlSimples(n) {
+  return 'R$ ' + (n||0).toFixed(2).replace('.', ',');
+}
+
+/* ---------- Dashboard ---------- */
+async function abrirDashboard() {
+  document.getElementById('dashOverlay').classList.add('open');
+  _tgUpdateBadge();
+  await _dashCarregar();
+}
+function fecharDashboard() {
+  document.getElementById('dashOverlay').classList.remove('open');
+  if (_dashChartLinha) { _dashChartLinha.destroy(); _dashChartLinha = null; }
+  if (_dashChartTop)   { _dashChartTop.destroy();   _dashChartTop = null; }
+}
+function _dashSet(p) {
+  _dashPeriodo = p;
+  document.querySelectorAll('.dash-period-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.period === p);
+  });
+  _dashCarregar();
+}
+function _dashPeriodoRange() {
+  if (_dashPeriodo === 'today') return [_hojeISO(), _hojeISO()];
+  if (_dashPeriodo === '7')     return [_isoMinusDias(6), _hojeISO()];
+  if (_dashPeriodo === '30')    return [_isoMinusDias(29), _hojeISO()];
+  if (_dashPeriodo === 'month') {
+    const d = new Date();
+    const ini = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-01';
+    return [ini, _hojeISO()];
+  }
+  return [_hojeISO(), _hojeISO()];
+}
+async function _dashCarregar() {
+  const body = document.getElementById('dashBody');
+  body.innerHTML = '<div class="dash-empty">Carregando dados...</div>';
+  const [di, df] = _dashPeriodoRange();
+  document.getElementById('dashPeriodInfo').textContent = _ddmm(di) + ' até ' + _ddmm(df);
+  if (!window.carregarAtendimentosPorPeriodo) {
+    body.innerHTML = '<div class="dash-empty">⚠️ Firebase indisponível</div>'; return;
+  }
+  try {
+    _dashData = await window.carregarAtendimentosPorPeriodo(di, df);
+    _dashRender();
+  } catch (e) {
+    body.innerHTML = '<div class="dash-empty">❌ Erro ao buscar dados: ' + e.message + '</div>';
+  }
+}
+function _dashAgregar(data) {
+  let totFat = 0, totAt = data.length, totItens = 0;
+  const porDia = {}, porServico = {};
+  data.forEach(a => {
+    totFat += a.total || 0;
+    (a.items || []).forEach(it => {
+      totItens += it.qty || 0;
+      const nome = it.name || '?';
+      porServico[nome] = porServico[nome] || { qtd: 0, rec: 0 };
+      porServico[nome].qtd += it.qty || 0;
+      porServico[nome].rec += it.tot || 0;
+    });
+    const d = a.data || '?';
+    porDia[d] = porDia[d] || { fat: 0, at: 0 };
+    porDia[d].fat += a.total || 0;
+    porDia[d].at += 1;
+  });
+  const ticket = totAt > 0 ? totFat / totAt : 0;
+  const dias = Object.keys(porDia).sort();
+  const servicosArr = Object.entries(porServico)
+    .map(([nome, v]) => ({ nome, qtd: v.qtd, rec: v.rec, pct: totFat > 0 ? v.rec/totFat : 0 }))
+    .sort((a,b) => b.rec - a.rec);
+  return { totFat, totAt, totItens, ticket, porDia, dias, servicosArr };
+}
+function _dashRender() {
+  const body = document.getElementById('dashBody');
+  if (_dashData.length === 0) {
+    body.innerHTML = '<div class="dash-empty">📭 Sem atendimentos nesse período</div>'; return;
+  }
+  const ag = _dashAgregar(_dashData);
+  const top5 = ag.servicosArr.slice(0, 5);
+  body.innerHTML = `
+    <div class="kpi-grid">
+      <div class="kpi-card teal"><div class="kpi-label">Faturamento</div><div class="kpi-value">${_brl(ag.totFat)}</div><div class="kpi-sub">no período</div></div>
+      <div class="kpi-card purple"><div class="kpi-label">Atendimentos</div><div class="kpi-value">${ag.totAt}</div><div class="kpi-sub">${ag.dias.length} dia(s)</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Ticket Médio</div><div class="kpi-value">${_brl(ag.ticket)}</div><div class="kpi-sub">por atendimento</div></div>
+      <div class="kpi-card terra"><div class="kpi-label">Itens Vendidos</div><div class="kpi-value">${ag.totItens}</div><div class="kpi-sub">soma de qtds</div></div>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-box"><h3>Faturamento por Dia</h3><canvas id="dashCanvasLinha"></canvas></div>
+      <div class="chart-box"><h3>Top 5 Serviços</h3><ul class="top-list">
+        ${top5.map(s => `<li><span class="name">${s.nome}</span><span><span class="val">${_brl(s.rec)}</span><span class="pct">${(s.pct*100).toFixed(1)}%</span></span></li>`).join('')}
+      </ul></div>
+    </div>
+    <div class="chart-box"><h3>Receita por Serviço (top 8)</h3><canvas id="dashCanvasTop"></canvas></div>
+  `;
+  // gráficos
+  if (_dashChartLinha) _dashChartLinha.destroy();
+  if (_dashChartTop) _dashChartTop.destroy();
+  const ctxL = document.getElementById('dashCanvasLinha').getContext('2d');
+  _dashChartLinha = new Chart(ctxL, {
+    type: 'line',
+    data: {
+      labels: ag.dias.map(_ddmm),
+      datasets: [{ label: 'Faturamento', data: ag.dias.map(d => ag.porDia[d].fat),
+        borderColor: '#01696F', backgroundColor: 'rgba(1,105,111,.12)', tension: .25, fill: true, pointRadius: 4, pointBackgroundColor: '#01696F' }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v } } } }
+  });
+  const top8 = ag.servicosArr.slice(0, 8);
+  const ctxT = document.getElementById('dashCanvasTop').getContext('2d');
+  _dashChartTop = new Chart(ctxT, {
+    type: 'bar',
+    data: {
+      labels: top8.map(s => s.nome.length > 28 ? s.nome.slice(0,28)+'…' : s.nome),
+      datasets: [{ label: 'Receita', data: top8.map(s => s.rec), backgroundColor: '#5a3e8a', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true, ticks: { callback: v => 'R$ ' + v } } } }
+  });
+}
+
+/* ---------- Geração de resumo texto p/ Telegram ---------- */
+function _gerarResumoTexto(titulo, di, df, data) {
+  if (!data || data.length === 0) {
+    return `📊 *${titulo}*\n📅 ${_ddmm(di)} a ${_ddmm(df)}\n\n_Sem atendimentos no período_`;
+  }
+  const ag = _dashAgregar(data);
+  const top3 = ag.servicosArr.slice(0, 3);
+  let txt = `📊 *${titulo}*\n`;
+  txt += `📅 ${_ddmm(di)}` + (di !== df ? ` a ${_ddmm(df)}` : '') + `\n`;
+  txt += `━━━━━━━━━━━━━━━━━━\n\n`;
+  txt += `💰 *Faturamento:* ${_brlSimples(ag.totFat)}\n`;
+  txt += `🎯 *Atendimentos:* ${ag.totAt}\n`;
+  txt += `📈 *Ticket Médio:* ${_brlSimples(ag.ticket)}\n`;
+  txt += `📦 *Itens vendidos:* ${ag.totItens}\n\n`;
+  if (top3.length) {
+    txt += `*🏆 Top 3 Serviços:*\n`;
+    top3.forEach((s, i) => {
+      const med = ['🥇','🥈','🥉'][i];
+      txt += `${med} ${s.nome} — ${_brlSimples(s.rec)} (${s.qtd}x)\n`;
+    });
+  }
+  if (ag.dias.length > 1) {
+    const melhor = ag.dias.reduce((m, d) => ag.porDia[d].fat > ag.porDia[m].fat ? d : m, ag.dias[0]);
+    txt += `\n📅 Melhor dia: *${_ddmm(melhor)}* (${_brlSimples(ag.porDia[melhor].fat)})`;
+  }
+  txt += `\n\n_Aliança Informática · PDV v2.7_`;
+  return txt;
+}
+
+async function enviarResumoManual(tipo) {
+  if (!_tgGet()) {
+    if (confirm('Telegram não configurado. Configurar agora?')) abrirConfigTelegram();
+    return;
+  }
+  if (!window.carregarAtendimentosPorPeriodo) {
+    alert('Firebase indisponível'); return;
+  }
+  let di, df, titulo;
+  if (tipo === 'day') { di = df = _hojeISO(); titulo = 'Resumo do Dia'; }
+  else if (tipo === 'week') { di = _isoMinusDias(6); df = _hojeISO(); titulo = 'Resumo Semanal'; }
+  else { di = _isoMinusDias(29); df = _hojeISO(); titulo = 'Resumo Mensal'; }
+  try {
+    const data = await window.carregarAtendimentosPorPeriodo(di, df);
+    const txt = _gerarResumoTexto(titulo, di, df, data);
+    const r = await _tgSend(txt);
+    if (r.ok) alert('✓ Resumo enviado no Telegram'); else alert('❌ Erro: ' + (r.description || 'verifique config'));
+  } catch (e) { alert('❌ Falha: ' + e.message); }
+}
+
+/* ---------- Fechar caixa do dia (botão inteligente) ---------- */
+// Substituído pela versão inteligente: abre overlay e detecta dias em aberto
+async function fecharCaixaDoDia() {
+  abrirFecharCaixaAvancado();
+}
+
+/* ---------- Fechamento avançado: detecta múltiplos dias ---------- */
+async function abrirFecharCaixaAvancado() {
+  document.getElementById('fecharCaixaOverlay').classList.add('open');
+  document.getElementById('btnConfirmarFechamento').disabled = true;
+  const body = document.getElementById('fecharCaixaBody');
+  body.innerHTML = '<div class="dash-empty">Verificando dias em aberto...</div>';
+
+  if (!window.carregarAtendimentosPorPeriodo) {
+    body.innerHTML = '<div class="dash-empty">⚠️ Firebase indisponível</div>'; return;
+  }
+
+  try {
+    // Busca últimos 14 dias para detectar pendências
+    const fim = _hojeISO();
+    const ini = _isoMinusDias(13);
+    const data = await window.carregarAtendimentosPorPeriodo(ini, fim);
+    const porDia = {};
+    data.forEach(a => {
+      const d = a.data || '?';
+      porDia[d] = porDia[d] || { fat: 0, at: 0 };
+      porDia[d].fat += a.total || 0;
+      porDia[d].at += 1;
+    });
+
+    const hoje = _hojeISO();
+    const log = _getSentLog();
+    const diasFechados = log.day || [];
+
+    // Lista todos os dias com atendimentos
+    const dias = Object.keys(porDia).sort().reverse(); // mais recente primeiro
+    const opcoes = dias.map(d => ({
+      data: d,
+      fat: porDia[d].fat,
+      at: porDia[d].at,
+      fechado: diasFechados.includes(d),
+      hoje: d === hoje
+    }));
+
+    _diasEmAberto = opcoes;
+
+    if (opcoes.length === 0) {
+      body.innerHTML = '<div class="dash-empty">📭 Nenhum atendimento nos últimos 14 dias.</div>';
+      return;
+    }
+
+    const emAberto = opcoes.filter(o => !o.fechado);
+    const atrasados = emAberto.filter(o => !o.hoje);
+
+    let html = '';
+    if (atrasados.length > 0) {
+      html += `<div style="background:#fff3cd;border:1px solid #ffe69c;color:#664d03;padding:10px 12px;border-radius:8px;font-size:13px;margin-bottom:16px">
+        ⚠️ Você tem <b>${atrasados.length} dia(s) atrasado(s)</b> que ainda não foram fechados.
+      </div>`;
+    }
+    html += '<div style="font-size:12px;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Selecione os dias para fechar:</div>';
+    html += '<div style="display:flex;flex-direction:column;gap:6px;max-height:340px;overflow-y:auto">';
+    opcoes.forEach(o => {
+      const labelData = _ddmmaaaa(o.data);
+      const diaSem = _diaDaSemana(o.data);
+      const bg = o.fechado ? '#f5f5f5' : (o.hoje ? '#e8f4f5' : '#fff8e1');
+      const checked = (!o.fechado) ? 'checked' : '';
+      const disabled = o.fechado ? 'disabled' : '';
+      const tag = o.fechado
+        ? '<span style="font-size:10px;background:#28a745;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">FECHADO</span>'
+        : (o.hoje ? '<span style="font-size:10px;background:#01696F;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">HOJE</span>'
+                  : '<span style="font-size:10px;background:#dc3545;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">ABERTO</span>');
+      html += `<label style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:${bg};border:1px solid var(--color-border);border-radius:8px;cursor:${o.fechado?'not-allowed':'pointer'};font-size:13px">
+        <input type="checkbox" class="fec-dia" data-dia="${o.data}" ${checked} ${disabled} onchange="_atualizarBtnFechar()">
+        <div style="flex:1">
+          <div style="font-weight:700;color:var(--color-text)">${labelData} <span style="font-weight:400;color:var(--color-text-muted);font-size:11px">· ${diaSem}</span></div>
+          <div style="font-size:11px;color:var(--color-text-muted);margin-top:2px">${o.at} atendimento(s) · ${_brlSimples(o.fat)}</div>
+        </div>
+        ${tag}
+      </label>`;
+    });
+    html += '</div>';
+    body.innerHTML = html;
+    _atualizarBtnFechar();
+  } catch (e) {
+    body.innerHTML = '<div class="dash-empty">❌ Erro: ' + e.message + '</div>';
+  }
+}
+
+function _atualizarBtnFechar() {
+  const checks = document.querySelectorAll('.fec-dia:checked');
+  const btn = document.getElementById('btnConfirmarFechamento');
+  btn.disabled = checks.length === 0;
+  btn.textContent = checks.length > 0 ? `🔒 Fechar ${checks.length} dia(s)` : '🔒 Confirmar Fechamento';
+}
+
+function fecharFecharCaixaOverlay() {
+  document.getElementById('fecharCaixaOverlay').classList.remove('open');
+}
+
+async function _executarFechamento() {
+  const checks = document.querySelectorAll('.fec-dia:checked');
+  if (checks.length === 0) return;
+  const diasParaFechar = Array.from(checks).map(c => c.dataset.dia);
+  const btn = document.getElementById('btnConfirmarFechamento');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+
+  let sucesso = 0, falhas = 0, semTelegram = 0;
+  const temTg = !!_tgGet();
+
+  for (const dia of diasParaFechar) {
+    try {
+      const data = await window.carregarAtendimentosPorPeriodo(dia, dia);
+      if (data.length === 0) { _marcarEnviado('day', dia); sucesso++; continue; }
+      if (temTg) {
+        const titulo = (dia === _hojeISO()) ? '🔒 Fechamento de Caixa' : `🔒 Fechamento de Caixa (atrasado)`;
+        const txt = _gerarResumoTexto(titulo, dia, dia, data);
+        const r = await _tgSend(txt);
+        if (r.ok) { _marcarEnviado('day', dia); sucesso++; }
+        else { falhas++; console.error('Falha Telegram dia', dia, r); }
+      } else {
+        _marcarEnviado('day', dia); semTelegram++;
+      }
+    } catch (e) { falhas++; console.error('Erro fechar dia', dia, e); }
+  }
+
+  let msg = '';
+  if (sucesso > 0) msg += `✓ ${sucesso} dia(s) fechado(s)`;
+  if (semTelegram > 0) msg += `\nℹ️ ${semTelegram} dia(s) marcado(s) como fechado(s) (Telegram não configurado, sem envio)`;
+  if (falhas > 0) msg += `\n❌ ${falhas} dia(s) falharam`;
+  alert(msg || 'Nada foi feito');
+
+  fecharFecharCaixaOverlay();
+  _verificarPendencias(); // atualiza banner
+}
+
+function _dispensarBanner() {
+  // dispensa por 1 hora
+  localStorage.setItem(BANNER_DISMISS_KEY, String(Date.now() + 60*60*1000));
+  document.getElementById('caixaPendenteBanner').style.display = 'none';
+}
+
+async function _verificarPendencias() {
+  if (!window.carregarAtendimentosPorPeriodo) return;
+  // respeita dispensa por 1h
+  const dispensaAte = parseInt(localStorage.getItem(BANNER_DISMISS_KEY) || '0', 10);
+  if (Date.now() < dispensaAte) return;
+
+  try {
+    const fim = _isoMinusDias(1);  // ontem
+    const ini = _isoMinusDias(7);  // 7 dias atrás
+    const data = await window.carregarAtendimentosPorPeriodo(ini, fim);
+    const log = _getSentLog();
+    const fechados = log.day || [];
+    const porDia = {};
+    data.forEach(a => {
+      const d = a.data;
+      if (!d || fechados.includes(d)) return;
+      porDia[d] = porDia[d] || { fat: 0, at: 0 };
+      porDia[d].fat += a.total || 0;
+      porDia[d].at += 1;
+    });
+    const pendentes = Object.keys(porDia).sort();
+    const banner = document.getElementById('caixaPendenteBanner');
+    const txt = document.getElementById('caixaPendenteBannerTxt');
+    if (pendentes.length > 0) {
+      const totalFat = pendentes.reduce((s,d) => s + porDia[d].fat, 0);
+      const labels = pendentes.length === 1
+        ? `Caixa de ${_ddmmaaaa(pendentes[0])} não foi fechado (${_brlSimples(porDia[pendentes[0]].fat)})`
+        : `${pendentes.length} caixas atrasados (${_brlSimples(totalFat)} no total)`;
+      txt.textContent = '⚠️ ' + labels;
+      banner.style.display = 'block';
+      document.body.style.paddingTop = (banner.offsetHeight || 44) + 'px';
+    } else {
+      banner.style.display = 'none';
+      document.body.style.paddingTop = '';
+    }
+  } catch (e) { console.error('Erro verificar pendências:', e); }
+}
+
+function _ddmmaaaa(iso) {
+  if (!iso) return '';
+  const p = iso.split('-');
+  return p[2] + '/' + p[1] + '/' + p[0];
+}
+function _diaDaSemana(iso) {
+  if (!iso) return '';
+  const p = iso.split('-');
+  const d = new Date(parseInt(p[0]), parseInt(p[1])-1, parseInt(p[2]));
+  return ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'][d.getDay()];
+}
+
+/* ---------- Lembrete automático de fechamento ---------- */
+function _getLembreteCfg() {
+  try {
+    const c = JSON.parse(localStorage.getItem(LEMBRETE_KEY) || 'null');
+    return c || { ativo: true, hora: '18:00' };
+  } catch (e) { return { ativo: true, hora: '18:00' }; }
+}
+function _salvarLembrete() {
+  const hora = document.getElementById('tgLembreteHora').value || '18:00';
+  const ativo = document.getElementById('tgLembreteAtivo').checked;
+  localStorage.setItem(LEMBRETE_KEY, JSON.stringify({ ativo, hora }));
+  const msg = document.getElementById('tgConfigMsg');
+  msg.textContent = '✓ Lembrete ' + (ativo ? `ativado às ${hora}` : 'desativado');
+  msg.style.color = '#28a745';
+}
+async function _verificarLembrete() {
+  if (!_tgGet()) return;
+  const cfg = _getLembreteCfg();
+  if (!cfg.ativo) return;
+  const agora = new Date();
+  // só segunda a sábado
+  if (agora.getDay() === 0) return;
+  const [hh, mm] = cfg.hora.split(':').map(Number);
+  // só dispara DEPOIS do horário configurado
+  if (agora.getHours() < hh || (agora.getHours() === hh && agora.getMinutes() < mm)) return;
+
+  const hojeKey = 'lembrete_' + _hojeISO();
+  if (_foiEnviado('lembrete', hojeKey)) return; // só manda 1x por dia
+
+  // verifica se hoje já foi fechado
+  const log = _getSentLog();
+  if ((log.day || []).includes(_hojeISO())) return;
+
+  // tem atendimentos hoje?
+  try {
+    const data = await window.carregarAtendimentosPorPeriodo(_hojeISO(), _hojeISO());
+    if (data.length === 0) return; // dia vazio, sem necessidade de lembrar
+    const total = data.reduce((s,a) => s + (a.total || 0), 0);
+    const txt = `🔔 *Lembrete — Aliança*\n\nVocê ainda não fechou o caixa de hoje (${_ddmmaaaa(_hojeISO())}).\n\n💰 Total até agora: *${_brlSimples(total)}*\n🎯 Atendimentos: ${data.length}\n\n_Abra o site e clique em "Fechar Caixa do Dia" pra encerrar._`;
+    const r = await _tgSend(txt);
+    if (r.ok) { _marcarEnviado('lembrete', hojeKey); console.log('Lembrete enviado:', hojeKey); }
+  } catch (e) { console.error('Falha lembrete:', e); }
+}
+
+/* ---------- Agendamentos automáticos (semanal/mensal) ---------- */
+function _getSentLog() {
+  try { return JSON.parse(localStorage.getItem(TG_SENT_KEY) || '{}'); } catch (e) { return {}; }
+}
+function _marcarEnviado(tipo, chave) {
+  const log = _getSentLog();
+  if (!log[tipo]) log[tipo] = [];
+  if (!log[tipo].includes(chave)) log[tipo].push(chave);
+  // mantém só os últimos 30 registros por tipo
+  if (log[tipo].length > 30) log[tipo] = log[tipo].slice(-30);
+  localStorage.setItem(TG_SENT_KEY, JSON.stringify(log));
+}
+function _foiEnviado(tipo, chave) {
+  const log = _getSentLog();
+  return (log[tipo] || []).includes(chave);
+}
+function _yearWeek(d) {
+  // ISO week number
+  const t = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  t.setDate(t.getDate() + 4 - (t.getDay()||7));
+  const yearStart = new Date(t.getFullYear(),0,1);
+  const week = Math.ceil((((t - yearStart)/86400000) + 1)/7);
+  return t.getFullYear() + '-W' + String(week).padStart(2,'0');
+}
+async function _verificarAgendamentos() {
+  if (!_tgGet() || !window.carregarAtendimentosPorPeriodo) return;
+  const agora = new Date();
+  const hora = agora.getHours();
+  if (hora < 8) return; // só dispara após 8h
+
+  // SEMANAL: toda segunda-feira (getDay() === 1)
+  if (agora.getDay() === 1) {
+    const chaveSem = _yearWeek(agora);
+    if (!_foiEnviado('week', chaveSem)) {
+      const fim = _isoMinusDias(1);  // domingo
+      const ini = _isoMinusDias(7);  // segunda anterior
+      try {
+        const data = await window.carregarAtendimentosPorPeriodo(ini, fim);
+        const txt = _gerarResumoTexto('📅 Resumo Semanal (segunda passada → domingo)', ini, fim, data);
+        const r = await _tgSend(txt);
+        if (r.ok) { _marcarEnviado('week', chaveSem); console.log('Resumo semanal enviado:', chaveSem); }
+      } catch (e) { console.error('Falha agendamento semanal:', e); }
+    }
+  }
+
+  // MENSAL: todo dia 1º
+  if (agora.getDate() === 1) {
+    const chaveMes = agora.getFullYear() + '-' + String(agora.getMonth()+1).padStart(2,'0');
+    if (!_foiEnviado('month', chaveMes)) {
+      // mês anterior
+      const fim = _isoMinusDias(1);
+      const primDiaMesAnt = new Date(agora.getFullYear(), agora.getMonth()-1, 1);
+      const ini = primDiaMesAnt.getFullYear() + '-' + String(primDiaMesAnt.getMonth()+1).padStart(2,'0') + '-01';
+      try {
+        const data = await window.carregarAtendimentosPorPeriodo(ini, fim);
+        const txt = _gerarResumoTexto('🗓️ Resumo Mensal', ini, fim, data);
+        const r = await _tgSend(txt);
+        if (r.ok) { _marcarEnviado('month', chaveMes); console.log('Resumo mensal enviado:', chaveMes); }
+      } catch (e) { console.error('Falha agendamento mensal:', e); }
+    }
+  }
+}
+
+/* Dispara agendamentos + verifica pendências + lembrete */
+window.addEventListener('load', () => {
+  _tgUpdateBadge();
+  // popula campos do lembrete no overlay
+  const cfgL = _getLembreteCfg();
+  const inputH = document.getElementById('tgLembreteHora');
+  const inputA = document.getElementById('tgLembreteAtivo');
+  if (inputH) inputH.value = cfgL.hora;
+  if (inputA) inputA.checked = cfgL.ativo;
+
+  setTimeout(() => {
+    _verificarAgendamentos();
+    _verificarPendencias();
+    _verificarLembrete();
+  }, 5000);
+  setInterval(() => {
+    _verificarAgendamentos();
+    _verificarPendencias();
+    _verificarLembrete();
+  }, 15 * 60 * 1000); // a cada 15 min (lembrete precisa ser mais frequente)
+});
+
+/* ESC fecha overlays */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('tgConfigOverlay').classList.contains('open')) fecharConfigTelegram();
+    else if (document.getElementById('fecharCaixaOverlay').classList.contains('open')) fecharFecharCaixaOverlay();
+    else if (document.getElementById('dashOverlay').classList.contains('open')) fecharDashboard();
+  }
+});
+
+/* Expor globalmente */
+window.abrirDashboard = abrirDashboard;
+window.fecharDashboard = fecharDashboard;
+window.abrirConfigTelegram = abrirConfigTelegram;
+window.fecharConfigTelegram = fecharConfigTelegram;
+window.enviarResumoManual = enviarResumoManual;
+window.fecharCaixaDoDia = fecharCaixaDoDia;
+window.abrirFecharCaixaAvancado = abrirFecharCaixaAvancado;
+window.fecharFecharCaixaOverlay = fecharFecharCaixaOverlay;
+window._executarFechamento = _executarFechamento;
+window._atualizarBtnFechar = _atualizarBtnFechar;
+window._dispensarBanner = _dispensarBanner;
+window._salvarLembrete = _salvarLembrete;
+window._dashSet = _dashSet;
+window._tgSave = _tgSave;
+window._tgClear = _tgClear;
+window._tgTest = _tgTest;
+</script>
 
 </body>
 </html>
