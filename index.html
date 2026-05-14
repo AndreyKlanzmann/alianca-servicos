@@ -295,9 +295,13 @@ a{text-decoration:none;color:inherit}
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
       <span>Modo Rápido</span>
     </button>
+    <button class="btn-quick" onclick="abrirEstoque()" title="Estoque de produtos" style="background:#5a3e8a">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      <span>Estoque</span>
+    </button>
     <button class="btn-patch" onclick="openPatch()" title="Notas de atualização">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      <span>v2.8</span>
+      <span>v3.0</span>
     </button>
     <button class="btn-icon" data-theme-toggle aria-label="Alternar tema">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -311,6 +315,7 @@ a{text-decoration:none;color:inherit}
 
   <nav class="cat-nav" id="catNav">
     <button class="cat-pill active" data-cat="all">Todos</button>
+    <button class="cat-pill" data-cat="loja" style="background:linear-gradient(135deg,#5a3e8a,#7b5db4);color:#fff;border:none">🛒 Loja</button>
     <button class="cat-pill" data-cat="detran">Detran</button>
     <button class="cat-pill" data-cat="mei">MEI</button>
     <button class="cat-pill" data-cat="gov">GOV</button>
@@ -485,6 +490,25 @@ a{text-decoration:none;color:inherit}
     <div class="cards-grid" id="grid-especiais"></div>
   </section>
 
+  <section class="section" data-cat="loja">
+    <div class="section-head">
+      <span class="cat-tag">🛒 Loja</span>
+      <h2 class="section-title">Produtos à Venda</h2>
+      <span class="section-count" id="count-loja">carregando...</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+      <input type="text" id="lojaBusca" placeholder="Buscar produto na loja..." style="flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px" oninput="_renderLoja()">
+      <select id="lojaGrupo" onchange="_renderLoja()" style="padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;background:var(--color-card)">
+        <option value="">Todos os grupos</option>
+      </select>
+      <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-muted);cursor:pointer">
+        <input type="checkbox" id="lojaSoComEstoque" onchange="_renderLoja()"> Só com estoque
+      </label>
+      <button onclick="_recarregarLoja()" class="btn-ver" style="padding:8px 12px" title="Recarregar do Firebase">↻ Atualizar</button>
+    </div>
+    <div class="cards-grid" id="grid-loja"></div>
+  </section>
+
   </div><!-- #sections -->
 
   <div id="emptyState" class="empty-state" style="display:none">
@@ -500,7 +524,7 @@ a{text-decoration:none;color:inherit}
     <div class="patch-head">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-patch)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       <h2>Patch Notes</h2>
-      <span class="patch-version-badge">v2.8</span>
+      <span class="patch-version-badge">v3.0</span>
       <button class="patch-close" onclick="closePatch()" aria-label="Fechar">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
@@ -508,6 +532,26 @@ a{text-decoration:none;color:inherit}
     <div class="patch-body">
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
+        <div class="patch-content">
+          <div class="patch-version">v3.0</div>
+          <div class="patch-date">14 de maio de 2026</div>
+          <div class="patch-title">🚀 Sistema de Estoque + Sincronização Total (acabou a barreira do navegador)</div>
+          <ul class="patch-items">
+            <li>🔓 <b>Caixa sincronizado entre PCs:</b> fechamento agora vai pro Firebase — fechou no balcão, aparece fechado em todos os computadores (não depende mais de localStorage por navegador)</li>
+            <li>📦 <b>Sistema de Estoque novo:</b> botão 📦 Estoque no header abre uma planilha completa com todos os produtos, busca, filtro por grupo, badges de estoque baixo / esgotado</li>
+            <li>📅 <b>414 produtos do SMB:</b> botão "📥 Importar SMB" carrega a base inteira no Firebase de uma vez (papelaria, eletrônicos, armarinho, papel especial, artesanato) com estoque inicial</li>
+            <li>🛒 <b>Categoria Loja na Central:</b> nova aba roxa lista os produtos com preço + estoque + botão "+ Caixa" — vende como qualquer serviço</li>
+            <li>⚡ <b>Baixa automática:</b> ao finalizar atendimento, todos os produtos vendidos são descontados do estoque automaticamente no Firebase — atualiza em todos os PCs em tempo real</li>
+            <li>✅ <b>Permite estoque negativo:</b> se vender mais do que tem no sistema, marca o estoque como negativo (não trava a venda) — útil quando o estoque do SMB está desatualizado</li>
+            <li>🔴 <b>Tag ESGOTADO + alerta:</b> produtos com estoque ≤ 0 ficam com tag vermelha; abaixo do mínimo, badge amarelo de aviso</li>
+            <li>✏️ <b>Editar / Entrada manual:</b> chegou produto novo? Clique em entrada de estoque ou cadastre manualmente — fica disponível em todos os PCs na hora</li>
+            <li>📊 <b>Auditoria de movimentos:</b> nova coleção <code>estoque_movimentos</code> registra entradas e saídas com data, hora, motivo e atendimento vinculado</li>
+            <li>🔄 <b>Re-importar SMB sem duplicar:</b> usa o código do produto como ID único (Firestore merge) — pode rodar quantas vezes quiser</li>
+          </ul>
+        </div>
+      </div>
+      <div class="patch-entry">
+        <div class="patch-timeline"><div class="patch-dot"></div><div class="patch-line"></div></div>
         <div class="patch-content">
           <div class="patch-version">v2.8</div>
           <div class="patch-date">14 de maio de 2026</div>
@@ -1281,6 +1325,16 @@ function addToCart(name, priceStr) {
   if (ex) { ex.qty++; } else { _cart.push({uid: _cart.length + '_' + Date.now(), name:name, qty:1, basePrice:_parsePrice(priceStr)}); }
   _renderCart(); _renderBadge();
 }
+
+// Adiciona produto da Loja (com código) ao carrinho — será baixado do estoque no finishAttendance
+function addProductToCart(codigo, nome, preco) {
+  var ex = null;
+  for (var i=0;i<_cart.length;i++) { if (_cart[i].name===nome){ex=_cart[i];break;} }
+  if (ex) { ex.qty++; }
+  else { _cart.push({uid: 'p_' + codigo + '_' + Date.now(), name:nome, qty:1, basePrice:Number(preco)||0, productCode: String(codigo)}); }
+  _renderCart(); _renderBadge();
+}
+window.addProductToCart = addProductToCart;
 function quickAdd(name, price) { addToCart(name, price); }
 
 function _removeItem(idx) {
@@ -1310,12 +1364,18 @@ async function finishAttendance() {
   for (var i = 0; i < _cart.length; i++) tot += _itemTotal(_cart[i]);
 
   var saved = [];
+  var produtosVendidos = [];
   for (var i = 0; i < _cart.length; i++) {
-    saved.push({
+    var savedItem = {
       name: _cart[i].name,
       qty: _cart[i].qty,
       tot: _itemTotal(_cart[i])
-    });
+    };
+    if (_cart[i].productCode) {
+      savedItem.productCode = _cart[i].productCode;
+      produtosVendidos.push({ codigo: _cart[i].productCode, qty: _cart[i].qty });
+    }
+    saved.push(savedItem);
   }
 
   var agora = new Date();
@@ -1352,6 +1412,17 @@ async function finishAttendance() {
   } else {
     at._syncStatus = 'error';
     _renderHistory();
+  }
+
+  // Baixa automática de estoque para produtos vendidos (permite negativo)
+  if (produtosVendidos.length > 0 && window.baixaEstoque) {
+    for (var p = 0; p < produtosVendidos.length; p++) {
+      try {
+        await window.baixaEstoque(produtosVendidos[p].codigo, produtosVendidos[p].qty, at.id);
+      } catch (e) { console.warn('Falha baixa estoque:', e); }
+    }
+    // Atualiza loja em background
+    if (window._recarregarLoja) { window._recarregarLoja(true); }
   }
 }
 
@@ -1713,13 +1784,15 @@ function _updateCaixaStatusBadge() {
   if (!badge) return;
   try {
     var hoje = _hojeISO();
+    // Fonte da verdade: Firebase (cache local serve só pra UI instantânea)
+    var cacheFirebase = JSON.parse(localStorage.getItem('alianca_caixa_fb_cache_v1') || '{"dias":[]}');
     var log = JSON.parse(localStorage.getItem('alianca_tg_sent_log_v1') || '{}');
-    var fechado = (log.day || []).indexOf(hoje) !== -1;
+    var fechado = cacheFirebase.dias.indexOf(hoje) !== -1 || (log.day || []).indexOf(hoje) !== -1;
     if (fechado) {
       badge.textContent = '✓ Fechado';
       badge.style.background = '#dcfce7';
       badge.style.color = '#166534';
-      badge.title = 'Caixa de hoje já foi fechado';
+      badge.title = 'Caixa de hoje já foi fechado (sincronizado entre PCs)';
     } else {
       badge.textContent = '○ Aberto';
       badge.style.background = '#fef3c7';
@@ -2605,7 +2678,12 @@ function gerarNotinha(idx) {
     where,
     orderBy,
     deleteDoc,
-    doc
+    doc,
+    setDoc,
+    updateDoc,
+    increment,
+    writeBatch,
+    getDoc
   } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
   const firebaseConfig = {
@@ -2774,12 +2852,180 @@ async function carregarAtendimentosDoDia(dataISO) {
     }
   }, 60000);
 
+  // ============================================================
+  // PRODUTOS / ESTOQUE (coleção: produtos)
+  // Documento ID = string do código do produto (codigo)
+  // ============================================================
+
+  async function carregarProdutos() {
+    try {
+      const snap = await getDocs(query(collection(db, 'produtos'), orderBy('nome', 'asc')));
+      const lista = [];
+      snap.forEach(d => { lista.push({ _docId: d.id, ...d.data() }); });
+      return lista;
+    } catch (e) {
+      console.error('Erro carregarProdutos:', e);
+      return [];
+    }
+  }
+
+  async function salvarProduto(prod) {
+    // prod = { codigo, nome, grupo, subgrupo, preco, unid, estoque, estoqueMinimo, ativo, origem }
+    if (!prod.codigo) throw new Error('produto sem código');
+    const docId = String(prod.codigo);
+    const payload = {
+      codigo: Number(prod.codigo),
+      nome: String(prod.nome || '').trim(),
+      grupo: String(prod.grupo || 'OUTROS').trim(),
+      subgrupo: String(prod.subgrupo || '').trim(),
+      preco: Number(prod.preco) || 0,
+      unid: String(prod.unid || 'UN').trim(),
+      estoque: Number(prod.estoque) || 0,
+      estoqueMinimo: Number(prod.estoqueMinimo) || 0,
+      ativo: prod.ativo !== false,
+      origem: prod.origem || 'manual',
+      atualizadoEm: new Date().toISOString()
+    };
+    await setDoc(doc(db, 'produtos', docId), payload, { merge: true });
+    return docId;
+  }
+
+  async function deletarProduto(codigo) {
+    await deleteDoc(doc(db, 'produtos', String(codigo)));
+  }
+
+  async function entradaEstoque(codigo, quantidade, motivo) {
+    // Soma quantidade ao estoque (atomicamente)
+    const ref = doc(db, 'produtos', String(codigo));
+    await updateDoc(ref, {
+      estoque: increment(Number(quantidade)),
+      atualizadoEm: new Date().toISOString()
+    });
+    // Registra movimento de auditoria
+    await addDoc(collection(db, 'estoque_movimentos'), {
+      codigo: Number(codigo),
+      tipo: 'entrada',
+      quantidade: Number(quantidade),
+      motivo: motivo || 'Entrada manual',
+      em: new Date().toISOString()
+    });
+  }
+
+  async function baixaEstoque(codigo, quantidade, atendimentoId) {
+    // Subtrai quantidade do estoque (permite negativo — conforme decisão do usuário)
+    const ref = doc(db, 'produtos', String(codigo));
+    try {
+      await updateDoc(ref, {
+        estoque: increment(-Math.abs(Number(quantidade))),
+        atualizadoEm: new Date().toISOString()
+      });
+      await addDoc(collection(db, 'estoque_movimentos'), {
+        codigo: Number(codigo),
+        tipo: 'venda',
+        quantidade: Number(quantidade),
+        atendimentoId: atendimentoId || null,
+        em: new Date().toISOString()
+      });
+    } catch (e) {
+      // produto inexistente — ignora silenciosamente (serviços do governo não têm doc de produto)
+      if (e.code !== 'not-found') console.warn('baixaEstoque falhou:', e.message);
+    }
+  }
+
+  async function importarProdutosEmLote(lista) {
+    // Importa em batches de 400 (limite Firestore: 500)
+    let total = 0;
+    for (let i = 0; i < lista.length; i += 400) {
+      const chunk = lista.slice(i, i + 400);
+      const batch = writeBatch(db);
+      chunk.forEach(p => {
+        const docId = String(p.codigo);
+        const ref = doc(db, 'produtos', docId);
+        batch.set(ref, {
+          codigo: Number(p.codigo),
+          nome: String(p.nome || '').trim(),
+          grupo: String(p.grupo || 'OUTROS').trim(),
+          subgrupo: String(p.subgrupo || '').trim(),
+          preco: Number(p.preco) || 0,
+          unid: String(p.unid || 'UN').trim(),
+          estoque: Number(p.estoque) || 0,
+          estoqueMinimo: Number(p.estoqueMinimo) || 0,
+          ativo: true,
+          origem: 'SMB',
+          atualizadoEm: new Date().toISOString()
+        }, { merge: true });
+      });
+      await batch.commit();
+      total += chunk.length;
+      console.log(`Importados ${total}/${lista.length} produtos`);
+    }
+    return total;
+  }
+
+  // ============================================================
+  // FECHAMENTO DE CAIXA (coleção: caixa_fechamentos)
+  // Documento ID = data ISO (ex: "2026-05-14")
+  // Substitui o localStorage — sincroniza entre todos os PCs
+  // ============================================================
+
+  async function fecharCaixaFirebase(dataISO, info) {
+    const payload = {
+      data: dataISO,
+      fechadoEm: new Date().toISOString(),
+      fechadoPor: (navigator.userAgent || '').slice(0, 100),
+      atendimentos: (info && info.atendimentos) || 0,
+      total: (info && info.total) || 0
+    };
+    await setDoc(doc(db, 'caixa_fechamentos', dataISO), payload, { merge: true });
+    return payload;
+  }
+
+  async function reabrirCaixaFirebase(dataISO) {
+    await deleteDoc(doc(db, 'caixa_fechamentos', dataISO));
+  }
+
+  async function listarCaixaFechamentos(inicioISO, fimISO) {
+    try {
+      const qRef = query(
+        collection(db, 'caixa_fechamentos'),
+        where('data', '>=', inicioISO),
+        where('data', '<=', fimISO)
+      );
+      const snap = await getDocs(qRef);
+      const dias = [];
+      snap.forEach(d => dias.push(d.data().data));
+      return dias;
+    } catch (e) {
+      console.error('Erro listarCaixaFechamentos:', e);
+      return [];
+    }
+  }
+
+  async function caixaJaFechado(dataISO) {
+    try {
+      const snap = await getDoc(doc(db, 'caixa_fechamentos', dataISO));
+      return snap.exists();
+    } catch (e) { return false; }
+  }
+
   try {
     window.salvarAtendimento = salvarAtendimento;
     window.excluirAtendimento = excluirAtendimento;
     window.carregarAtendimentosDoDia = carregarAtendimentosDoDia;
     window.carregarAtendimentosPorPeriodo = carregarAtendimentosPorPeriodo;
     window.carregarTodosAtendimentos = carregarTodosAtendimentos;
+    // Produtos / estoque
+    window.carregarProdutos = carregarProdutos;
+    window.salvarProduto = salvarProduto;
+    window.deletarProduto = deletarProduto;
+    window.entradaEstoque = entradaEstoque;
+    window.baixaEstoque = baixaEstoque;
+    window.importarProdutosEmLote = importarProdutosEmLote;
+    // Fechamento caixa
+    window.fecharCaixaFirebase = fecharCaixaFirebase;
+    window.reabrirCaixaFirebase = reabrirCaixaFirebase;
+    window.listarCaixaFechamentos = listarCaixaFechamentos;
+    window.caixaJaFechado = caixaJaFechado;
     console.log('Funções Firestore expostas em window');
   } catch (e) {
     console.error('Erro ao expor funções no window:', e);
@@ -3152,7 +3398,7 @@ function _gerarResumoTexto(titulo, di, df, data) {
     const melhor = ag.dias.reduce((m, d) => ag.porDia[d].fat > ag.porDia[m].fat ? d : m, ag.dias[0]);
     txt += `\n📅 Melhor dia: *${_ddmm(melhor)}* (${_brlSimples(ag.porDia[melhor].fat)})`;
   }
-  txt += `\n\n_Aliança Informática · PDV v2.8_`;
+  txt += `\n\n_Aliança Informática · PDV v3.0_`;
   return txt;
 }
 
@@ -3208,7 +3454,9 @@ async function abrirFecharCaixaAvancado() {
 
     const hoje = _hojeISO();
     const log = _getSentLog();
-    const diasFechados = log.day || [];
+    // v3.0: combina local + Firebase cache
+    const cacheFB = JSON.parse(localStorage.getItem('alianca_caixa_fb_cache_v1') || '{"dias":[]}');
+    const diasFechados = Array.from(new Set([...(log.day || []), ...cacheFB.dias]));
 
     // Lista todos os dias com atendimentos
     const dias = Object.keys(porDia).sort().reverse(); // mais recente primeiro
@@ -3331,7 +3579,8 @@ async function _verificarPendencias() {
     const ini = _isoMinusDias(7);  // 7 dias atrás
     const data = await window.carregarAtendimentosPorPeriodo(ini, fim);
     const log = _getSentLog();
-    const fechados = log.day || [];
+    const cacheFB = JSON.parse(localStorage.getItem('alianca_caixa_fb_cache_v1') || '{"dias":[]}');
+    const fechados = Array.from(new Set([...(log.day || []), ...cacheFB.dias]));
     const porDia = {};
     data.forEach(a => {
       const d = a.data;
@@ -3399,9 +3648,10 @@ async function _verificarLembrete() {
   const hojeKey = 'lembrete_' + _hojeISO();
   if (_foiEnviado('lembrete', hojeKey)) return; // só manda 1x por dia
 
-  // verifica se hoje já foi fechado
+  // verifica se hoje já foi fechado (local OU Firebase)
   const log = _getSentLog();
-  if ((log.day || []).includes(_hojeISO())) return;
+  const cacheFB = JSON.parse(localStorage.getItem('alianca_caixa_fb_cache_v1') || '{"dias":[]}');
+  if ((log.day || []).includes(_hojeISO()) || cacheFB.dias.includes(_hojeISO())) return;
 
   // tem atendimentos hoje?
   try {
@@ -3425,7 +3675,43 @@ function _marcarEnviado(tipo, chave) {
   // mantém só os últimos 30 registros por tipo
   if (log[tipo].length > 30) log[tipo] = log[tipo].slice(-30);
   localStorage.setItem(TG_SENT_KEY, JSON.stringify(log));
+  // v3.0: se for fechamento de dia, persiste no Firebase também (sincroniza entre PCs)
+  if (tipo === 'day' && window.fecharCaixaFirebase) {
+    // Atualiza cache local imediatamente (UI instantânea)
+    try {
+      const cache = JSON.parse(localStorage.getItem('alianca_caixa_fb_cache_v1') || '{"dias":[]}');
+      if (!cache.dias.includes(chave)) cache.dias.push(chave);
+      localStorage.setItem('alianca_caixa_fb_cache_v1', JSON.stringify(cache));
+    } catch (e) {}
+    // Persiste em Firestore (assincrono — não trava UI)
+    (async () => {
+      try {
+        let info = { atendimentos: 0, total: 0 };
+        if (window.carregarAtendimentosPorPeriodo) {
+          const dados = await window.carregarAtendimentosPorPeriodo(chave, chave);
+          info.atendimentos = dados.length;
+          info.total = dados.reduce((s, a) => s + (a.total || 0), 0);
+        }
+        await window.fecharCaixaFirebase(chave, info);
+        try { _updateCaixaStatusBadge(); } catch(e){}
+      } catch (e) { console.warn('Falha sync caixa Firebase:', e); }
+    })();
+  }
 }
+
+// v3.0: sincroniza cache local com lista de fechamentos do Firebase
+async function _sincronizarCacheCaixaFirebase() {
+  if (!window.listarCaixaFechamentos) return;
+  try {
+    const fim = _hojeISO();
+    const ini = _isoMinusDias(30);
+    const dias = await window.listarCaixaFechamentos(ini, fim);
+    localStorage.setItem('alianca_caixa_fb_cache_v1', JSON.stringify({ dias, atualizadoEm: Date.now() }));
+    try { _updateCaixaStatusBadge(); } catch(e){}
+    return dias;
+  } catch (e) { console.warn('Falha sincronizar cache caixa:', e); return null; }
+}
+window._sincronizarCacheCaixaFirebase = _sincronizarCacheCaixaFirebase;
 function _foiEnviado(tipo, chave) {
   const log = _getSentLog();
   return (log[tipo] || []).includes(chave);
@@ -3493,6 +3779,7 @@ async function _verificarAgendamentos() {
 
     let _checkTimer = null;
     function _runChecks(){
+      try { _sincronizarCacheCaixaFirebase(); } catch(e){} // v3.0: refresca cache primeiro
       try { _verificarAgendamentos(); } catch(e){}
       try { _verificarPendencias(); } catch(e){}
       try { _verificarLembrete(); } catch(e){}
@@ -3551,6 +3838,418 @@ window._tgTest = _tgTest;
 window._updateCaixaStatusBadge = _updateCaixaStatusBadge;
 window._verificarPendencias = _verificarPendencias;
 window._verificarLembrete = _verificarLembrete;
+</script>
+
+<!-- =================================================================
+     v3.0 — OVERLAY ESTOQUE + LOJA + IMPORT SMB
+     ================================================================= -->
+<div class="overlay" id="estoqueOverlay" role="dialog" aria-modal="true" aria-label="Estoque">
+  <div class="patch-panel" style="max-width:1100px;width:96vw;max-height:92vh">
+    <div class="patch-head" style="flex-wrap:wrap;gap:8px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a3e8a" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      <h2 style="margin:0;flex:1">Estoque · <span id="estoqueCount" style="font-weight:400;color:#888;font-size:13px">carregando...</span></h2>
+      <button onclick="_abrirImportSMB()" class="btn-ver" style="padding:8px 12px;background:#01696F;color:#fff;border:none" title="Importar 414 produtos do SMB no Firebase">📥 Importar SMB</button>
+      <button onclick="_abrirEditarProduto(null)" class="btn-ver" style="padding:8px 12px;background:#28a745;color:#fff;border:none">➕ Novo produto</button>
+      <button onclick="_recarregarEstoque()" class="btn-ver" style="padding:8px 12px">↻ Atualizar</button>
+      <button class="patch-close" onclick="fecharEstoque()" aria-label="Fechar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--color-border);flex-wrap:wrap;background:var(--color-card)">
+      <input type="text" id="estoqueBusca" placeholder="Buscar por nome, código ou subgrupo..." oninput="_renderEstoque()" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px">
+      <select id="estoqueGrupo" onchange="_renderEstoque()" style="padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;background:var(--color-card)">
+        <option value="">Todos os grupos</option>
+      </select>
+      <select id="estoqueStatus" onchange="_renderEstoque()" style="padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;background:var(--color-card)">
+        <option value="">Todos</option>
+        <option value="esgotado">Esgotado / Negativo</option>
+        <option value="baixo">Estoque baixo</option>
+        <option value="positivo">Com estoque</option>
+      </select>
+    </div>
+    <div class="patch-body" id="estoqueBody" style="max-height:calc(92vh - 130px);overflow:auto;padding:0">
+      <div style="padding:40px;text-align:center;color:#888">Carregando produtos do Firebase...</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Entrada de Estoque -->
+<div class="overlay" id="entradaEstoqueOverlay" role="dialog" aria-modal="true">
+  <div class="patch-panel" style="max-width:420px">
+    <div class="patch-head">
+      <h2 style="margin:0;flex:1">➕ Entrada de Estoque</h2>
+      <button class="patch-close" onclick="_fecharEntradaEstoque()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12px;color:#666">Produto: <b id="entradaProdNome"></b><br>Estoque atual: <b id="entradaProdEstoque"></b></div>
+      <label style="font-size:12px;font-weight:600">Quantidade que chegou:</label>
+      <input type="number" id="entradaQty" value="1" min="1" style="padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:15px">
+      <label style="font-size:12px;font-weight:600">Motivo (opcional):</label>
+      <input type="text" id="entradaMotivo" placeholder="Ex: Compra fornecedor" style="padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px">
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+        <button onclick="_fecharEntradaEstoque()" class="btn-ver">Cancelar</button>
+        <button onclick="_confirmarEntradaEstoque()" class="btn-ver" style="background:#28a745;color:#fff;border:none">✓ Confirmar entrada</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Editar / Criar Produto -->
+<div class="overlay" id="editarProdutoOverlay" role="dialog" aria-modal="true">
+  <div class="patch-panel" style="max-width:500px">
+    <div class="patch-head">
+      <h2 style="margin:0;flex:1" id="editarProdutoTitulo">Editar Produto</h2>
+      <button class="patch-close" onclick="_fecharEditarProduto()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div style="padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="grid-column:span 2">
+        <label style="font-size:11px;font-weight:600;color:#666">Código (não pode mudar depois)</label>
+        <input type="text" id="prodCodigo" placeholder="Ex: 7894632532595" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div style="grid-column:span 2">
+        <label style="font-size:11px;font-weight:600;color:#666">Nome</label>
+        <input type="text" id="prodNome" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:600;color:#666">Grupo</label>
+        <input type="text" id="prodGrupo" placeholder="Ex: PAPELARIA ESCOLAR" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:600;color:#666">Subgrupo</label>
+        <input type="text" id="prodSubgrupo" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:600;color:#666">Preço (R$)</label>
+        <input type="number" step="0.01" id="prodPreco" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:600;color:#666">Unidade</label>
+        <input type="text" id="prodUnid" value="UN" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:600;color:#666">Estoque atual</label>
+        <input type="number" id="prodEstoque" value="0" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:600;color:#666">Estoque mínimo</label>
+        <input type="number" id="prodEstoqueMin" value="0" style="width:100%;padding:8px 12px;border:1px solid var(--color-border);border-radius:8px;font-size:13px;margin-top:4px">
+      </div>
+      <div id="prodEditMsg" style="grid-column:span 2;font-size:12px;min-height:18px"></div>
+      <div style="grid-column:span 2;display:flex;gap:8px;justify-content:space-between">
+        <button id="prodDeleteBtn" onclick="_excluirProdutoUI()" class="btn-ver" style="background:#dc3545;color:#fff;border:none;display:none">🗑️ Excluir</button>
+        <div style="display:flex;gap:8px;margin-left:auto">
+          <button onclick="_fecharEditarProduto()" class="btn-ver">Cancelar</button>
+          <button onclick="_salvarProdutoUI()" class="btn-ver" style="background:#01696F;color:#fff;border:none">✓ Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   v3.0 — ESTOQUE + LOJA + IMPORTAÇÃO SMB
+   ============================================================ */
+var _produtosCache = [];   // lista em memória — carregada do Firebase
+var _produtoEdit = null;   // produto sendo editado/incluído
+var _produtoEntrada = null;
+
+async function abrirEstoque() {
+  document.getElementById('estoqueOverlay').classList.add('open');
+  await _recarregarEstoque();
+}
+function fecharEstoque() { document.getElementById('estoqueOverlay').classList.remove('open'); }
+
+async function _recarregarEstoque() {
+  if (!window.carregarProdutos) {
+    document.getElementById('estoqueBody').innerHTML = '<div style="padding:40px;text-align:center;color:#c00">⚠️ Firebase indisponível</div>';
+    return;
+  }
+  document.getElementById('estoqueBody').innerHTML = '<div style="padding:40px;text-align:center;color:#888">Carregando produtos do Firebase...</div>';
+  _produtosCache = await window.carregarProdutos();
+  _popularFiltroGrupos('estoqueGrupo', _produtosCache);
+  _renderEstoque();
+  // também recarrega loja
+  if (window._recarregarLoja) window._recarregarLoja(true);
+}
+
+function _popularFiltroGrupos(selectId, lista) {
+  var sel = document.getElementById(selectId);
+  if (!sel) return;
+  var grupos = Array.from(new Set(lista.map(p => p.grupo).filter(Boolean))).sort();
+  var atual = sel.value;
+  sel.innerHTML = '<option value="">Todos os grupos</option>' + grupos.map(g => '<option value="'+g+'">'+g+' ('+lista.filter(p=>p.grupo===g).length+')</option>').join('');
+  if (atual) sel.value = atual;
+}
+
+function _renderEstoque() {
+  var busca = (document.getElementById('estoqueBusca').value || '').toLowerCase().trim();
+  var grupo = document.getElementById('estoqueGrupo').value;
+  var status = document.getElementById('estoqueStatus').value;
+  var filtrados = _produtosCache.filter(p => {
+    if (grupo && p.grupo !== grupo) return false;
+    if (status === 'esgotado' && p.estoque > 0) return false;
+    if (status === 'baixo' && !(p.estoque > 0 && p.estoque <= (p.estoqueMinimo || 0))) return false;
+    if (status === 'positivo' && p.estoque <= 0) return false;
+    if (busca) {
+      var hay = (p.nome + ' ' + p.codigo + ' ' + (p.subgrupo||'') + ' ' + (p.grupo||'')).toLowerCase();
+      if (!hay.includes(busca)) return false;
+    }
+    return true;
+  });
+  document.getElementById('estoqueCount').textContent = filtrados.length + ' / ' + _produtosCache.length + ' produtos';
+
+  if (filtrados.length === 0) {
+    document.getElementById('estoqueBody').innerHTML = '<div style="padding:40px;text-align:center;color:#888">💭 Nenhum produto encontrado com esses filtros</div>';
+    return;
+  }
+
+  var rows = filtrados.map(p => {
+    var estoque = Number(p.estoque || 0);
+    var min = Number(p.estoqueMinimo || 0);
+    var badgeColor = '#28a745', badgeText = String(estoque);
+    if (estoque <= 0) { badgeColor = '#dc3545'; badgeText = estoque + ' ⚠️'; }
+    else if (estoque <= min) { badgeColor = '#f59e0b'; badgeText = estoque + ' 🔽'; }
+    var precoStr = 'R$ ' + (Number(p.preco)||0).toFixed(2).replace('.', ',');
+    var codigoEsc = String(p.codigo).replace(/'/g, "\\'");
+    return `<tr style="border-bottom:1px solid var(--color-border)">
+      <td style="padding:8px 10px;font-family:monospace;font-size:11px;color:#666">${p.codigo}</td>
+      <td style="padding:8px 10px;font-size:13px;font-weight:500">${p.nome}</td>
+      <td style="padding:8px 10px;font-size:11px;color:#666">${p.grupo||''}<br><span style="color:#999">${p.subgrupo||''}</span></td>
+      <td style="padding:8px 10px;font-size:13px;text-align:right;font-weight:600">${precoStr}</td>
+      <td style="padding:8px 10px;text-align:center"><span style="background:${badgeColor};color:#fff;padding:3px 10px;border-radius:10px;font-size:12px;font-weight:700;font-family:monospace">${badgeText}</span><br><span style="font-size:10px;color:#999">min: ${min} ${p.unid||'UN'}</span></td>
+      <td style="padding:8px 10px;white-space:nowrap;text-align:right">
+        <button onclick="_abrirEntradaEstoque('${codigoEsc}')" class="btn-ver" style="padding:5px 9px;font-size:11px;background:#28a745;color:#fff;border:none;margin-right:4px" title="Entrada de estoque">➕</button>
+        <button onclick="_abrirEditarProduto('${codigoEsc}')" class="btn-ver" style="padding:5px 9px;font-size:11px;margin-right:4px" title="Editar">✏️</button>
+      </td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('estoqueBody').innerHTML = `
+    <table style="width:100%;border-collapse:collapse;background:var(--color-card)">
+      <thead style="position:sticky;top:0;background:var(--color-card);box-shadow:0 1px 0 var(--color-border)">
+        <tr style="font-size:11px;color:#666;text-align:left;text-transform:uppercase">
+          <th style="padding:10px">Código</th>
+          <th style="padding:10px">Nome</th>
+          <th style="padding:10px">Grupo / Subgrupo</th>
+          <th style="padding:10px;text-align:right">Preço</th>
+          <th style="padding:10px;text-align:center">Estoque</th>
+          <th style="padding:10px;text-align:right">Ações</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+/* ---------- Entrada de Estoque ---------- */
+function _abrirEntradaEstoque(codigo) {
+  _produtoEntrada = _produtosCache.find(p => String(p.codigo) === String(codigo));
+  if (!_produtoEntrada) return;
+  document.getElementById('entradaProdNome').textContent = _produtoEntrada.nome;
+  document.getElementById('entradaProdEstoque').textContent = _produtoEntrada.estoque + ' ' + (_produtoEntrada.unid||'UN');
+  document.getElementById('entradaQty').value = 1;
+  document.getElementById('entradaMotivo').value = '';
+  document.getElementById('entradaEstoqueOverlay').classList.add('open');
+}
+function _fecharEntradaEstoque(){ document.getElementById('entradaEstoqueOverlay').classList.remove('open'); }
+async function _confirmarEntradaEstoque() {
+  if (!_produtoEntrada) return;
+  var qty = parseInt(document.getElementById('entradaQty').value || '0', 10);
+  var motivo = document.getElementById('entradaMotivo').value.trim() || 'Entrada manual';
+  if (qty <= 0) { alert('Quantidade inválida'); return; }
+  try {
+    await window.entradaEstoque(_produtoEntrada.codigo, qty, motivo);
+    _fecharEntradaEstoque();
+    await _recarregarEstoque();
+  } catch (e) { alert('Erro: ' + e.message); }
+}
+
+/* ---------- Editar / Criar Produto ---------- */
+function _abrirEditarProduto(codigo) {
+  var prod = codigo ? _produtosCache.find(p => String(p.codigo) === String(codigo)) : null;
+  _produtoEdit = prod;
+  document.getElementById('editarProdutoTitulo').textContent = prod ? '✏️ Editar Produto' : '➕ Novo Produto';
+  document.getElementById('prodCodigo').value = prod ? prod.codigo : '';
+  document.getElementById('prodCodigo').disabled = !!prod;
+  document.getElementById('prodNome').value = prod ? prod.nome : '';
+  document.getElementById('prodGrupo').value = prod ? prod.grupo : '';
+  document.getElementById('prodSubgrupo').value = prod ? (prod.subgrupo||'') : '';
+  document.getElementById('prodPreco').value = prod ? prod.preco : '';
+  document.getElementById('prodUnid').value = prod ? (prod.unid||'UN') : 'UN';
+  document.getElementById('prodEstoque').value = prod ? prod.estoque : 0;
+  document.getElementById('prodEstoqueMin').value = prod ? (prod.estoqueMinimo||0) : 0;
+  document.getElementById('prodEditMsg').textContent = '';
+  document.getElementById('prodDeleteBtn').style.display = prod ? 'inline-block' : 'none';
+  document.getElementById('editarProdutoOverlay').classList.add('open');
+}
+function _fecharEditarProduto(){ document.getElementById('editarProdutoOverlay').classList.remove('open'); }
+async function _salvarProdutoUI() {
+  var codigo = document.getElementById('prodCodigo').value.trim();
+  var nome = document.getElementById('prodNome').value.trim();
+  if (!codigo || !nome) { document.getElementById('prodEditMsg').textContent = '⚠️ Código e Nome são obrigatórios'; return; }
+  var payload = {
+    codigo: codigo,
+    nome: nome,
+    grupo: document.getElementById('prodGrupo').value.trim() || 'OUTROS',
+    subgrupo: document.getElementById('prodSubgrupo').value.trim(),
+    preco: parseFloat(document.getElementById('prodPreco').value) || 0,
+    unid: document.getElementById('prodUnid').value.trim() || 'UN',
+    estoque: parseInt(document.getElementById('prodEstoque').value) || 0,
+    estoqueMinimo: parseInt(document.getElementById('prodEstoqueMin').value) || 0,
+    ativo: true,
+    origem: _produtoEdit ? _produtoEdit.origem : 'manual'
+  };
+  try {
+    await window.salvarProduto(payload);
+    _fecharEditarProduto();
+    await _recarregarEstoque();
+  } catch (e) { document.getElementById('prodEditMsg').textContent = '❌ ' + e.message; }
+}
+async function _excluirProdutoUI() {
+  if (!_produtoEdit) return;
+  if (!confirm('Excluir "' + _produtoEdit.nome + '" do estoque? (não pode desfazer)')) return;
+  try {
+    await window.deletarProduto(_produtoEdit.codigo);
+    _fecharEditarProduto();
+    await _recarregarEstoque();
+  } catch (e) { document.getElementById('prodEditMsg').textContent = '❌ ' + e.message; }
+}
+
+/* ---------- Importar SMB (one-shot) ---------- */
+async function _abrirImportSMB() {
+  if (!confirm('Importar 414 produtos do SMB para o Firebase?\n\nProdutos existentes (mesmo código) serão atualizados (não duplica).\nIsso pode levar 5–10 segundos.')) return;
+  var btn = event && event.target;
+  if (btn) { btn.disabled = true; btn.textContent = 'Importando...'; }
+  try {
+    var resp = await fetch('produtos_smb.json?ts=' + Date.now());
+    if (!resp.ok) throw new Error('produtos_smb.json não encontrado (status ' + resp.status + ')');
+    var lista = await resp.json();
+    if (!Array.isArray(lista) || lista.length === 0) throw new Error('JSON vazio ou inválido');
+    var total = await window.importarProdutosEmLote(lista);
+    alert('✓ ' + total + ' produtos importados com sucesso no Firebase!\nTodos os PCs agora veem o mesmo estoque.');
+    await _recarregarEstoque();
+  } catch (e) {
+    alert('❌ Erro na importação: ' + e.message + '\n\nSe estiver rodando local, certifique-se que o arquivo produtos_smb.json está na mesma pasta.');
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '📥 Importar SMB'; }
+  }
+}
+
+/* ============================================================
+   LOJA — categoria visual na Central de Serviços
+   ============================================================ */
+var _lojaCache = [];
+
+async function _recarregarLoja(silencioso) {
+  if (!window.carregarProdutos) return;
+  if (!silencioso) {
+    var grid = document.getElementById('grid-loja');
+    if (grid) grid.innerHTML = '<div style="padding:30px;text-align:center;color:#888;grid-column:1/-1">Carregando produtos...</div>';
+  }
+  _lojaCache = await window.carregarProdutos();
+  // popular filtro grupos da loja
+  _popularFiltroGrupos('lojaGrupo', _lojaCache);
+  _renderLoja();
+}
+window._recarregarLoja = _recarregarLoja;
+
+function _renderLoja() {
+  var grid = document.getElementById('grid-loja');
+  var count = document.getElementById('count-loja');
+  if (!grid) return;
+  var busca = ((document.getElementById('lojaBusca')||{}).value || '').toLowerCase().trim();
+  var grupo = (document.getElementById('lojaGrupo')||{}).value || '';
+  var soComEstoque = (document.getElementById('lojaSoComEstoque')||{}).checked;
+  var filtrados = _lojaCache.filter(p => {
+    if (p.ativo === false) return false;
+    if (grupo && p.grupo !== grupo) return false;
+    if (soComEstoque && (Number(p.estoque) <= 0)) return false;
+    if (busca) {
+      var hay = (p.nome + ' ' + p.codigo + ' ' + (p.subgrupo||'')).toLowerCase();
+      if (!hay.includes(busca)) return false;
+    }
+    return true;
+  });
+  if (count) count.textContent = filtrados.length + ' produto(s)';
+
+  if (filtrados.length === 0) {
+    grid.innerHTML = '<div style="padding:30px;text-align:center;color:#888;grid-column:1/-1">💭 Nenhum produto encontrado. Tente importar do SMB no botão 📦 Estoque.</div>';
+    return;
+  }
+
+  // Limita a 200 cards renderizados para não lagar (414 produtos)
+  var renderizados = filtrados.slice(0, 200);
+  grid.innerHTML = renderizados.map(p => {
+    var est = Number(p.estoque) || 0;
+    var min = Number(p.estoqueMinimo) || 0;
+    var precoStr = 'R$ ' + (Number(p.preco)||0).toFixed(2).replace('.', ',');
+    var nomeEsc = String(p.nome).replace(/'/g,"\\'").replace(/"/g,'&quot;');
+    var codigoEsc = String(p.codigo).replace(/'/g,"\\'");
+    var badge = '';
+    if (est <= 0) badge = '<span style="position:absolute;top:8px;right:8px;background:#dc3545;color:#fff;padding:2px 8px;border-radius:10px;font-size:9px;font-weight:700;letter-spacing:.5px">ESGOTADO</span>';
+    else if (est <= min) badge = '<span style="position:absolute;top:8px;right:8px;background:#f59e0b;color:#fff;padding:2px 8px;border-radius:10px;font-size:9px;font-weight:700">BAIXO</span>';
+    var estColor = est > min ? '#28a745' : (est > 0 ? '#f59e0b' : '#dc3545');
+    return `<div class="card" data-name="${(p.nome||'').toLowerCase()}" data-cat="loja" style="position:relative;border-left:3px solid #5a3e8a">
+      ${badge}
+      <div class="card-top">
+        <div class="card-name" style="padding-right:60px">${p.nome}</div>
+        <span class="card-price" style="background:#5a3e8a;color:#fff">${precoStr}</span>
+      </div>
+      <div class="card-obs" style="font-size:11px">
+        📂 ${p.grupo||''} ${p.subgrupo ? '· ' + p.subgrupo : ''}<br>
+        📊 Estoque: <b style="color:${estColor}">${est} ${p.unid||'UN'}</b> ${min ? '(mín: '+min+')' : ''}<br>
+        🏷️ Código: <span style="font-family:monospace;font-size:10px">${p.codigo}</span>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="btn-ver" onclick="_abrirEditarProduto('${codigoEsc}')" style="flex:1" title="Editar produto">✏️</button>
+        <button class="btn-add-cart" onclick="addProductToCart('${codigoEsc}','${nomeEsc}',${p.preco||0})" style="flex:2">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          + Caixa
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+
+  if (filtrados.length > 200) {
+    grid.innerHTML += '<div style="grid-column:1/-1;text-align:center;color:#888;padding:14px;font-size:12px">Mostrando primeiros 200 de ' + filtrados.length + '. Use a busca pra filtrar.</div>';
+  }
+}
+window._renderLoja = _renderLoja;
+
+/* Carrega loja em background ao abrir o site */
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    if (window.carregarProdutos) {
+      _recarregarLoja();
+    }
+  }, 2500);
+});
+
+/* Expor */
+window.abrirEstoque = abrirEstoque;
+window.fecharEstoque = fecharEstoque;
+window._recarregarEstoque = _recarregarEstoque;
+window._renderEstoque = _renderEstoque;
+window._abrirEntradaEstoque = _abrirEntradaEstoque;
+window._fecharEntradaEstoque = _fecharEntradaEstoque;
+window._confirmarEntradaEstoque = _confirmarEntradaEstoque;
+window._abrirEditarProduto = _abrirEditarProduto;
+window._fecharEditarProduto = _fecharEditarProduto;
+window._salvarProdutoUI = _salvarProdutoUI;
+window._excluirProdutoUI = _excluirProdutoUI;
+window._abrirImportSMB = _abrirImportSMB;
+
+/* ESC fecha overlays do estoque */
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') {
+    var ov = document.getElementById('estoqueOverlay');
+    if (ov && ov.classList.contains('open')) fecharEstoque();
+    var ov2 = document.getElementById('entradaEstoqueOverlay');
+    if (ov2 && ov2.classList.contains('open')) _fecharEntradaEstoque();
+    var ov3 = document.getElementById('editarProdutoOverlay');
+    if (ov3 && ov3.classList.contains('open')) _fecharEditarProduto();
+  }
+});
 </script>
 
 </body>
