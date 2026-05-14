@@ -4242,7 +4242,7 @@ window._abrirImportSMB = _abrirImportSMB;
 
 /* ---------- Limpar todos os produtos (perigoso) ---------- */
 async function _limparTodosProdutos() {
-  if (!window.firebaseDB) { alert('Firebase não conectado.'); return; }
+  if (typeof window.carregarProdutos !== 'function' || typeof window.deletarProduto !== 'function') { alert('Firebase não conectado.'); return; }
   const confirma1 = confirm('⚠️ APAGAR TODOS OS PRODUTOS do Firebase?\n\nIsso apaga a collection "produtos" inteira. Não tem como desfazer.\n\nContinuar?');
   if (!confirma1) return;
   const confirma2 = prompt('Pra confirmar, digite APAGAR (em maiúsculo):');
