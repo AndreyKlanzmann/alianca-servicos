@@ -1,0 +1,3728 @@
+[
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7894632532595,
+    "nome": "AGENDA",
+    "preco": 39.99,
+    "unid": "UN",
+    "estoque": 9
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7895523447394,
+    "nome": "BLOCO DE ANOTAÇÃO",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 7
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 504,
+    "nome": "BOLSA AZUL MARINHO RETANGULO",
+    "preco": 45.99,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 503,
+    "nome": "BOLSA AZUL MESCLADO",
+    "preco": 39.99,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 5001,
+    "nome": "BOLSA PINK",
+    "preco": 54.9,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 502,
+    "nome": "BOLSA VERMELHA",
+    "preco": 39.99,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 505,
+    "nome": "BOLSAS TULIPA",
+    "preco": 52.99,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 307,
+    "nome": "BOSINHA PORTA MOEDA",
+    "preco": 7.0,
+    "unid": "4",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7897856806510,
+    "nome": "CADERNETA COM CANETA",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 320,
+    "nome": "CAIXA DE LENÇO COM 3",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 322,
+    "nome": "CALICE SANTA CEIA",
+    "preco": 20.0,
+    "unid": "PC",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 499,
+    "nome": "CANECA 300 ML",
+    "preco": 10.0,
+    "unid": "2",
+    "estoque": -3
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 341393,
+    "nome": "CANECA CAFE 225ML",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 299,
+    "nome": "CANECA FOSCA VIDRO",
+    "preco": 10.0,
+    "unid": "3",
+    "estoque": -4
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 300,
+    "nome": "CANECA PORCELANA DECORADA 300ML",
+    "preco": 35.0,
+    "unid": "5",
+    "estoque": 6
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 134448,
+    "nome": "CANECA SUCO 300ML",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 321,
+    "nome": "CARTEIRA MASCULINA COURINO",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 3
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 312,
+    "nome": "CHAVEIRO",
+    "preco": 3.5,
+    "unid": "PC",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 309,
+    "nome": "CHAVEIRO",
+    "preco": 3.5,
+    "unid": "12",
+    "estoque": -2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 3090,
+    "nome": "CHAVEIRO GEL REDONDO FLOR",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 310,
+    "nome": "CHAVEIRO JESUS BORRACHA",
+    "preco": 3.5,
+    "unid": "12",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 311,
+    "nome": "CHAVEIRO JESUS CHAPINHA",
+    "preco": 3.5,
+    "unid": "12",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7894444391137,
+    "nome": "CHAVEIROS",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": 33
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 303,
+    "nome": "FOLHETOS COM 100",
+    "preco": 3.5,
+    "unid": "10",
+    "estoque": 12
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 4766,
+    "nome": "GARAFA DE ÁGUA 500ML",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 3
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 599,
+    "nome": "GARRAFA DE ÁGUA SQUEEZE",
+    "preco": 10.0,
+    "unid": "2",
+    "estoque": -4
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 3021,
+    "nome": "GRAVATA CAIXA COM 3",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 3041,
+    "nome": "KIT CANETA COM MARCA PÁGINA",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 29
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 304,
+    "nome": "KIT CHAVEIRO COM MARCA PÁGINA",
+    "preco": 3.0,
+    "unid": "10",
+    "estoque": 65
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 313,
+    "nome": "LEMBRANÇA DE VIDRO LEÃO",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7896340906026,
+    "nome": "MARCA TEXTO PASTEL",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 305,
+    "nome": "NECESSARIE ESTAMPADA",
+    "preco": 10.0,
+    "unid": "5",
+    "estoque": 3
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 306,
+    "nome": "NECESSARIE TECIDO",
+    "preco": 14.0,
+    "unid": "3",
+    "estoque": 5
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 301,
+    "nome": "PORTA CANETA MADEIRA",
+    "preco": 10.0,
+    "unid": "05",
+    "estoque": -10
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7899203106168,
+    "nome": "PORTA CHAVE 5 PINOS",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 308,
+    "nome": "PORTA CHAVE CORDA",
+    "preco": 12.0,
+    "unid": "5",
+    "estoque": 3
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 3070,
+    "nome": "PORTA MOEDA UNISSEX COURINO",
+    "preco": 8.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 20215,
+    "nome": "PORTA RETRATO 10X15",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 62,
+    "nome": "PORTA RETRATO MADEIRA",
+    "preco": 15.0,
+    "unid": "02",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 61,
+    "nome": "PORTA RETRATO PEROLADO",
+    "preco": 10.0,
+    "unid": "03",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 185764,
+    "nome": "PORTA RETRATO PERSONALIZADO MÃE",
+    "preco": 10.0,
+    "unid": "1",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 904162,
+    "nome": "PORTA RETRATO PERSONALIZADO MÃE",
+    "preco": 10.0,
+    "unid": "1",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7898466913100,
+    "nome": "PORTA RETRATOS 15X21",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7897481129763,
+    "nome": "PORTA RETRATOS 20X25",
+    "preco": 14.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 10191,
+    "nome": "QUADRO PERSONALIZADO MÃE",
+    "preco": 10.0,
+    "unid": "2",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 7899734002946,
+    "nome": "RELOGIO",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 3685,
+    "nome": "TELA COZINHA",
+    "preco": 12.0,
+    "unid": "2",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 3684,
+    "nome": "TELA RETRÔ",
+    "preco": 15.0,
+    "unid": "2",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "04 ARMARINHO",
+    "codigo": 302,
+    "nome": "TOALHA PINTADA PEQUENA",
+    "preco": 10.0,
+    "unid": "05",
+    "estoque": 8
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "ASSUNTA",
+    "codigo": 314,
+    "nome": "CASINHA DE VIDRO",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": 4
+  },
+  {
+    "grupo": "ARMARINHO",
+    "subgrupo": "GERAL",
+    "codigo": 7891271325946,
+    "nome": "MOCHILA",
+    "preco": 55.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "ARTESANATO",
+    "subgrupo": "ASSUNTA",
+    "codigo": 3010,
+    "nome": "POTE AZUL PEQUENO",
+    "preco": 12.0,
+    "unid": "01",
+    "estoque": -1
+  },
+  {
+    "grupo": "ARTESANATO",
+    "subgrupo": "ASSUNTA",
+    "codigo": 3015,
+    "nome": "POTE ESTRELA",
+    "preco": 17.0,
+    "unid": "01",
+    "estoque": 0
+  },
+  {
+    "grupo": "ARTESANATO",
+    "subgrupo": "ASSUNTA",
+    "codigo": 1020,
+    "nome": "POTE GRANDE COM TAMPA",
+    "preco": 25.0,
+    "unid": "01",
+    "estoque": 3
+  },
+  {
+    "grupo": "ARTESANATO",
+    "subgrupo": "ASSUNTA",
+    "codigo": 2015,
+    "nome": "POTE MÉDIO COM TAMPA",
+    "preco": 17.0,
+    "unid": "04",
+    "estoque": -4
+  },
+  {
+    "grupo": "ARTESANATO",
+    "subgrupo": "GERAL",
+    "codigo": 7892978479260,
+    "nome": "BOLSA MARROM",
+    "preco": 55.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "Assunta",
+    "subgrupo": "Artesanato",
+    "codigo": 1015,
+    "nome": "PORTA LÁPIS",
+    "preco": 20.0,
+    "unid": "03",
+    "estoque": 4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7898843500046,
+    "nome": "ADAPTADOR BLUETOOTH PARA CARRO",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7891755703062,
+    "nome": "ADAPTADOR CABO ALTOMEX IOS / P-2 FEMEA AL-0306-5G",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7892020021331,
+    "nome": "ADAPTADOR CABO AV MACHO / P-2 FEMEA",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7898605608867,
+    "nome": "ADAPTADOR CABO IT BLUE TIPO C / P-2 FEMEA",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7891650049685,
+    "nome": "ADAPTADOR CABO P-3 / 2 RCA",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7898771412961,
+    "nome": "ADAPTADOR CABO P-3 MACHO / 3 RCA FEMEA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7897720221012,
+    "nome": "ADAPTADOR CARTAO MEMORIA / USB KAPBOM",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7898240472670,
+    "nome": "CARREGADOR DE CARRO",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7892629162077,
+    "nome": "CONVERSOR OTG",
+    "preco": 7.5,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 789908558301,
+    "nome": "FONE DE OUVIDO INOVA FON-12006",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -13
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7898476326136,
+    "nome": "PENDRIVE MULTI 16 GB",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 6702,
+    "nome": "PENDRIVE SAN DISK 16GB USB 2.0",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7899381219742,
+    "nome": "PORTA CARTAO",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7896465875504,
+    "nome": "SOMBRINHA ESTAMPADA",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "02 ELETRONICOS",
+    "codigo": 7895830194356,
+    "nome": "SOMBRINHA GRANDE",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "ADAPTADORES",
+    "codigo": 7899704621306,
+    "nome": "ADAPTADOR DUPLO CABO DE REDE",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "ADAPTADORES",
+    "codigo": 7897070171289,
+    "nome": "ADAPTADOR HUB USB 4 PORTAS",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "ADAPTADORES",
+    "codigo": 7898953501735,
+    "nome": "ADAPTADOR PLACA SOM EXTERNA KNUP USB 2.0",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "ADAPTADORES",
+    "codigo": 7892618023150,
+    "nome": "ADAPTADOR VGA / 2 VGA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "ADAPTADORES",
+    "codigo": 7890006008437,
+    "nome": "ADAPTADOR VGA / HDMI",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "ADAPTADORES",
+    "codigo": 7908412808692,
+    "nome": "MICROFONE DE LAPELA HREBOS P-3 1.5M",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898824022932,
+    "nome": "CABO ALTOMEX 3A AL-11-5G 1M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898824022918,
+    "nome": "CABO ALTOMEX 3A TIPO C AL-11 1M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -21
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898824022925,
+    "nome": "CABO ALTOMEX 3A V-8 AL-11 1M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -9
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7891755703079,
+    "nome": "CABO ALTOMEX IOS / P-2 MACHO AL-0307-5G",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898880030520,
+    "nome": "CABO ALTOMEX IOS AL-305-5G 1M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -10
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898999360068,
+    "nome": "CABO ALTOMEX MAGNETICO 3 EM 1 AL-C360 1M",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 8878921130913,
+    "nome": "CABO ALTOMEX TIPO C / V-8 AL-309T 1.2M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898880030513,
+    "nome": "CABO ALTOMEX V-8 AL-305 1M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898972066048,
+    "nome": "CABO AVI / AVI PARA DVD",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7893595900793,
+    "nome": "CABO BMAX FORÇA BIPOLAR 1.5M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7893595900809,
+    "nome": "CABO BMAX FORÇA TRIPOLAR 1.5M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7897571155740,
+    "nome": "CABO BMAX IMPRESSORA 1.5M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7897571154781,
+    "nome": "CABO B-MAX P-2 / P-10 3M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7897571154736,
+    "nome": "CABO BMAX P-2 / RCA DUPLO",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7897571154835,
+    "nome": "CABO BMAX USB MACHO / USB FEMEA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7899454442640,
+    "nome": "CABO DE REDE MAXMIDIA RJ45 30 M",
+    "preco": 65.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7897070171210,
+    "nome": "CABO DE REDE RJ45 20M",
+    "preco": 55.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898615152435,
+    "nome": "CABO DE REDE XCELL 10M",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7908417102818,
+    "nome": "CABO DE REDE XCELL 5M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898443800829,
+    "nome": "CABO HD SATA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7892016112319,
+    "nome": "CABO HDMI 4K 10M",
+    "preco": 60.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7899085587680,
+    "nome": "CABO INOVA 3.4A TIPO C CBO-20147 2M",
+    "preco": 27.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898605600557,
+    "nome": "CABO ITBLUE USB MACHO / USB MACHO",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 6923450901625,
+    "nome": "CABO KAIDI IOS KD-31A 1M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -11
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 6923450901618,
+    "nome": "CABO KAIDI TIPO C KD-31C 1M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -11
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7899980100151,
+    "nome": "CABO KROSS HDMI 1.8M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7894576227069,
+    "nome": "CABO P-2 / P-2 COM MICROFONE",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7892138439417,
+    "nome": "CABO PAD ALTOMEX V-8 25W",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -15
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7895232660176,
+    "nome": "CABO PAD TIPO C 25W",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -19
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898615152411,
+    "nome": "CABO XCELL P-2 / P-2 1.2M",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898615151179,
+    "nome": "CABO XCELL P-2 / P-2 3M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7908417101279,
+    "nome": "CABO XCELL TIPO C / TIPO C XC-85 1M",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898615158581,
+    "nome": "CABO XCELL V-3 XC-V3 1.2M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7898615159403,
+    "nome": "CABO XCELL VGA 1.5M",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CABOS",
+    "codigo": 7899980101707,
+    "nome": "MOUSE KROSS USB KE-M095",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CAIXAS DE SOM",
+    "codigo": 8878921130876,
+    "nome": "CAIXA DE SOM ALTOMEX USB G 3W AL-3087",
+    "preco": 55.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CAIXAS DE SOM",
+    "codigo": 8878921130869,
+    "nome": "CAIXA DE SOM ALTOMEX USB P 3W AL-3086",
+    "preco": 45.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CAIXAS DE SOM",
+    "codigo": 7898803068876,
+    "nome": "CAIXA DE SOM BLUETOOTH ALTOMEX WS-887",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 7898822590037,
+    "nome": "CARREGADOR ALTOMEX 5.1A TIPO C AL-5900",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 8878921901322,
+    "nome": "CARREGADOR ALTOMEX TIPO C ORIGINAL AL9013",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 8878921905818,
+    "nome": "CARREGADOR ALTOMEX V-8 5.1A AL-9058",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 8878919900665,
+    "nome": "CARREGADOR ALTOMEX V-8 ORIGINAL AL-9006",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -9
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 7898822770521,
+    "nome": "CARREGADOR RAPIDO ALTOMEX TIPO C AL-7705",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 7896621610918,
+    "nome": "CARREGADOR RAPIDO HMASTON IOS Y-34",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 6998472582558,
+    "nome": "CARREGADOR RAPIDO KAIDI IOS 2.4A 12W",
+    "preco": 45.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 8878921502734,
+    "nome": "CARREGADOR TURBO ALTOMEX TIPO C QC 3.0 AL-5027",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 8878921502710,
+    "nome": "CARREGADOR TURBO ALTOMEX V-8 QC 3.0 AL-5027",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 6973256991115,
+    "nome": "CARREGADOR TURBO KAIDI 18W IOS QC 3.0",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "CARREGADORES",
+    "codigo": 6956974931564,
+    "nome": "CARREGADOR TURBO KAIDI 20W IOS KD-108A",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7898866541880,
+    "nome": "FONE ALTOMEX 90°",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7898866886103,
+    "nome": "FONE ALTOMEX AT-10 SUBWOOFER",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -13
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7898843230608,
+    "nome": "FONE ALTOMEX F-060",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -40
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 154712112086,
+    "nome": "FONE BLUETOOTH ALTOMEX I9S",
+    "preco": 60.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7898892163995,
+    "nome": "FONE BLUETOOTH ALTOMEX M9",
+    "preco": 70.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7891110014024,
+    "nome": "FONE ELETROMEX COLOR EL-1402",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -11
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7892023014040,
+    "nome": "FONE ELETROMEX EL-1404",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 7891123114100,
+    "nome": "FONE ELETROMEX TIPO C EL-1410",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 6923450901724,
+    "nome": "FONE KAIDI IOS KD-730",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "FONES",
+    "codigo": 2010000007853,
+    "nome": "HEADSET CAERUS RGB ENTRADA DUPLA P-2",
+    "preco": 100.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "KIT PERIFERICO",
+    "codigo": 7899980102995,
+    "nome": "KIT MOUSE TECLADO KROSS USB KE-KM400",
+    "preco": 60.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "KIT PERIFERICO",
+    "codigo": 7898506474509,
+    "nome": "KIT MOUSE TECLADO SEM FIO MULTI CS-200",
+    "preco": 120.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSEPADS",
+    "codigo": 7899980102629,
+    "nome": "MOUSE GAMER KROSS 60X30 CM KE-MP1013",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSES",
+    "codigo": 8878920208309,
+    "nome": "MOUSE ALTOMEX SEM FIO AG-830",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSES",
+    "codigo": 7897982205409,
+    "nome": "MOUSE BRIGHT SEM FIO BR-0404",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSES",
+    "codigo": 7899980101448,
+    "nome": "MOUSE GAMER KROSS PULSE USB 6400 DPI",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSES",
+    "codigo": 7899980101714,
+    "nome": "MOUSE KROSS SEM FIO KE-M218",
+    "preco": 45.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSES",
+    "codigo": 7899980101745,
+    "nome": "MOUSE KROSS SEM FIO SILENCIOSO KE-M305",
+    "preco": 60.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "MOUSES",
+    "codigo": 7899980102612,
+    "nome": "MOUSEPAD KROSS 30X20 CM",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PENDRIVE/CT MEMORIA",
+    "codigo": 6974202726089,
+    "nome": "CARTAO DE MEMORIA HIKSEMI 32 GB",
+    "preco": 45.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PENDRIVE/CT MEMORIA",
+    "codigo": 74061730982,
+    "nome": "PENDRIVE KINGDTON 64 GB USB 3.2",
+    "preco": 70.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PENDRIVE/CT MEMORIA",
+    "codigo": 740617309928,
+    "nome": "PENDRIVE KINGSTON 128 GB USB 3.2",
+    "preco": 130.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PENDRIVE/CT MEMORIA",
+    "codigo": 619659182274,
+    "nome": "PENDRIVE SANDISK 32 GB USB 3.2",
+    "preco": 55.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PILHAS/BATERIAS",
+    "codigo": 7898464739207,
+    "nome": "BATERIA LITHIUN BRASFORT CR 2025",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PILHAS/BATERIAS",
+    "codigo": 7898615159144,
+    "nome": "BATERIA LITHIUN CR-2032",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -23
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PILHAS/BATERIAS",
+    "codigo": 7908417105123,
+    "nome": "PILHA AA 1.5V FLEXGOLD",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -81
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "PILHAS/BATERIAS",
+    "codigo": 7898615154873,
+    "nome": "PILHA PALITO FLEXGOLD AAA FX-3AZ",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -51
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "SUPORTES",
+    "codigo": 6974407809563,
+    "nome": "SUPORTE DE CELULAR MOTO LEHMOX LEY-161",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "SUPORTES",
+    "codigo": 7892021112403,
+    "nome": "SUPORTE VEICULAR GARRA",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "ELETRONICO",
+    "subgrupo": "TECLADOS",
+    "codigo": 7899980100397,
+    "nome": "TECLADO KROSS USB KE-K095V2",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7895066797130,
+    "nome": "FOLHA VINIL AVULSO",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": -43
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898690149184,
+    "nome": "CANECA PARA SUBLIMAÇÃO",
+    "preco": 11.5,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7891576196555,
+    "nome": "CANECA PARA SUBLIMAÇAO MASTERPRINT 325ML",
+    "preco": 11.5,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898853875998,
+    "nome": "CX ENVELOPE PARDO",
+    "preco": 115.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229110155,
+    "nome": "FILME LAMIN. FRIO MASTERPRINT",
+    "preco": 17.5,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229105281,
+    "nome": "MP PLASTICO P PLASTIFICAÇÃO A4 C/ 100 LAMINAS",
+    "preco": 70.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104091,
+    "nome": "P. A3 FOTO ADESIVO 130G C/ 20 FLS - MP",
+    "preco": 28.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104077,
+    "nome": "P. A3 FOTO GLOSSY 180G C/20 FLS - MP",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -17
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229107742,
+    "nome": "P. ADS GLOSSY 115G C/ 50 FOLHAS - MP",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -52
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103742,
+    "nome": "P. ADS GLOSSY 130G C/ 20 FOLHAS - MP",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103865,
+    "nome": "P. ADS GLOSSY 130G C/ 50 FOLHAS - MP",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -111
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104008,
+    "nome": "P. ADS GLOSSY 80G C/ 20 FOLHAS - MP",
+    "preco": 14.0,
+    "unid": "UN",
+    "estoque": -12
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229107735,
+    "nome": "P. ADS GLOSSY 80G C/ 50 FOLHAS - MP",
+    "preco": 29.0,
+    "unid": "UN",
+    "estoque": -51
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103872,
+    "nome": "P. ADS MATTE 108G C/ 20 FOLHAS - MP",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -42
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229107216,
+    "nome": "P. COLORPLUS 120G MIX 10 CORES C/50 FOLHAS - MP",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7894894176728,
+    "nome": "P. COLORPLUS 180G CORES C/50 FLS - MP",
+    "preco": 18.0,
+    "unid": "UN",
+    "estoque": -13
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898582203987,
+    "nome": "P. COLORPLUS MIX 8 CORES 180G CORES C/50 FLS - MP",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229107810,
+    "nome": "P. CRIATIVO 75G 8 CORES C/45 FOLHAS - MP",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103926,
+    "nome": "P. FOTO GLOSSY 115G C/ 50 FOLHAS - MP",
+    "preco": 16.0,
+    "unid": "UN",
+    "estoque": -18
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103711,
+    "nome": "P. FOTO GLOSSY 180G C/ 50 FOLHAS - MP",
+    "preco": 19.0,
+    "unid": "UN",
+    "estoque": -455
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103728,
+    "nome": "P. FOTO GLOSSY 230G C/ 20 FOLHAS - MP",
+    "preco": 14.0,
+    "unid": "UN",
+    "estoque": -11
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103858,
+    "nome": "P. FOTO GLOSSY 230G C/ 50 FOLHAS - MP",
+    "preco": 23.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103995,
+    "nome": "P. FOTO MATTE 230G C/100 FLS - MP",
+    "preco": 43.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119103971,
+    "nome": "P. FOTO MATTE FOSCO 170G C/ 100 FOLHAS",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -14
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229105595,
+    "nome": "P. KRAFT 180G C/50 FOLHAS - MP",
+    "preco": 14.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7891295521850,
+    "nome": "P. LAMICOTE CORES 250G C/10 FLS - MP",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -31
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898141987914,
+    "nome": "P. NEON CORES 180G C/20 FLS - MP",
+    "preco": 13.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7895534327036,
+    "nome": "P. NEON MIX 4 CORES 180G C/20 FLS - MP",
+    "preco": 14.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229105243,
+    "nome": "P. OFFSET BRANC 120G C/ 50 FOLHAS - MP",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": -17
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7808229105168,
+    "nome": "P. OFFSET BRANC. 180G C/50 FOLHAS - MP",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -152
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898401147720,
+    "nome": "P. OFFSET TEXT. 180G C/50 FLS - MP",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104046,
+    "nome": "P. SUBLIMATICO 100G C/100 FLS - MP",
+    "preco": 32.0,
+    "unid": "UN",
+    "estoque": -9
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104053,
+    "nome": "P. TRANSF. TECIDOS CLAROS 160G C5 FLS - MP",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104060,
+    "nome": "P. TRANSF. TECIDOS ESCUROS 160G C/5 FLS - MP",
+    "preco": 40.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7895453149672,
+    "nome": "PAPEL ADESIVO AVULSO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -9
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7891899486784,
+    "nome": "SOMBRINHA LISA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7894803997277,
+    "nome": "UBER ENTREGAS ACERTAR COM VITOR",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": -53
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7898119104039,
+    "nome": "VINIL ADS 100% TRANSP 150G C/10 - MP",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 790822910334,
+    "nome": "VINIL ADS BRANCO 135G C/ 10 FOLHAS - MP",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -29
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229108589,
+    "nome": "VINIL ADS DOURADO GLOSSY 135G C/ 10 FOLHAS - MP",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229108596,
+    "nome": "VINIL ADS HOLOG ESPIRAL 135G C/ 10 FOLHAS",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229108572,
+    "nome": "VINIL ADS PRATA MATE 135G C/ 10 FOLHAS - MP",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPEL ESPECIAL",
+    "subgrupo": "03 PAPEL ESPECIAL",
+    "codigo": 7908229106790,
+    "nome": "VINIL ADS SEMITRANSP 150G C/ 10 FOLHAS - MP",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908642000101,
+    "nome": "ABRAÇADEIRA NYLON M 3,6 X 250 MM",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908642000309,
+    "nome": "ABRAÇADEIRA NYLON P 2,5 X 100 MM",
+    "preco": 0.25,
+    "unid": "UN",
+    "estoque": -110
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119105661,
+    "nome": "ADESIVO POST IT NEON 4 CORES MASTERPRINT",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256260035,
+    "nome": "APONTADOR BLOCO C/ DEPOSITO LEO E LEO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -26
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119105449,
+    "nome": "APONTADOR DE METAL MASTERPRINT",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7892241109016,
+    "nome": "APONTADOR SIMPLES",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898464731652,
+    "nome": "BASTAO COLA QUENTE FINO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 89
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898464731645,
+    "nome": "BASTAO COLA QUENTE GR0SS0",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 44
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891027229238,
+    "nome": "BLOCO NOTA NEUTRA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891027151355,
+    "nome": "BLOCO NOTA PROMISSORIA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891027151454,
+    "nome": "BLOCO RECIBO COMERCIAL C/ CANHOTO",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891027151430,
+    "nome": "BLOCO RECIBO DE ALUGUEL C/ CANHOTO",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256241843,
+    "nome": "BORRACHA BRANCA C/ CINTA LEO E LEO",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": 64
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896152324452,
+    "nome": "BORRACHA BRANCA SIMPL. REDBOR",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256246800,
+    "nome": "BORRACHA NEON C/ CINTA LEO E LEO",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": 26
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 789725263913,
+    "nome": "BORRACHA OVAL LEO E LEO",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": 15
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256261285,
+    "nome": "BORRACHA PONTEIRA LEO E LEO",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": 53
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7895092475415,
+    "nome": "BRINCO INFANTIL",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 42
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893460438840,
+    "nome": "BRINQUEDOS PREÇO UNICO",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": -20
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896749994150,
+    "nome": "BUCHINHA DE CABELO",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494711305,
+    "nome": "CAD 10X1 160 FLS CD ADVENTURE JANDAIA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494672972,
+    "nome": "CAD 10X1 160 FLS CD BASIC  STIFF JANDAIA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -22
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494690549,
+    "nome": "CAD 10X1 160 FLS CD ECOWAY JANDAIA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494729980,
+    "nome": "CAD 10X1 160 FLS CD FLORK JANDAIA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494729775,
+    "nome": "CAD 10X1 160 FLS CD HOUSE OH DRAGONS JANDAIA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494727856,
+    "nome": "CAD 10X1 160 FLS CD MARBLE JANDAIA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494688706,
+    "nome": "CAD 10X1 160 FLS CD STONE JANDAIA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494689079,
+    "nome": "CAD 10X1 160 FLS CD SWEETNESS JANDAIA",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494687525,
+    "nome": "CAD 10X1 160 FLS FLOW JANDAIA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7892599712616,
+    "nome": "CAD 10X1 160 FOLHAS TINKER BELL KRAFT",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": 4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899320947521,
+    "nome": "CAD 1X1 80 FLS CD TILIBRA",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894498004070,
+    "nome": "CAD BROCHURA A5 48FLS CAPA FLEX JANDAINHA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -10
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494688068,
+    "nome": "CAD BROCHURA A5 80 FLS STIFF JANDAIA",
+    "preco": 7.5,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494004124,
+    "nome": "CAD BROCHURAO A4 60 FLS CAPA FLEX. JANDAINHA",
+    "preco": 8.0,
+    "unid": "UN",
+    "estoque": -9
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494688164,
+    "nome": "CAD BROCHURAO A4 80 FLS CD JANDAIA",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": -47
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494004063,
+    "nome": "CAD BROCHURAO S/ PAUTA A4 60 FLS JANDAINHA",
+    "preco": 9.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494640349,
+    "nome": "CAD BROCHURAO S/ PAUTA CD 96 FLS JANDAIA",
+    "preco": 13.0,
+    "unid": "UN",
+    "estoque": 14
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494004018,
+    "nome": "CAD CALIGRAFIA A5 CAPA FLEX 48 FLS JANDAINHA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896481744648,
+    "nome": "CAD DE DESENHO E CARTOGRAFIA",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": 10
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894494081095,
+    "nome": "CAD ESPIRAL A5 48 FLS BRASILIDADE JANDAIA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 79
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898916901404,
+    "nome": "CADERNETA ESPIRAL A6 48 FLS",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -18
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896303600053,
+    "nome": "CAIXA DE CLIPS C/ 100",
+    "preco": 5.5,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7909549204197,
+    "nome": "CAIXA GRAMPO C/ 1000",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -15
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119104312,
+    "nome": "CAIXA GRAMPO C/ 5000",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 710006,
+    "nome": "CAIXA GUACHE 6 CORES",
+    "preco": 8.9,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 2010000010846,
+    "nome": "CALCULADORA G CAERUS 12 DIG GRANDE CRS-881",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 6952525888370,
+    "nome": "CALCULADORA M DOTAD 12 DIGITO",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899027765985,
+    "nome": "CANETA EM GEL COM BRILHO",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 28
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256238492,
+    "nome": "CANETA ESFER. ESPIRAL WOW 0.7 JOGAR OFFICE",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": 8
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256238263,
+    "nome": "CANETA ESFER. GEL HAPPY 0.7 JOCAR OFFICE",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898662835954,
+    "nome": "CANETA ESFER. SIMP",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": -179
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896989099387,
+    "nome": "CANETA PARA QUADRO BRANCO RECARREGAVEL",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893561757208,
+    "nome": "CANETA PARA QUADRO BRANCO RECARREGAVEL",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 22
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897616845964,
+    "nome": "CANETA PERFUMADA WOW",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 49
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898001672622,
+    "nome": "CANETA PERMANENTE PRETA CHANFRADA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 24
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899172174335,
+    "nome": "CANETA TOUCH COR 0",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256222965,
+    "nome": "CANETA WOW PERFUMADA JOCAR OFFICE",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894282342797,
+    "nome": "CANETAS FOFAS KAWAI",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -17
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894011194109,
+    "nome": "CANETAS TOUCH 24 CORES",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893898431659,
+    "nome": "CANETAS TOUCH AVULSAS",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": -119
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256244783,
+    "nome": "CANETINHA HIDROCOR C/06 LEO E LEO",
+    "preco": 4.5,
+    "unid": "UN",
+    "estoque": 9
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256230014,
+    "nome": "CANETINHA HIDROCOR C/12 LEO E LEO",
+    "preco": 7.65,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256245827,
+    "nome": "CANETINHA HIDROCOR C/24 LEO E LEO",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": 15
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 789858455317,
+    "nome": "CARNE INSS / GPS CARBONADO",
+    "preco": 7.5,
+    "unid": "UN",
+    "estoque": -13
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7892046319849,
+    "nome": "CARTOLINA",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": -80
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256220015,
+    "nome": "COLA BASTAO 10 G P LEO E LEO",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": 42
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256245445,
+    "nome": "COLA BASTAO 21 G LEO E LEO",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": 16
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893986325266,
+    "nome": "COLA BASTÃO 40G",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 30
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 789725624700,
+    "nome": "COLA BRANCA 40 G LEO E LEO",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": 16
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256243717,
+    "nome": "COLA BRANCA 90 G LEO E LEO",
+    "preco": 5.5,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899415400023,
+    "nome": "COLA C/ GLITTER AVULSA",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": 12
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897243114709,
+    "nome": "COLA COLORIDA AVULSA",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 11
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894106561540,
+    "nome": "COLA DE ISOPOR",
+    "preco": 7.0,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898590650018,
+    "nome": "COLA SILICONE",
+    "preco": 7.0,
+    "unid": "UN",
+    "estoque": 21
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256220817,
+    "nome": "CORRETIVO CANETA 8ML JOCAR OFFICE",
+    "preco": 6.5,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119105241,
+    "nome": "CORRETIVO CANETA MASTERPRINT",
+    "preco": 6.5,
+    "unid": "UN",
+    "estoque": 13
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7503002900666,
+    "nome": "CORRETIVO FITA JOCAR OFFICE",
+    "preco": 7.0,
+    "unid": "UN",
+    "estoque": -15
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256217152,
+    "nome": "CORRETIVO LIQUIDO 18ML JOCAR OFFICE",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119104541,
+    "nome": "ESTILETE GRANDE 18MM MASTERPRINT",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119104527,
+    "nome": "ESTILETE PEQUENO 9MM MASTERPRINT",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 17
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896305201050,
+    "nome": "ESTOJO PLASTICO ESCOLAR",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897357101213,
+    "nome": "ETIQUETA ADESIVA ROLO N°2 22X14MM",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897357101251,
+    "nome": "ETIQUETA ADESIVA ROLO N°7 50X30MM",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893283442253,
+    "nome": "ETIQUETA ESCOLAR C/ 6",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 13
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897874567509,
+    "nome": "FITA  DUPLA FACE ESPUMA",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896603846106,
+    "nome": "FITA CREPE 18X10M ADELBRAS",
+    "preco": 4.5,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898580678107,
+    "nome": "FITA DULPA FACE VERMELHA",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 3
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908654107362,
+    "nome": "FITA DUPLA FACE TROYA ESPUMA 3M",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908654107430,
+    "nome": "FITA DUPLA FACE TROYA SILICONE 2M",
+    "preco": 17.5,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898000255826,
+    "nome": "FITA DUREX COLORIDA 12X10M KORETECH",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": 14
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896603803604,
+    "nome": "FITA DUREX P 12X10M ADELBRAS",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": -12
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908467200045,
+    "nome": "FITA LARGA 45X40M KORETECK",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894470636240,
+    "nome": "GIZ DE CERA 6 CORES",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256245049,
+    "nome": "GIZ DE CERA C/12 PEQ. LEO E LEO",
+    "preco": 6.5,
+    "unid": "UN",
+    "estoque": 7
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893500635024,
+    "nome": "GLITER PACOTINHO",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256246015,
+    "nome": "GRAFITE 0.5 MINA C/12 LEO E LEO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 9
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256246022,
+    "nome": "GRAFITE 0.7 MINA C/12 LEO E LEO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -17
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898147531159,
+    "nome": "GRAFITE 2.0 MINA C/8 LEO E LEO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -21
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7503002900390,
+    "nome": "GRAMPEADOR 13 CM JOCAR OFFICE P/ 25 FLS",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7503002900420,
+    "nome": "GRAMPEADOR 15,5 CM P/ 25 FLS",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256231608,
+    "nome": "GRAMPEADOR MINI JOCAR OFFICE P/ 12 FLS",
+    "preco": 12.0,
+    "unid": "UN",
+    "estoque": 4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893634411099,
+    "nome": "KIT CANETAS TOUCH - 12 CORES",
+    "preco": 30.0,
+    "unid": "UN",
+    "estoque": -11
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897936365005,
+    "nome": "KIT CANETAS TOUCH - 6 CORES",
+    "preco": 18.0,
+    "unid": "UN",
+    "estoque": -11
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7892415689825,
+    "nome": "KIT COLA C/GLITTER 6 CORES",
+    "preco": 18.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897162678832,
+    "nome": "KIT COLA COLORIDA C/6 CORES",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891892916561,
+    "nome": "KIT GUACHE BLISTER",
+    "preco": 8.0,
+    "unid": "UN",
+    "estoque": 12
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899239465598,
+    "nome": "KIT LIVRO BOBBIE GOODS + CANETAS",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898848034140,
+    "nome": "KIT LIVRO COZY + CANETAS",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897340967055,
+    "nome": "KIT MASSINHA + MODELADOR",
+    "preco": 7.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898234829909,
+    "nome": "LAÇO M",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": 138
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894079690575,
+    "nome": "LAÇO P",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": 65
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894458734395,
+    "nome": "LAMINA PARA ESTILETE GRANDE",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 8
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7894555584190,
+    "nome": "LAMINA PARA ESTILETE PEQUENO",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": 9
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256250036,
+    "nome": "LAPIS DE COR C/12 MP",
+    "preco": 7.0,
+    "unid": "UN",
+    "estoque": 5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256244493,
+    "nome": "LAPIS DE COR C/24 MP",
+    "preco": 13.0,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898659152279,
+    "nome": "LAPIS DE COR MINI C/12 MASTER",
+    "preco": 4.5,
+    "unid": "UN",
+    "estoque": 8
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256251118,
+    "nome": "LAPIS DE COR NO POTE C/24 LEO E LEO",
+    "preco": 16.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7895011974579,
+    "nome": "LAPIS DE COR TOM PASTEL C/ 10",
+    "preco": 7.0,
+    "unid": "UN",
+    "estoque": 12
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891734234099,
+    "nome": "LAPIS HB ESTAMPADO LEO E LEO",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": 127
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256242823,
+    "nome": "LAPIS HB PRETO LEO E LEO",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": 621
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256239901,
+    "nome": "LAPIS HB VERDE LEO E LEO",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 37
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256270799,
+    "nome": "LAPISEIRA 0.7 POP LEO E LEO",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256228219,
+    "nome": "LAPISEIRA NEON 0.5 JOCAR OFFICE",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256264743,
+    "nome": "LAPISEIRA PLUS 2.0 LEO E LEO",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 3
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898385431174,
+    "nome": "LIVRO DE COLORIR BOBBIES GOODS",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -73
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898444417118,
+    "nome": "LIVRO DE COLORIR COZY",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -10
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897819284799,
+    "nome": "LOUSA MAGICA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908487305638,
+    "nome": "MALETINHA DE PINTURA",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893040735123,
+    "nome": "MARCA BIBLIA + CANETA",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7893229420789,
+    "nome": "MARCA TEXTO CANETA NEON",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": 48
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908229107711,
+    "nome": "MARCA TEXTO METÁLICO GLITTER CANETA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -21
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256281436,
+    "nome": "MARCA TEXTO MINI PICOLE JOCAR OFFICE",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 6
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256283904,
+    "nome": "MARCADOR PERMANENTE SLIM JOCAR OFFICE",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256272038,
+    "nome": "MARCADOR RETROPOJETOR PTA JOCAR OFFICE",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891276775593,
+    "nome": "MARMITINHA BORRACHAS DIVERTIDAS",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898274042016,
+    "nome": "MASSA DE MODELAR",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899455987812,
+    "nome": "MINI BLOQUINHO BICHINHOS",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 11
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898559640685,
+    "nome": "PALITO P/ TOPO DE BOLO",
+    "preco": 0.75,
+    "unid": "UN",
+    "estoque": 15
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896644717793,
+    "nome": "PASTA ELASTICO 2,5 A5 POLIBRAS",
+    "preco": 5.5,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896644715768,
+    "nome": "PASTA ELASTICO A4 FINA POLIBRAS",
+    "preco": 6.5,
+    "unid": "UN",
+    "estoque": -30
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7896644715706,
+    "nome": "PASTA ELASTICO FINA A5 POLIBRAS",
+    "preco": 5.5,
+    "unid": "UN",
+    "estoque": 2
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7895375482437,
+    "nome": "PASTA L",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 8300222524219,
+    "nome": "PISTOLA COLA QUENTE FINA",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 78997258019,
+    "nome": "POP IT GAME",
+    "preco": 25.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897216950310,
+    "nome": "PRANCHETA MDF A4",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 1
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897216950327,
+    "nome": "PRANCHETA MDF A5",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897256230977,
+    "nome": "PRENDEDOR CARINHA SMILES",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": 23
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899662744406,
+    "nome": "REFIL DE TINTA P/CANETAS FOFAS",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7899489099383,
+    "nome": "REGUA ACRILICO 30 CM",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": -12
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898581964377,
+    "nome": "SACOLA PÁSCOA",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": 4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891941106912,
+    "nome": "SACOS DE PRESENTE G",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": 13
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898386155369,
+    "nome": "SACOS DE PRESENTE M",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": 30
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7892516543262,
+    "nome": "SACOS DE PRESENTE P",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": 59
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891137506366,
+    "nome": "SUPER COLA",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": 3
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898119104459,
+    "nome": "TESOURA ESCOLAR COLORIDA MASTERPRINT",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7898440760379,
+    "nome": "TESOURA ESCOLAR PTA LEO E LEO",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": 39
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7908229101481,
+    "nome": "TESOURA MASTERPRINT 21 CM MP-510",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7897049710006,
+    "nome": "TINTA GUAXE 15ML UNIDADE",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": 11
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "01 PAPELARIA ESC",
+    "codigo": 7891525079601,
+    "nome": "VARIADOS JAKELINE SÓ ACERTAR COM ELA",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "PAPELARIA ESCOLAR",
+    "subgrupo": "GERAL",
+    "codigo": 7908364132951,
+    "nome": "MINI CEDULAS DE DINHEIRO 61 NOTAS",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": 11
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 10101,
+    "nome": "00 IMPRESSAO PB",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": -1220
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 100,
+    "nome": "00 RECEBIMENTO CREDIARIOS",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": -60
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 2,
+    "nome": "01 IMPRESSAO PB F/V",
+    "preco": 3.5,
+    "unid": "UN",
+    "estoque": -112
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 3,
+    "nome": "02 IMPRESSAO COLORIDA",
+    "preco": 3.0,
+    "unid": "UN",
+    "estoque": -599
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 4,
+    "nome": "03 IMPRESSAO COLORIDA F/V",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -21
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 5,
+    "nome": "04 XEROX PB",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": -1417
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 6,
+    "nome": "05 XEROX COLORIDO",
+    "preco": 0.85,
+    "unid": "UN",
+    "estoque": -34
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7,
+    "nome": "06 BOLETO",
+    "preco": 4.75,
+    "unid": "UN",
+    "estoque": -95
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 8,
+    "nome": "07 IMPRESSAO PAPEL CARTAO",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -10
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 9,
+    "nome": "08 IMPRESSAO PAPEL CARTAO F/V",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 10,
+    "nome": "09 IMPRESSAO PAPEL FOTOGRAFICO",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -42
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 11,
+    "nome": "10 IMPRESSAO PAPEL FOTOGRAFICO F/V",
+    "preco": 7.5,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 12,
+    "nome": "11 SERVIÇO R$ 0,50",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": -514
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 13,
+    "nome": "12 SERVIÇO R$ 1,00",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": -349
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 14,
+    "nome": "13 SERVIÇO R$ 2,00",
+    "preco": 2.0,
+    "unid": "UN",
+    "estoque": -105
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 15,
+    "nome": "14 SERVIÇO R$ 5,00",
+    "preco": 5.0,
+    "unid": "UN",
+    "estoque": -1147
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 16,
+    "nome": "15 SERVIÇO R$ 10,00",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -462
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 17,
+    "nome": "16 SERVIÇO R$ 15,00",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -149
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 18,
+    "nome": "17 SERVIÇO R$ 20,00",
+    "preco": 20.0,
+    "unid": "UN",
+    "estoque": -335
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 19,
+    "nome": "18 ENVELOPE PARDO A4",
+    "preco": 1.5,
+    "unid": "UN",
+    "estoque": -464
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 20,
+    "nome": "19 CURRICULO PADRÃO",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 21,
+    "nome": "20 CURRICULO PREMIUM",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 22,
+    "nome": "21 PORTA DOCUMENTOS",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": -110
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 23,
+    "nome": "22 SERVIÇO R$ 50,00",
+    "preco": 50.0,
+    "unid": "UN",
+    "estoque": -78
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 24,
+    "nome": "23 PACOTE PAPEL C/100",
+    "preco": 9.0,
+    "unid": "UN",
+    "estoque": -22
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 25,
+    "nome": "24 CONTRATO PERSONALIZADO",
+    "preco": 45.0,
+    "unid": "UN",
+    "estoque": 99
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 26,
+    "nome": "25 INSS",
+    "preco": 35.0,
+    "unid": "UN",
+    "estoque": -4
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 27,
+    "nome": "26 DIGITALIZAÇÃO",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 28,
+    "nome": "27 PLAQUINHA DE AVISO",
+    "preco": 8.5,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 29,
+    "nome": "28 ABERTURA MEI",
+    "preco": 140.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 30,
+    "nome": "29 DECLARAÇÃO MEI",
+    "preco": 80.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 31,
+    "nome": "30 ENCADERNAÇÃO",
+    "preco": 7.5,
+    "unid": "UN",
+    "estoque": -7
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 3733,
+    "nome": "500 FOLHAS OFÍCIO",
+    "preco": 32.0,
+    "unid": "UN",
+    "estoque": 3
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7896794703004,
+    "nome": "CONTRATO PADRÃO",
+    "preco": 45.0,
+    "unid": "UN",
+    "estoque": 100
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7897034962779,
+    "nome": "CONTRATO PARA PREENCHER (EM BRANCO/ 2 VIAS)",
+    "preco": 10.0,
+    "unid": "UN",
+    "estoque": 100
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7899550548796,
+    "nome": "DEPOSITO DE MOEDAS",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": -1
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7898596917986,
+    "nome": "ENTRADA DE MOEDA",
+    "preco": 0.02,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7897919580340,
+    "nome": "IMPRESSÃO DE DOCUMENTO",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -107
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7899047662615,
+    "nome": "IMPRESSÃO P/B",
+    "preco": 2.5,
+    "unid": "UN",
+    "estoque": -2
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7893295709498,
+    "nome": "IMPRESSÃO VINIL",
+    "preco": 8.0,
+    "unid": "UN",
+    "estoque": -5
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7893887445339,
+    "nome": "PLASTIFICAÇÃO MAIOR",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 32,
+    "nome": "PLASTIFICAÇÃO PEQ.",
+    "preco": 4.0,
+    "unid": "UN",
+    "estoque": -42
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7894640466578,
+    "nome": "SERVIÇO METODISTA",
+    "preco": 1.0,
+    "unid": "UN",
+    "estoque": -85
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 7897428552500,
+    "nome": "SERVIÇO R$ 6,00",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 103360,
+    "nome": "TINTA MP AMARELA 70ML",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": -6
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 103346,
+    "nome": "TINTA MP CIANO 70 ML",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 103353,
+    "nome": "TINTA MP MAGENTA 70 ML",
+    "preco": 15.0,
+    "unid": "UN",
+    "estoque": 0
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "00 SERVIÇOS",
+    "codigo": 103339,
+    "nome": "TINTA MP PRETA 127ML",
+    "preco": 17.5,
+    "unid": "UN",
+    "estoque": -8
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "GERAL",
+    "codigo": 7896724817153,
+    "nome": "CARTÃO DE CARTA",
+    "preco": 0.5,
+    "unid": "UN",
+    "estoque": -30
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "GERAL",
+    "codigo": 7897300378686,
+    "nome": "INTERNET",
+    "preco": 0.75,
+    "unid": "UN",
+    "estoque": 976
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "GERAL",
+    "codigo": 7897223125695,
+    "nome": "IPTU",
+    "preco": 6.0,
+    "unid": "UN",
+    "estoque": 998
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "GERAL",
+    "codigo": 7898095470661,
+    "nome": "NET",
+    "preco": 7.5,
+    "unid": "UN",
+    "estoque": 999
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "GERAL",
+    "codigo": 7891058160661,
+    "nome": "NET",
+    "preco": 0.75,
+    "unid": "UN",
+    "estoque": -3
+  },
+  {
+    "grupo": "SERVIÇOS",
+    "subgrupo": "GERAL",
+    "codigo": 7894652215836,
+    "nome": "SACOLA BRANCA",
+    "preco": 0.1,
+    "unid": "UN",
+    "estoque": 960
+  }
+]
