@@ -3616,36 +3616,16 @@ async function _executarFechamento() {
 
 async function _reimprimir(dataISO) {
   try {
-    var p = dataISO.split('-');
-    var dataFmt = p[2]+'/'+p[1]+'/'+p[0];
-    // Buscar dados do fechamento no Firebase
     var info = { moeda: 0, recolhido: 0 };
-    if (window.db) {
-      try {
-        var snap = await window.db.collection
-          ? window.db.collection('caixa_fechamentos').doc(dataISO).get()
-          : null;
-        if (snap && snap.exists) {
-          var d = snap.data();
-          info.moeda = d.moeda || 0;
-          info.recolhido = d.recolhido || 0;
-        }
-      } catch(e) {
-        // Firebase modular — tenta via função exposta
-        if (window.getDoc && window.doc) {
-          try {
-            var docSnap = await window.getDoc(window.doc(window.db, 'caixa_fechamentos', dataISO));
-            if (docSnap.exists()) {
-              info.moeda = docSnap.data().moeda || 0;
-              info.recolhido = docSnap.data().recolhido || 0;
-            }
-          } catch(e2) {}
-        }
+    if (typeof window.buscarFechamentoPorData === 'function') {
+      var dados = await window.buscarFechamentoPorData(dataISO);
+      if (dados) {
+        info.moeda = dados.moeda || 0;
+        info.recolhido = dados.recolhido || 0;
       }
     }
     _abrirImpressaoFechamento({ dias: [dataISO], moeda: info.moeda, recolhido: info.recolhido });
   } catch(e) {
-    // Abre mesmo sem dados do Firebase
     _abrirImpressaoFechamento({ dias: [dataISO], moeda: 0, recolhido: 0 });
   }
 }
@@ -4878,9 +4858,6 @@ document.addEventListener('keydown', function(e){
 })();
 </script>
 <!-- ═══ FIM DO PATCH v3.1 ═══ -->
-  
-<script src="js/despesas.js"></script>
-  
 </body>
 
 </html>
