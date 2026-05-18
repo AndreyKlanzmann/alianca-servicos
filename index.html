@@ -2253,7 +2253,8 @@ function gerarRelatorio() {
       '<div style="text-align:right"><div class="resumo-info">Atendimentos</div><div style="font-size:22px;font-weight:800;color:#444">' + _atendimentos.length + '</div></div>' +
     '</div>' +
     linhas +
-    '</body></html>');
+    '<script src="js/despesas.js"></script>
+</body></html>');
   win.document.close();
 }
 
@@ -2302,7 +2303,8 @@ function abrirGrafico() {
     '</div>' +
     '<p>' + dataStr2 + ' — Top ' + top.length + ' serviços do dia</p>' +
     bars +
-    '</body></html>');
+    '<script src="js/despesas.js"></script>
+</body></html>');
   win2.document.close();
 }
 
@@ -2424,7 +2426,8 @@ function gerarNotinha(idx) {
   <div style="text-align:center;padding:12px">
     <button onclick="window.print()" style="padding:8px 20px;background:#1a3a8f;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700">🖨 Imprimir Notinha</button>
   </div>
-  </body></html>`);
+  <script src="js/despesas.js"></script>
+</body></html>`);
   win.document.close();
 }
 
@@ -3668,7 +3671,8 @@ function _abrirImpressaoFechamento(dados) {
     '<hr class="line">' +
     '<div class="center" style="font-size:9px;color:#777;margin-top:4px">Assinatura: ___________________</div>' +
     '<div style="margin-top:12px;text-align:center"><button onclick="window.print()" style="padding:6px 16px;font-size:12px;cursor:pointer">🖨️ Imprimir</button></div>' +
-    '</body></html>';
+    '<script src="js/despesas.js"></script>
+</body></html>';
 
   var win = window.open('', '_blank', 'width=420,height=320');
   if (win) {
@@ -4404,7 +4408,8 @@ document.addEventListener('keydown', function(e){
 <!--
   ╔══════════════════════════════════════════════════════════════╗
   ║   PATCH v3.1 — CONTROLE DE ACESSO ADMIN/OPERACIONAL         ║
-  ║   Cole IMEDIATAMENTE ANTES de </body> no index.html          ║
+  ║   Cole IMEDIATAMENTE ANTES de <script src="js/despesas.js"></script>
+</body> no index.html          ║
   ║                                                              ║
   ║   PROTEGIDO (pede senha):                                    ║
   ║   • Total do Dia (fica oculto com ••••)                      ║
@@ -4858,6 +4863,7 @@ document.addEventListener('keydown', function(e){
 })();
 </script>
 <!-- ═══ FIM DO PATCH v3.1 ═══ -->
+<script src="js/despesas.js"></script>
 </body>
 
 </html>
