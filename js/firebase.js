@@ -392,6 +392,9 @@ async function carregarAtendimentosDoDia(dataISO) {
     window.entradaEstoque = entradaEstoque;
     window.baixaEstoque = baixaEstoque;
     window.importarProdutosEmLote = importarProdutosEmLote;
+    window.db = db;
+    window.getDoc = getDoc;
+    window.doc = doc;
     window.salvarDespesaFirebase    = salvarDespesaFirebase;
     window.atualizarDespesaFirebase = atualizarDespesaFirebase;
     window.excluirDespesaFirebase   = excluirDespesaFirebase;
