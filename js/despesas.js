@@ -44,9 +44,12 @@
     var q = document.getElementById('despBuscaProduto').value.toLowerCase();
     var lista = document.getElementById('despListaProdutos');
     var filtrados = q
-      ? _produtosCache.filter(function (p) { return p.nome.toLowerCase().includes(q) || (p.codigo || '').toLowerCase().includes(q); })
+      ? _produtosCache.filter(function (p) {
+          return p.nome.toLowerCase().includes(q) ||
+                 String(p.codigo || '').toLowerCase().includes(q);
+        })
       : _produtosCache;
-    lista.innerHTML = filtrados.slice(0, 30).map(function (p) {
+    lista.innerHTML = filtrados.slice(0, 100).map(function (p) {
       return '<div class="desp-produto-item" onclick="despSelecionarProduto(\'' + p.codigo + '\')">'
         + '<span style="font-weight:600;font-size:13px">' + p.nome + '</span>'
         + '<span style="font-size:11px;color:var(--color-text-muted)">' + (p.codigo || '') + '</span>'
