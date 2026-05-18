@@ -50,7 +50,7 @@
         })
       : _produtosCache;
     lista.innerHTML = filtrados.slice(0, 100).map(function (p) {
-      return '<div class="desp-produto-item" onclick="despSelecionarProduto(\'' + p.codigo + '\')">'
+      return '<div class="desp-produto-item" onclick="despSelecionarProduto(\'' + String(p.codigo) + '\')">'
         + '<span style="font-weight:600;font-size:13px">' + p.nome + '</span>'
         + '<span style="font-size:11px;color:var(--color-text-muted)">' + (p.codigo || '') + '</span>'
         + '<span style="font-size:12px;font-weight:700;color:var(--color-primary)">' + _brl(p.preco || 0) + '</span>'
@@ -59,7 +59,7 @@
   };
 
   window.despSelecionarProduto = function (codigo) {
-    var prod = _produtosCache.find(function (p) { return p.codigo === codigo; });
+    var prod = _produtosCache.find(function (p) { return String(p.codigo) === String(codigo); });
     if (!prod) return;
     document.getElementById('despProdSelecionado').style.display = 'flex';
     document.getElementById('despProdNome').textContent = prod.nome;
@@ -91,7 +91,7 @@
     var codigo = document.getElementById('despProdCodigo').value;
     var qty = parseInt(document.getElementById('despProdQty').value) || 1;
     var base = parseFloat(document.getElementById('despProdPrecoBase').value) || 0;
-    var prod = _produtosCache.find(function (p) { return p.codigo === codigo; });
+    var prod = _produtosCache.find(function (p) { return String(p.codigo) === String(codigo); });
     if (!prod) { showToast('Selecione um produto'); return; }
     _salvar({
       descricao: prod.nome,
