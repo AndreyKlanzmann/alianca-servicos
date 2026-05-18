@@ -390,7 +390,7 @@
       '</div>',
 
       '<!-- BOTÃO FLUTUANTE DESPESAS -->',
-      '<button id="despFab" onclick="abrirDespesas()" title="Despesas" style="position:fixed;bottom:160px;right:24px;z-index:299;background:#a12c7b;color:#fff;border:none;border-radius:999px;padding:10px 18px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(161,44,123,.4);display:flex;align-items:center;gap:6px;font-family:inherit;transition:transform .15s">',
+      '<button id="despFab" onclick="abrirDespesas()" title="Despesas" style="position:fixed;bottom:155px;right:24px;z-index:299;background:#a12c7b;color:#fff;border:none;border-radius:999px;padding:10px 18px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(161,44,123,.4);display:flex;align-items:center;gap:6px;font-family:inherit;transition:transform .15s">',
         '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
         'Despesas',
       '</button>',
