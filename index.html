@@ -3110,6 +3110,25 @@ async function carregarAtendimentosDoDia(dataISO) {
     <div style="padding:20px 24px" id="fecharCaixaBody">
       <div class="dash-empty">Verificando dias em aberto...</div>
     </div>
+    <div style="padding:0 24px 16px;display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:11px;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.5px">Valores do caixa físico</div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+          <label for="caixaMoeda" style="font-size:12px;font-weight:600;color:var(--color-text-muted)">💰 Moeda que fica (troco)</label>
+          <div style="position:relative">
+            <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--color-text-muted);pointer-events:none">R$</span>
+            <input id="caixaMoeda" type="number" step="0.01" min="0" placeholder="0,00" style="width:100%;padding:9px 12px 9px 36px;border:1.5px solid var(--color-border);border-radius:8px;font-size:14px;font-weight:600;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">
+          </div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+          <label for="caixaRecolhido" style="font-size:12px;font-weight:600;color:var(--color-text-muted)">💵 Valor recolhido</label>
+          <div style="position:relative">
+            <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--color-text-muted);pointer-events:none">R$</span>
+            <input id="caixaRecolhido" type="number" step="0.01" min="0" placeholder="0,00" style="width:100%;padding:9px 12px 9px 36px;border:1.5px solid var(--color-border);border-radius:8px;font-size:14px;font-weight:600;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="dash-actions">
       <button onclick="fecharFecharCaixaOverlay()">Cancelar</button>
       <button class="primary" id="btnConfirmarFechamento" onclick="_executarFechamento()" disabled>🔒 Confirmar Fechamento</button>
@@ -3696,6 +3715,10 @@ function _marcarEnviado(tipo, chave) {
   if (log[tipo].length > 30) log[tipo] = log[tipo].slice(-30);
   localStorage.setItem(TG_SENT_KEY, JSON.stringify(log));
   // v3.0: se for fechamento de dia, persiste no Firebase também (sincroniza entre PCs)
+  // Capturar valores do caixa físico
+  const _moeda = parseFloat(document.getElementById('caixaMoeda')?.value?.replace(',','.') || '0') || 0;
+  const _recolhido = parseFloat(document.getElementById('caixaRecolhido')?.value?.replace(',','.') || '0') || 0;
+
   if (tipo === 'day' && window.fecharCaixaFirebase) {
     // Atualiza cache local imediatamente (UI instantânea)
     try {
@@ -3712,7 +3735,7 @@ function _marcarEnviado(tipo, chave) {
           info.atendimentos = dados.length;
           info.total = dados.reduce((s, a) => s + (a.total || 0), 0);
         }
-        await window.fecharCaixaFirebase(chave, info);
+        await window.fecharCaixaFirebase(chave, { ...info, moeda: _moeda, recolhido: _recolhido });
         try { _updateCaixaStatusBadge(); } catch(e){}
       } catch (e) { console.warn('Falha sync caixa Firebase:', e); }
     })();
@@ -4758,7 +4781,6 @@ document.addEventListener('keydown', function(e){
 })();
 </script>
 <!-- ═══ FIM DO PATCH v3.1 ═══ -->
-<script src="js/despesas.js"></script>
 </body>
 
 </html>
