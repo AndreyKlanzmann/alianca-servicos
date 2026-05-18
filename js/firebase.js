@@ -308,7 +308,9 @@ async function carregarAtendimentosDoDia(dataISO) {
       fechadoEm: new Date().toISOString(),
       fechadoPor: (navigator.userAgent || '').slice(0, 100),
       atendimentos: (info && info.atendimentos) || 0,
-      total: (info && info.total) || 0
+      total: (info && info.total) || 0,
+      moeda: (info && info.moeda) || 0,
+      recolhido: (info && info.recolhido) || 0
     };
     await setDoc(doc(db, 'caixa_fechamentos', dataISO), payload, { merge: true });
     return payload;
@@ -379,6 +381,17 @@ async function carregarAtendimentosDoDia(dataISO) {
     }
   }
 
+  async function buscarFechamentoPorData(dataISO) {
+    try {
+      const snap = await getDoc(doc(db, 'caixa_fechamentos', dataISO));
+      if (snap.exists()) return snap.data();
+      return null;
+    } catch (e) {
+      console.error('Erro ao buscar fechamento:', e);
+      return null;
+    }
+  }
+
   try {
     window.salvarAtendimento = salvarAtendimento;
     window.excluirAtendimento = excluirAtendimento;
@@ -404,6 +417,7 @@ async function carregarAtendimentosDoDia(dataISO) {
     window.reabrirCaixaFirebase = reabrirCaixaFirebase;
     window.listarCaixaFechamentos = listarCaixaFechamentos;
     window.caixaJaFechado = caixaJaFechado;
+    window.buscarFechamentoPorData    = buscarFechamentoPorData;
     console.log('Funções Firestore expostas em window');
   } catch (e) {
     console.error('Erro ao expor funções no window:', e);
