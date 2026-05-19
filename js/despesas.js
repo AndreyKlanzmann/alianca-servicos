@@ -71,14 +71,17 @@
     document.getElementById('despProdNome').textContent = prod.nome;
     document.getElementById('despProdPrecoUnit').textContent = _brl(prod.preco || 0);
     document.getElementById('despProdQty').value = 1;
-    document.getElementById('despProdCodigo').value = prod.codigo;
+    document.getElementById('despProdCodigo').value = String(prod.codigo);
     document.getElementById('despProdPrecoBase').value = prod.preco || 0;
+    var editEl = document.getElementById('despProdPrecoEdit');
+    if (editEl) editEl.value = (prod.preco || 0).toFixed(2);
     _despAtualizarTotalProd();
   };
 
   window._despAtualizarTotalProd = function () {
     var qty = parseInt(document.getElementById('despProdQty').value) || 1;
-    var base = parseFloat(document.getElementById('despProdPrecoBase').value) || 0;
+    var edit = document.getElementById('despProdPrecoEdit');
+    var base = edit ? (parseFloat(edit.value) || 0) : (parseFloat(document.getElementById('despProdPrecoBase').value) || 0);
     document.getElementById('despProdTotal').textContent = _brl(base * qty);
   };
 
@@ -96,7 +99,8 @@
   window.salvarDespesaEstoque = function () {
     var codigo = document.getElementById('despProdCodigo').value;
     var qty = parseInt(document.getElementById('despProdQty').value) || 1;
-    var base = parseFloat(document.getElementById('despProdPrecoBase').value) || 0;
+    var editEl = document.getElementById('despProdPrecoEdit');
+    var base = editEl ? (parseFloat(editEl.value) || 0) : (parseFloat(document.getElementById('despProdPrecoBase').value) || 0);
     var prod = _produtosCache.find(function (p) { return String(p.codigo) === String(codigo); });
     if (!prod) { showToast('Selecione um produto'); return; }
     _salvar({
@@ -130,23 +134,25 @@
   }
 
   function _salvarFirebase(desp, btn) {
-    var ok = function (docId) {
-      if (docId) desp.docId = docId;
+    if (window.salvarDespesaFirebase) {
+      window.salvarDespesaFirebase(desp).then(function(docId) {
+        desp.docId = docId;
+        _despesas.unshift(desp);
+        _renderLista();
+        _limparForm();
+        showToast('✅ Despesa registrada!');
+        if (btn) { btn.disabled = false; btn.textContent = 'Registrar'; }
+      }).catch(function(e) {
+        showToast('Erro ao salvar: ' + e.message);
+        if (btn) { btn.disabled = false; btn.textContent = 'Registrar'; }
+      });
+    } else {
+      // Sem Firebase — salva só localmente sem docId
       _despesas.unshift(desp);
       _renderLista();
       _limparForm();
-      showToast('✅ Despesa registrada!');
+      showToast('✅ Despesa registrada (local)');
       if (btn) { btn.disabled = false; btn.textContent = 'Registrar'; }
-    };
-    if (window.db) {
-      window.salvarDespesaFirebase
-        ? window.salvarDespesaFirebase(desp).then(ok).catch(function (e) {
-            showToast('Erro ao salvar: ' + e.message);
-            if (btn) { btn.disabled = false; btn.textContent = 'Registrar'; }
-          })
-        : ok(null);
-    } else {
-      ok(null);
     }
   }
 
@@ -379,9 +385,11 @@
                 '</div>',
                 '<input type="hidden" id="despProdCodigo">',
                 '<input type="hidden" id="despProdPrecoBase">',
-                '<div style="display:flex;align-items:center;gap:10px">',
-                  '<label style="font-size:12px;font-weight:600;color:var(--color-text-muted)">Quantidade:</label>',
-                  '<input id="despProdQty" type="number" min="1" value="1" oninput="_despAtualizarTotalProd()" style="width:70px;padding:8px;border:1.5px solid var(--color-border);border-radius:6px;font-size:14px;font-weight:700;text-align:center;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">',
+                '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">',
+                  '<label style="font-size:12px;font-weight:600;color:var(--color-text-muted)">Qtd:</label>',
+                  '<input id="despProdQty" type="number" min="1" value="1" oninput="_despAtualizarTotalProd()" style="width:60px;padding:8px;border:1.5px solid var(--color-border);border-radius:6px;font-size:14px;font-weight:700;text-align:center;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">',
+                  '<label style="font-size:12px;font-weight:600;color:var(--color-text-muted)">Preço unit:</label>',
+                  '<input id="despProdPrecoEdit" type="number" step="0.01" min="0" oninput="_despAtualizarTotalProd()" style="width:90px;padding:8px;border:1.5px solid var(--color-border);border-radius:6px;font-size:14px;font-weight:700;text-align:center;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">',
                   '<span style="font-size:12px;color:var(--color-text-muted)">Total:</span>',
                   '<span id="despProdTotal" style="font-size:16px;font-weight:800;color:#a12c7b">R$ 0,00</span>',
                 '</div>',

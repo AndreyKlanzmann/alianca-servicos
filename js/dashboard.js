@@ -344,8 +344,9 @@ async function abrirFecharCaixaAvancado() {
       const bg = o.fechado ? '#f5f5f5' : (o.hoje ? '#e8f4f5' : '#fff8e1');
       const checked = (!o.fechado) ? 'checked' : '';
       const disabled = o.fechado ? 'disabled' : '';
+      const dataEsc = o.data;
       const tag = o.fechado
-        ? '<span style="font-size:10px;background:#28a745;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">FECHADO</span>'
+        ? `<span style="display:flex;align-items:center;gap:6px"><span style="font-size:10px;background:#28a745;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">FECHADO</span><button onclick="event.preventDefault();event.stopPropagation();_reimprimir('${dataEsc}')" style="font-size:10px;padding:2px 8px;border-radius:10px;border:1.5px solid #28a745;background:none;color:#28a745;cursor:pointer;font-weight:700">🖨️</button></span>`
         : (o.hoje ? '<span style="font-size:10px;background:#01696F;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">HOJE</span>'
                   : '<span style="font-size:10px;background:#dc3545;color:#fff;padding:2px 8px;border-radius:10px;font-weight:700">ABERTO</span>');
       html += `<label style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:${bg};border:1px solid var(--color-border);border-radius:8px;cursor:${o.fechado?'not-allowed':'pointer'};font-size:13px">
@@ -403,6 +404,19 @@ async function _executarFechamento() {
     } catch (e) { falhas++; console.error('Erro fechar dia', dia, e); }
   }
 
+  // Capturar moeda e recolhido
+  const _moeda = parseFloat((document.getElementById('caixaMoeda')?.value || '0').replace(',','.')) || 0;
+  const _recolhido = parseFloat((document.getElementById('caixaRecolhido')?.value || '0').replace(',','.')) || 0;
+
+  // Salvar moeda/recolhido no Firebase para cada dia fechado
+  if (sucesso > 0 && window.fecharCaixaFirebase) {
+    for (const dia of diasParaFechar) {
+      try {
+        await window.fecharCaixaFirebase(dia, { moeda: _moeda, recolhido: _recolhido });
+      } catch(e) { console.warn('Erro ao salvar moeda/recolhido:', e); }
+    }
+  }
+
   let msg = '';
   if (sucesso > 0) msg += `✓ ${sucesso} dia(s) fechado(s)`;
   if (semTelegram > 0) msg += `\nℹ️ ${semTelegram} dia(s) marcado(s) como fechado(s) (Telegram não configurado, sem envio)`;
@@ -410,8 +424,74 @@ async function _executarFechamento() {
   alert(msg || 'Nada foi feito');
 
   fecharFecharCaixaOverlay();
-  _verificarPendencias(); // atualiza banner
+  _verificarPendencias();
   try { _updateCaixaStatusBadge(); } catch(e){}
+
+  // Abrir impressão automaticamente
+  if (sucesso > 0) {
+    _abrirImpressaoFechamento({ dias: diasParaFechar, moeda: _moeda, recolhido: _recolhido });
+  }
+}
+
+async function _reimprimir(dataISO) {
+  try {
+    var info = { moeda: 0, recolhido: 0 };
+    if (typeof window.buscarFechamentoPorData === 'function') {
+      var dados = await window.buscarFechamentoPorData(dataISO);
+      if (dados) { info.moeda = dados.moeda || 0; info.recolhido = dados.recolhido || 0; }
+    }
+    _abrirImpressaoFechamento({ dias: [dataISO], moeda: info.moeda, recolhido: info.recolhido });
+  } catch(e) {
+    _abrirImpressaoFechamento({ dias: [dataISO], moeda: 0, recolhido: 0 });
+  }
+}
+
+function _abrirImpressaoFechamento(dados) {
+  var agora = new Date();
+  var hora = ('0'+agora.getHours()).slice(-2) + ':' + ('0'+agora.getMinutes()).slice(-2);
+  var dd = ('0'+agora.getDate()).slice(-2);
+  var mm = ('0'+(agora.getMonth()+1)).slice(-2);
+  var yyyy = agora.getFullYear();
+  var dataFmt = dd + '/' + mm + '/' + yyyy;
+  var moedaFmt = 'R$ ' + (dados.moeda || 0).toFixed(2).replace('.', ',');
+  var recolhidoFmt = 'R$ ' + (dados.recolhido || 0).toFixed(2).replace('.', ',');
+  var totalFmt = 'R$ ' + ((dados.moeda || 0) + (dados.recolhido || 0)).toFixed(2).replace('.', ',');
+  var diasStr = dados.dias.map(function(d) {
+    var p = d.split('-'); return p[2]+'/'+p[1]+'/'+p[0];
+  }).join(', ');
+
+  var win = window.open('', '_blank', 'width=420,height=320');
+  if (!win) return;
+  win.document.open();
+  win.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8">');
+  win.document.write('<title>Fechamento</title>');
+  win.document.write('<style>');
+  win.document.write('@page{size:105mm 74mm;margin:4mm}');
+  win.document.write('body{font-family:Arial,sans-serif;font-size:11px;color:#000;margin:0;padding:0;width:97mm}');
+  win.document.write('.center{text-align:center}.bold{font-weight:700}.big{font-size:15px;font-weight:700}');
+  win.document.write('.line{border:none;border-top:1px dashed #000;margin:4px 0}');
+  win.document.write('.row{display:flex;justify-content:space-between;margin:3px 0}');
+  win.document.write('.label{color:#555}.val{font-weight:700}');
+  win.document.write('.total-box{background:#000;color:#fff;padding:4px 8px;border-radius:3px;display:flex;justify-content:space-between;margin:4px 0}');
+  win.document.write('@media print{button{display:none}}');
+  win.document.write('</style></head><body>');
+  win.document.write('<div class="center bold" style="font-size:13px;margin-bottom:2px">ALIANCA INFORMATICA</div>');
+  win.document.write('<div class="center" style="font-size:9px;color:#555;margin-bottom:4px">Fechamento de Caixa</div>');
+  win.document.write('<hr class="line">');
+  win.document.write('<div class="row"><span class="label">Data:</span><span class="val">' + dataFmt + '</span></div>');
+  win.document.write('<div class="row"><span class="label">Hora:</span><span class="val">' + hora + '</span></div>');
+  win.document.write('<div class="row"><span class="label">Dia(s):</span><span class="val">' + diasStr + '</span></div>');
+  win.document.write('<hr class="line">');
+  win.document.write('<div class="row"><span class="label">Moeda (troco):</span><span class="val">' + moedaFmt + '</span></div>');
+  win.document.write('<div class="row"><span class="label">Recolhido:</span><span class="val">' + recolhidoFmt + '</span></div>');
+  win.document.write('<hr class="line">');
+  win.document.write('<div class="total-box"><span>TOTAL CAIXA</span><span class="big">' + totalFmt + '</span></div>');
+  win.document.write('<hr class="line">');
+  win.document.write('<div class="center" style="font-size:9px;color:#777;margin-top:4px">Assinatura: ___________________</div>');
+  win.document.write('<div style="margin-top:12px;text-align:center"><button onclick="window.print()" style="padding:6px 16px;font-size:12px;cursor:pointer">Imprimir</button></div>');
+  win.document.write('</body></html>');
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
 }
 
 function _dispensarBanner() {
