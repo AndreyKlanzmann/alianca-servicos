@@ -21,12 +21,12 @@
   } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyAVwUMdqCsgHHMVT1CXMRhEYX82Et_8sHQ",
-    authDomain: "lan-house-alianca.firebaseapp.com",
-    projectId: "lan-house-alianca",
-    storageBucket: "lan-house-alianca.firebasestorage.app",
-    messagingSenderId: "645899911722",
-    appId: "1:645899911722:web:ea98f7624ee5aba7487953"
+    apiKey: "YOUR_API_KEY",
+    authDomain: "your-project.firebaseapp.com",
+    projectId: "your-project-id",
+    storageBucket: "your-project.firebasestorage.app",
+    messagingSenderId: "000000000000",
+    appId: "1:000000000000:web:000000000000"
   };
 
   const app = initializeApp(firebaseConfig);
