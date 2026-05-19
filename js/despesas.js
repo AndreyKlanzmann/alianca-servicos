@@ -12,17 +12,11 @@
 
   /* ── Abrir modal (só admin) ── */
   window.abrirDespesas = function () {
-    var isAdmin = typeof window._adminIsActive === 'function' && window._adminIsActive();
-    if (!isAdmin) {
-      if (typeof window.requestAdminAction === 'function') {
-        window.requestAdminAction(function () { _abrirModal(); });
-      } else {
-        // admin.js ainda não carregou — tenta abrir direto
-        _abrirModal();
-      }
-      return;
+    if (typeof window.requireAdmin === 'function') {
+      window.requireAdmin(function () { _abrirModal(); });
+    } else {
+      _abrirModal();
     }
-    _abrirModal();
   };
 
   function _abrirModal() {
