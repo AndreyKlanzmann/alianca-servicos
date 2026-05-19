@@ -16,8 +16,14 @@ let _dashData = [];
 let _diasEmAberto = []; // [{data, totalFat, totalAt}]
 
 /* ---------- Telegram config ---------- */
+// Config padrão do Telegram — usada se não houver nada no localStorage
+var TG_DEFAULT = { token: '8239490224:AAH7urqLHOFAFxaNh7osQPLpbHUT9NG1uas', chatId: '6414156770' };
+
 function _tgGet() {
-  try { return JSON.parse(localStorage.getItem(TG_KEY) || 'null'); } catch (e) { return null; }
+  try {
+    var salvo = JSON.parse(localStorage.getItem(TG_KEY) || 'null');
+    return salvo || TG_DEFAULT;
+  } catch (e) { return TG_DEFAULT; }
 }
 function _tgSet(cfg) { localStorage.setItem(TG_KEY, JSON.stringify(cfg)); _tgUpdateBadge(); }
 function _tgUpdateBadge() {
