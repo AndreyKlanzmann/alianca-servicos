@@ -107,6 +107,8 @@ const SERVICES = [
   {cat:'grafica', name:'Vinil', obs:'Impressão em vinil', price:'R$ 8,00', url:null},
   {cat:'grafica', name:'Plastificação Pequena', obs:'Plastificação de documento pequeno', price:'R$ 4,00', url:null},
   {cat:'grafica', name:'Plastificação Grande', obs:'Plastificação de documento grande', price:'R$ 6,00', url:null},
+  {cat:'grafica', name:'Scan', obs:'Digitalização de documento em PDF ou imagem', price:'R$ 2,50/und · desc. por qtd', url:null},
+  {cat:'grafica', name:'Aluguel de Internet', obs:'Uso da internet por tempo (cobrado por unidade de uso)', price:'R$ 0,75/und', url:null},
   {cat:'grafica', name:'Encadernação', obs:'Encadernação espiral de trabalho/apostila', price:'R$ 10,00', url:null},
   {cat:'grafica', name:'Corte de Material Impresso', obs:'Corte de folhas ou papéis impressos', price:'R$ 1,00 por folha', url:null},
   {cat:'grafica', name:'Consulta Completa', obs:'Consulta para serviços complexos que demandam mais tempo e atenção (use o bom senso)', price:'R$ 4,00', url:null},
