@@ -143,29 +143,7 @@ async function _dashCarregar() {
   const [di, df] = _dashPeriodoRange();
   document.getElementById('dashPeriodInfo').textContent = _ddmm(di) + ' até ' + _ddmm(df);
   if (!window.carregarAtendimentosPorPeriodo) {
-    // Firebase não configurado — usar dados locais da sessão
-    const local = (typeof _atendimentos !== 'undefined' ? _atendimentos : [])
-      .filter(a => a.data >= di && a.data <= df);
-    if (local.length === 0) {
-      body.innerHTML = '<div class="dash-empty" style="padding:32px 20px">' +
-        '<div style="font-size:32px;margin-bottom:12px">📊</div>' +
-        '<div style="font-size:15px;font-weight:600;margin-bottom:8px">Nenhum atendimento ainda</div>' +
-        '<div style="font-size:13px;color:var(--color-text-muted);margin-bottom:16px">Registre algumas vendas pelo carrinho e volte aqui para ver o dashboard.</div>' +
-        '<div style="background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--color-text-muted);text-align:left;max-width:380px;margin:0 auto">' +
-        '💡 <strong>Modo demonstração</strong> — dados ficam na sessão atual.<br>' +
-        'Configure o <code>firebase.js</code> para persistência permanente entre dispositivos.' +
-        '</div>' +
-        '</div>';
-      return;
-    }
-    _dashData = local;
-    _dashRender();
-    // Mostrar aviso de modo demo
-    const aviso = document.createElement('div');
-    aviso.style.cssText = 'margin:8px 24px 0;padding:8px 12px;background:rgba(1,105,111,.08);border:1px dashed #01696f;border-radius:8px;font-size:12px;color:#01696f';
-    aviso.innerHTML = '💡 <strong>Modo demonstração</strong> — dados desta sessão. Configure o <code>firebase.js</code> para persistência permanente.';
-    document.getElementById('dashBody').prepend(aviso);
-    return;
+    body.innerHTML = '<div class="dash-empty">⚠️ Firebase indisponível</div>'; return;
   }
   try {
     _dashData = await window.carregarAtendimentosPorPeriodo(di, df);
@@ -248,7 +226,7 @@ function _dashRender() {
 }
 
 /* ---------- Geração de resumo texto p/ Telegram ---------- */
-function _gerarResumoTexto(titulo, di, df, data) {
+function _gerarResumoTexto(titulo, di, df, data, extra) {
   if (!data || data.length === 0) {
     return `📊 *${titulo}*\n📅 ${_ddmm(di)} a ${_ddmm(df)}\n\n_Sem atendimentos no período_`;
   }
@@ -272,7 +250,27 @@ function _gerarResumoTexto(titulo, di, df, data) {
     const melhor = ag.dias.reduce((m, d) => ag.porDia[d].fat > ag.porDia[m].fat ? d : m, ag.dias[0]);
     txt += `\n📅 Melhor dia: *${_ddmm(melhor)}* (${_brlSimples(ag.porDia[melhor].fat)})`;
   }
-  txt += `\n\n_Aliança Informática · PDV v3.0_`;
+  // Caixa físico
+  if (extra && (extra.moeda || extra.recolhido)) {
+    const totalCaixa = (extra.moeda || 0) + (extra.recolhido || 0);
+    txt += `\n\n━━━━━━━━━━━━━━━━━━\n`;
+    txt += `🏦 *Caixa Físico:*\n`;
+    txt += `💰 Moeda (troco): *${_brlSimples(extra.moeda || 0)}*\n`;
+    txt += `💵 Recolhido: *${_brlSimples(extra.recolhido || 0)}*\n`;
+    txt += `📊 Total caixa: *${_brlSimples(totalCaixa)}*`;
+  }
+  // Despesas
+  if (extra && extra.despesas && extra.despesas.length > 0) {
+    const totalDesp = extra.despesas.reduce((s, d) => s + (d.valor || 0), 0);
+    txt += `\n\n━━━━━━━━━━━━━━━━━━\n`;
+    txt += `🧾 *Despesas do dia:* ${_brlSimples(totalDesp)}\n`;
+    extra.despesas.slice(0, 5).forEach(d => {
+      txt += `• ${d.descricao} — ${_brlSimples(d.valor || 0)}\n`;
+    });
+    if (extra.despesas.length > 5) txt += `_...e mais ${extra.despesas.length - 5} despesa(s)_\n`;
+    txt += `\n💹 *Resultado líquido:* ${_brlSimples(ag.totFat - totalDesp)}`;
+  }
+  txt += `\n\n_Aliança Informática · PDV v3.1_`;
   return txt;
 }
 
@@ -407,6 +405,10 @@ async function _executarFechamento() {
   btn.disabled = true;
   btn.textContent = 'Enviando...';
 
+  // Capturar moeda e recolhido antes do loop
+  const _moeda = parseFloat((document.getElementById('caixaMoeda')?.value || '0').replace(',','.')) || 0;
+  const _recolhido = parseFloat((document.getElementById('caixaRecolhido')?.value || '0').replace(',','.')) || 0;
+
   let sucesso = 0, falhas = 0, semTelegram = 0;
   const temTg = !!_tgGet();
 
@@ -416,7 +418,10 @@ async function _executarFechamento() {
       if (data.length === 0) { _marcarEnviado('day', dia); sucesso++; continue; }
       if (temTg) {
         const titulo = (dia === _hojeISO()) ? '🔒 Fechamento de Caixa' : `🔒 Fechamento de Caixa (atrasado)`;
-        const txt = _gerarResumoTexto(titulo, dia, dia, data);
+        // Buscar despesas do dia
+        let _despesasDia = [];
+        try { if (window.carregarDespesasHoje) _despesasDia = await window.carregarDespesasHoje(dia); } catch(e) {}
+        const txt = _gerarResumoTexto(titulo, dia, dia, data, { moeda: _moeda, recolhido: _recolhido, despesas: _despesasDia });
         const r = await _tgSend(txt);
         if (r.ok) { _marcarEnviado('day', dia); sucesso++; }
         else { falhas++; console.error('Falha Telegram dia', dia, r); }
@@ -425,10 +430,6 @@ async function _executarFechamento() {
       }
     } catch (e) { falhas++; console.error('Erro fechar dia', dia, e); }
   }
-
-  // Capturar moeda e recolhido
-  const _moeda = parseFloat((document.getElementById('caixaMoeda')?.value || '0').replace(',','.')) || 0;
-  const _recolhido = parseFloat((document.getElementById('caixaRecolhido')?.value || '0').replace(',','.')) || 0;
 
   // Salvar moeda/recolhido no Firebase para cada dia fechado
   if (sucesso > 0 && window.fecharCaixaFirebase) {
