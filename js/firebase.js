@@ -3,6 +3,7 @@
    =========================== */
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
   import {
     getFirestore,
     collection,
@@ -31,6 +32,19 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+  const auth = getAuth(app);
+
+  // Login automático silencioso — protege o Firestore
+  (async function _autoLogin() {
+    try {
+      const _e = atob('c2lzdGVtYUBhbGlhbmNhLmludGVybm8=');
+      const _p = atob('QWxpYW5jYUAyMDI2');
+      await signInWithEmailAndPassword(auth, _e, _p);
+      console.log('Firebase Auth: autenticado');
+    } catch(e) {
+      console.warn('Firebase Auth: erro no login automático', e.code);
+    }
+  })();
 
   // Salvar atendimento no Firestore
   async function salvarAtendimento(at) {
