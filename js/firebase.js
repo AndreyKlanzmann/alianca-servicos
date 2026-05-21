@@ -406,6 +406,39 @@ async function carregarAtendimentosDoDia(dataISO) {
     }
   }
 
+  // ============================================================
+  // CLIENTES EM ANDAMENTO (coleção: clientes)
+  // ============================================================
+
+  async function salvarClienteFirebase(cliente) {
+    const docRef = await addDoc(collection(db, 'clientes'), cliente);
+    return docRef.id;
+  }
+
+  async function atualizarClienteFirebase(docId, dados) {
+    const ref = doc(db, 'clientes', docId);
+    const { docId: _, ...payload } = dados;
+    await updateDoc(ref, payload);
+  }
+
+  async function excluirClienteFirebase(docId) {
+    await deleteDoc(doc(db, 'clientes', docId));
+  }
+
+  async function carregarClientesAtivos() {
+    try {
+      const q = query(
+        collection(db, 'clientes'),
+        orderBy('criadoEm', 'desc')
+      );
+      const snap = await getDocs(q);
+      return snap.docs.map(d => ({ docId: d.id, ...d.data() }));
+    } catch(e) {
+      console.error('Erro ao carregar clientes:', e);
+      return [];
+    }
+  }
+
   try {
     window.salvarAtendimento = salvarAtendimento;
     window.excluirAtendimento = excluirAtendimento;
@@ -432,6 +465,10 @@ async function carregarAtendimentosDoDia(dataISO) {
     window.listarCaixaFechamentos = listarCaixaFechamentos;
     window.caixaJaFechado = caixaJaFechado;
     window.buscarFechamentoPorData    = buscarFechamentoPorData;
+    window.salvarClienteFirebase    = salvarClienteFirebase;
+    window.atualizarClienteFirebase  = atualizarClienteFirebase;
+    window.excluirClienteFirebase    = excluirClienteFirebase;
+    window.carregarClientesAtivos    = carregarClientesAtivos;
     console.log('Funções Firestore expostas em window');
   } catch (e) {
     console.error('Erro ao expor funções no window:', e);
