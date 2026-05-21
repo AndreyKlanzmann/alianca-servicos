@@ -76,7 +76,7 @@
         + servicos.map(function(s, si) {
             return '<div style="background:var(--color-surface-offset);border-radius:8px;padding:8px 10px;display:flex;align-items:flex-start;gap:8px">'
               + '<div style="flex:1;min-width:0">'
-              +   '<div style="font-size:12px;font-weight:600;color:var(--color-text)">' + s.descricao + '</div>'
+              +   '<div style="font-size:12px;font-weight:600;color:var(--color-text)">' + s.descricao + (s.funcionario ? ' <span style="font-size:10px;font-weight:600;color:var(--color-primary);background:var(--color-primary-highlight);padding:1px 6px;border-radius:10px">' + s.funcionario + '</span>' : '') + '</div>'
               +   (s.obs ? '<div style="font-size:11px;color:var(--color-text-muted);margin-top:2px">' + s.obs + '</div>' : '')
               +   '<div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap">'
               +     '<span style="font-size:11px;font-weight:700;color:var(--color-primary)">' + _brl(s.valor || 0) + '</span>'
@@ -192,7 +192,7 @@
         nome: nome,
         telefone: tel,
         criadoEm: new Date().toISOString(),
-        servicos: [{ descricao: desc, valor: val, obs: obs, pago: false, entregue: false }]
+        servicos: [{ descricao: desc, valor: val, obs: obs, funcionario: document.getElementById('clienteFuncionario').value, pago: false, entregue: false }]
       };
       if (window.salvarClienteFirebase) {
         window.salvarClienteFirebase(novo).then(function(id) {
@@ -210,7 +210,7 @@
       var val2 = parseFloat(document.getElementById('clienteValor').value.replace(',', '.')) || 0;
       var obs2 = document.getElementById('clienteObs').value.trim();
       if (!desc2) { document.getElementById('clienteDescricao').focus(); return; }
-      c.servicos.push({ descricao: desc2, valor: val2, obs: obs2, pago: false, entregue: false });
+      c.servicos.push({ descricao: desc2, valor: val2, obs: obs2, funcionario: document.getElementById('clienteFuncionario').value, pago: false, entregue: false });
       _salvarCliente(c);
       _renderClientes();
       _fecharForm();
@@ -285,6 +285,16 @@
               '<div style="flex:2;display:flex;flex-direction:column;gap:4px">',
                 '<label style="font-size:11px;font-weight:600;color:var(--color-text-muted)">Observação</label>',
                 '<input id="clienteObs" type="text" placeholder="Detalhes, andamento..." style="padding:9px 12px;border:1.5px solid var(--color-border);border-radius:8px;font-size:13px;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">',
+              '</div>',
+            '<div style="display:flex;flex-direction:column;gap:4px">',
+                '<label style="font-size:11px;font-weight:600;color:var(--color-text-muted)">Funcionário</label>',
+                '<select id="clienteFuncionario" style="padding:9px 12px;border:1.5px solid var(--color-border);border-radius:8px;font-size:13px;background:var(--color-bg);color:var(--color-text);font-family:inherit;outline:none">',
+                  '<option value="">Selecionar</option>',
+                  '<option value="Edelaine">Edelaine</option>',
+                  '<option value="Josué">Josué</option>',
+                  '<option value="Lucas">Lucas</option>',
+                  '<option value="Andrey">Andrey</option>',
+                '</select>',
               '</div>',
             '</div>',
             '<div style="display:flex;gap:8px">',
