@@ -264,12 +264,34 @@
     <div class="patch-head">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-patch)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       <h2>Patch Notes</h2>
-      <span class="patch-version-badge">v3.1</span>
+      <span class="patch-version-badge">v3.2</span>
       <button class="patch-close" onclick="closePatch()" aria-label="Fechar">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="patch-body">
+      <div class="patch-entry">
+        <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
+        <div class="patch-content">
+          <div class="patch-version">v3.2</div>
+          <div class="patch-date">21 de maio de 2026</div>
+          <div class="patch-title">🔐 Autenticação, Despesas, Clientes em Andamento + Caixa turbinado</div>
+          <ul class="patch-items">
+            <li>🔐 <b>Tela de senha de entrada:</b> <code>acesso.js</code> bloqueia o sistema com senha e cria sessão de 8 horas — expira sozinha ou ao fechar o navegador</li>
+            <li>🔑 <b>Firebase Authentication:</b> login automático silencioso; regras do Firestore atualizadas para exigir <code>auth != null</code></li>
+            <li>🤫 <b>Telegram ofuscado:</b> token e Chat ID pré-configurados com base64 — não fica exposto em texto puro</li>
+            <li>💸 <b>Módulo de Despesas completo:</b> lançamento manual ou via estoque, editar, excluir e categorias expandidas</li>
+            <li>🧾 <b>Fechamento turbinado:</b> campos de moeda em espécie e valor recolhido; cupom de impressão em formato 1/8 A4</li>
+            <li>🖨️ <b>Reimprimir cupom:</b> botão nos dias já fechados para reimprimir sem reabrir o caixa</li>
+            <li>🔓 <b>Reabrir caixa:</b> botão para corrigir ou complementar dias já fechados</li>
+            <li>📲 <b>Telegram mais completo:</b> resumo agora inclui moeda em espécie, recolhido, despesas do dia e resultado líquido</li>
+            <li>👥 <b>Clientes em Andamento:</b> novo módulo com funcionário responsável, status pago/entregue por serviço e sync no Firebase</li>
+            <li>🖨️ <b>Novos serviços:</b> Scan, Aluguel de Internet, Formatação Simples, Formatação Completa, Impressão de Documento, Impressão de Boleto</li>
+            <li>🗂️ <b>Código modularizado:</b> CSS e JS separados em arquivos próprios — fim do arquivo único monolítico</li>
+            <li>🖼️ <b>Favicon:</b> ícone da aba atualizado com a logo da loja</li>
+          </ul>
+        </div>
+      </div>
       <div class="patch-entry">
         <div class="patch-timeline"><div class="patch-dot major"></div><div class="patch-line"></div></div>
         <div class="patch-content">
